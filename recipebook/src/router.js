@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import HomePage from './views/HomePage.vue'
 import LandingPage from './views/LandingPage.vue'
 import Login from './views/Login.vue'
 
@@ -21,6 +22,11 @@ export default new Router({
       component: Login
     },
     {
+      path:'/HomePage',
+      name: 'HomePage',
+      component: HomePage},
+      {
+
       path:'/landingPage',
       name: 'landingPage',
       component: LandingPage
