@@ -5,7 +5,7 @@
       <div class="alert alert-danger" role="alert" v-if="registrationErrors">
         There were problems registering this user.
       </div>
-      <label for="username" class="sr-only">Username</label>
+      <label for="firstname" class="sr-only">First Name: </label>
       <input
         type="text"
         id="firstname"
@@ -15,6 +15,9 @@
         required
         autofocus
       />
+      <br/>
+      <br/>
+      <label for="lastname" class="sr-only">Last Name: </label>
         <input
         type="text"
         id="lastname"
@@ -24,7 +27,9 @@
         required
         autofocus
       />
-      <label for="password" class="sr-only">Password</label>
+       <br/>
+      <br/>
+      <label for="password" class="sr-only">Password: </label>
       <input
         type="password"
         id="password"
@@ -33,6 +38,9 @@
         v-model="user.password"
         required
       />
+      <br/>
+      <br/>
+      <label for="confirmpassword" class="sr-only">Confrim Password: </label>
       <input
         type="password"
         id="confirmPassword"
@@ -41,7 +49,9 @@
         v-model="user.confirmPassword"
         required
       />
-        <label for="email" class="sr-only">Email</label>
+       <br/>
+       <br/>
+        <label for="email" class="sr-only">Email: </label>
         <input
         type="text"
         id="email"
@@ -51,7 +61,9 @@
         required
         autofocus
       />
-        <label for="phone" class="sr-only">Phone Number</label>
+      <br/>
+      <br/>
+        <label for="phone" class="sr-only">Phone Number: </label>
         <input
         type="text"
         id="phone"
@@ -61,12 +73,16 @@
         required
         autofocus
       />
-      <router-link :to="{ name: 'login' }">
-        Have an account?
-      </router-link>
+      <br/>
+      <br/>
       <button class="btn btn-lg btn-primary btn-block" type="submit">
         Create Account
       </button>
+      <br/>
+      <br/>
+      <router-link :to="{ name: 'login' }">
+        Have an account?
+      </router-link>
     </form>
   </div>
 </template>
