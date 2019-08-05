@@ -5,7 +5,7 @@
       <div class="alert alert-danger" role="alert" v-if="registrationErrors">
         There were problems registering this user.
       </div>
-      <label for="firstname" class="sr-only">First Name: </label>
+      <label for="firstName" class="sr-only">First Name: </label>
       <input
         type="text"
         id="firstname"
@@ -17,7 +17,7 @@
       />
       <br/>
       <br/>
-      <label for="lastname" class="sr-only">Last Name: </label>
+      <label for="lastName" class="sr-only">Last Name: </label>
         <input
         type="text"
         id="lastname"
@@ -40,7 +40,7 @@
       />
       <br/>
       <br/>
-      <label for="confirmpassword" class="sr-only">Confrim Password: </label>
+      <label for="confirmPassword" class="sr-only">Confrim Password: </label>
       <input
         type="password"
         id="confirmPassword"
