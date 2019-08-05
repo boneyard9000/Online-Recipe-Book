@@ -1,13 +1,32 @@
 <template>
   <div id="app">
+    <div id="headerDiv">
+    <header>
     <div id="nav">
+      
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/landingPage">Landing Page</router-link>
     </div>
+    </header>
+    
+    </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+
+
+
+export default {
+  name: 'app',
+  components: {
+    
+  }
+}
+
+</script>
 
 <style>
 #app {
@@ -29,4 +48,17 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+#headerDiv {
+  
+}
+
+header {
+  background-image:url(./assets/cookingHeader.jpg);
+  background-size: cover;
+  background-position:center;
+  height: 250px;
+}
+
+
+
 </style>
