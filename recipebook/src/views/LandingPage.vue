@@ -10,7 +10,7 @@ export default {
     
     name: 'landingPage',
     components: {
-
+        
     },
     methods: {
 
