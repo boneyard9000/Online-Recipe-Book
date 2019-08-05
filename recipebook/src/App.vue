@@ -2,13 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-<<<<<<< HEAD
       <router-link to="/about">About</router-link>|
       <router-link :to="{name: 'HomePage'}">HomePage</router-link>
-=======
-      <router-link to="/about">About</router-link> |
       <router-link to="/landingPage">Landing Page</router-link>
->>>>>>> 81a97fa786a744307627e025423cfac4ca81e598
     </div>
     <router-view/>
   </div>
