@@ -1,6 +1,6 @@
 <template>
     <div id="LandingPage">
-        <h1>This is the landing page</h1>
+            <h1>Discover New Recipes</h1>
     </div>
     
 </template>
@@ -21,16 +21,22 @@ export default {
 
 <style scoped>
 
-    #LandingPage {
+#LandingPage {
     background-image:url(../assets/cookingImageForLandingPage.jpg);
     background-size: cover;
     background-position:center;
     height: 700px;
-    width: 1200px;
-	
-  /* Preserve aspet ratio */
-  
 }
+
+#LandingPage h1 {
+    padding:0;
+    margin:0;
+}
+
+h1 {
+    font-size: 60px;
+}
+
 
 
 

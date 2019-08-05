@@ -1,12 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" style = "margin:0">
     <div id="headerDiv">
     <header>
     <div id="nav">
       
-      <router-link to="/">Home</router-link> |
-
-      <router-link to="/about">About</router-link> |
       <router-link to="/landingPage">Landing Page</router-link> |
       <router-link to="/login"> Login </router-link>|
       <router-link to="/register"> Register </router-link> |
@@ -52,17 +49,19 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
-#headerDiv {
-  
-}
 
-header {
+
+/* header {
   background-image:url(./assets/cookingHeader.jpg);
   background-size: cover;
   background-position:center;
-  height: 250px;
-}
+  height: 150px;
+} */
 
+* {
+  padding: 0;
+  margin: 0;
+}
 
 
 </style>
