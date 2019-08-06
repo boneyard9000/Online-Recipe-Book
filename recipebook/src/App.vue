@@ -6,8 +6,9 @@
       
       <router-link to="/landingPage">Landing Page</router-link> |
       <router-link to="/login"> Login </router-link>|
-      <router-link to="/register"> Register </router-link> |
-      <router-link :to="{name: 'HomePage'}">HomePage</router-link>
+      <router-link to="/register"> Register </router-link> 
+      <router-link :to="{name: 'HomePage'}" >HomePage</router-link>
+
     </div>
     </header>
     
