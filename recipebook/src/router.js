@@ -6,6 +6,7 @@ import HomePage from './views/HomePage.vue'
 import LandingPage from './views/LandingPage.vue'
 import Login from './views/Login.vue'
 import Register from './views/Register.vue'
+import RecipeDetails from './views/RecipeDetails.vue'
 
 Vue.use(Router)
 
@@ -44,6 +45,14 @@ const router = new Router({
       component: HomePage,
       meta: {
         requiresAuth: true
+      }
+    },
+    {
+      path: '/RecipeDetails',
+      name: 'RecipeDetails',
+      component: RecipeDetails,
+      meta: {
+        requiresAuth: false
       }
     },
       {
