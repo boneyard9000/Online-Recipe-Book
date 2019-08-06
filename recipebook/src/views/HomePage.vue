@@ -3,9 +3,9 @@
 <div class="recipe-of-day">
 <div class="rod-header">
 <h2>Recipe of the Day</h2>
-<h2>Recipe Name</h2>
+<h2>{{recipes[0].name}}</h2>
 </div>
-<a href="#"><img :src="recipes[0].picSrc"> </a>
+<a :href="`/RecipeDetails/${recipes[0].id}`"><img :src="recipes[0].picSrc"> </a>
 <div class="recipe-description">{{recipes[0].description}}
 </div>
 <div class="recipe-text">
@@ -24,7 +24,7 @@
 
 <div class="recipes" v-for="recipe in recipes" :key="recipe.name">
 <div> <h3>{{recipe.name}}</h3> </div>
-<a href="#"><img :src="recipe.picSrc"> </a>
+<a :href="`/RecipeDetails/${recipe.id}`"><img :src="recipe.picSrc"> </a>
 <div><button>➕</button> Add to Favorites</div>
 </div>
 

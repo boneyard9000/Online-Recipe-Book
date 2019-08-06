@@ -44,11 +44,11 @@ const router = new Router({
       name: 'HomePage',
       component: HomePage,
       meta: {
-        requiresAuth: true
+        requiresAuth: false
       }
     },
     {
-      path: '/RecipeDetails',
+      path: '/RecipeDetails/:id',
       name: 'RecipeDetails',
       component: RecipeDetails,
       meta: {
