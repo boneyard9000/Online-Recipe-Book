@@ -19,7 +19,7 @@
           />
           </b-form-group>
 
-          <br/>
+          
 
           <b-form-group id="input-group-2">
           <b-form-input
@@ -33,7 +33,7 @@
           />
           </b-form-group>
           
-          <br/>
+          
 
           <b-form-group id="input-group-3">
           <b-form-input
@@ -46,7 +46,7 @@
           />
           </b-form-group>
           
-          <br/>
+          
 
           <b-form-group id="input-group-4">
           <b-form-input
@@ -59,7 +59,7 @@
           />
           </b-form-group>
           
-          <br/>
+          
 
             <b-form-group id="input-group-5">
           <b-form-input
@@ -73,7 +73,7 @@
           />
             </b-form-group>
           
-          <br/>
+          
 
             <b-form-group id="input-group-6">
           <b-form-input
@@ -87,13 +87,13 @@
           />
             </b-form-group>
         
-          <br/>
+         
 
           <b-button pill variant="success">
             Create Account
           </b-button>
           
-          <br/>
+         <br/>
 
           <router-link :to="{ name: 'login' }">
             Have an account?
