@@ -5,47 +5,29 @@
 <h2>Recipe of the Day</h2>
 <h2>Recipe Name</h2>
 </div>
-<a href="#"><img src="../assets/stock.jpg"> </a>
-<div class="recipe-description">this is where the recipe description goes.  It will be an excellent recipe.  and a stellar description
-    Much wow.  instant profit
+<a href="#"><img :src="recipes[0].picSrc"> </a>
+<div class="recipe-description">{{recipes[0].description}}
 </div>
-<div class="recipe-text"><h4>This is where we tell you how to make the thing youre trying to make.</h4>
-    <ul class="recipe-steps">
-        <li>#1 figure out what youre trying to make.</li>
-        <li>#2 make the thing youre trying to make.</li>
-        <li>#3 actually thats pretty much it.</li>
-        <li>#4 Consume product</li>
-        <li>#5 dessert time</li>
+<div class="recipe-text">
+    <ul class="recipe-steps" v-for="step in recipes[0].steps" :key="step">
+        <li>
+        {{step}}
+        </li>
     </ul>
 </div>
+
 </div>
 
 
 <div class="extra-recipes-container">
-<div class="recipes">
-<div> <h3>Recipe Name</h3> </div>
-<a href="#"><img src="../assets/stock.jpg"> </a>
+
+
+<div class="recipes" v-for="recipe in recipes" :key="recipe.name">
+<div> <h3>{{recipe.name}}</h3> </div>
+<a href="#"><img :src="recipe.picSrc"> </a>
+<div><button>➕</button> Add to Favorites</div>
 </div>
 
-<div class="recipes">
-<div> <h3>Recipe Name</h3> </div>
-<a href="#"><img src="../assets/stock.jpg"> </a>
-</div>
-
-<div class="recipes">
-<div> <h3>Recipe Name</h3> </div>
-<a href="#"><img src="../assets/stock.jpg"> </a>
-</div>
-
-<div class="recipes">
-<div> <h3>Recipe Name</h3> </div>
-<a href="#"><img src="../assets/stock.jpg"> </a>
-</div>
-
-<div class="recipes">
-<div> <h3>Recipe Name</h3> </div>
-<a href="#"><img src="../assets/stock.jpg"> </a>
-</div>
 
 </div>
 
@@ -59,7 +41,28 @@
 
 <script>
 export default {
-    name: 'HomePage'
+    name: 'HomePage',
+
+    data() {
+        return {
+            recipes: [
+                {name: 'Chicken Cheesecake', picSrc: require('../assets/stock.jpg'), description: 'sounds weird...is weird', steps: ['get a chicken',
+                'kill and butcher, its easier if you do it quick', 'get a cheesecake', 'put chicken in to cheesecake', 'bake at 350 until golden brown']},
+                {name: 'Hot Dog Margarita', picSrc: require('../assets/stock.jpg'), description: 'technically edible', steps: ['purchase pack of 8 hot dogs minimum quality',
+                'beat to pulp with mortar and pestal', 'cover in tequila', 'let cure in sun for half day']},
+                {name: 'Literal Dirt', picSrc: require('../assets/stock.jpg'), description: 'its literally just dirt', steps: ['go outside', 'find some dirt',
+                'its not very hard to see where it goes from here', 'put said dirt in bowl of your choosing', 'dump out said dirt', 
+                'repeat process until entire yard has been turned', 'wait 6-8 months for delicious veggies to grow', 'eat that, not the dirt.  Its better']},
+                {name: 'Oil Change', picSrc: require('../assets/stock.jpg'), description: 'this is not a recipe.  This is an oil change.  how did this get here',
+                steps: ['let car sit at least 15 minutes to cool', 'jack up car and put on jack stands', 'open oil plug and drain in to drain pan', 'replace oil filter',
+                'refill your oil', 'replace drain plug.  also change drain plug gasket if necessary', 'put car back on to ground', 'fill the oil and check level once settled',
+                'Congratulations, you jsut changed you oil.  I bet youre hungry now...']},
+                {name: 'Unboiled Water', picSrc: require('../assets/stock.jpg'), description: 'tried of burnt water?  We can fix that', steps: ['Fill large pot with water', 
+                'put on high an let reach a rolling boil', 'remove pot from flame and take it outside', 'throw that nastiness out', 'refill pot with fresh, unboiled wter from the tap.  the less boiled the better',
+                'You have now learned how to make unboiled water.', 'profit']}
+            ]
+        }
+    }
 }
 </script>
 
