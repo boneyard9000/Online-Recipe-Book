@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import auth from './auth'
 import Home from './views/Home.vue'
 import HomePage from './views/HomePage.vue'
 import LandingPage from './views/LandingPage.vue'
@@ -8,34 +9,51 @@ import Register from './views/Register.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        requiresAuth: false
+      }
     },
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: Login,
+      meta: {
+        requiresAuth: false
+      }
     },
     {
       path:'/Register',
       name: 'Register',
-      component: Register},
+      component: Register,
+      meta: {
+        requiresAuth: false
+      }
+    },
     
     {
       path:'/HomePage',
       name: 'HomePage',
-      component: HomePage},
+      component: HomePage,
+      meta: {
+        requiresAuth: true
+      }
+    },
       {
 
       path:'/landingPage',
       name: 'landingPage',
-      component: LandingPage
+      component: LandingPage,
+      meta: {
+        requiresAuth: false
+      }
     },
     {
       path: '/about',
@@ -48,3 +66,20 @@ export default new Router({
    
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  // Determine if the route requires Authentication
+  const requiresAuth = to.matched.some(x => x.meta.requiresAuth);
+  const user = auth.getUser();
+
+  // If it does and they are not logged in, send the user to "/login"
+  if (requiresAuth && !user) {
+    next("/login");
+  } else {
+    // Else let them go to their next destination
+    next();
+  }
+});
+
+export default router;
+
