@@ -34,7 +34,7 @@
           />
       </b-form-group>
 
-      <b-button pill variant="success">Sign in</b-button>
+      <b-button type="submit" pill variant="success">Sign in</b-button>
 
       <br/>
       
