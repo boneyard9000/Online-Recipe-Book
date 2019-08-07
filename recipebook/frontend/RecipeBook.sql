@@ -24,7 +24,7 @@ CREATE TABLE recipes(
   cook_time integer NOT NULL,
   directions TEXT NOT NULL,
   ingredients TEXT NOT NULL,
-  catagory varchar (40) NOT NULL,
+  category varchar (40) NOT NULL,
 
   CONSTRAINT pk_recipe_recipe_id PRIMARY KEY (recipe_id)
 );
