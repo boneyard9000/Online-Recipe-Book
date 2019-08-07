@@ -95,7 +95,7 @@
           
           
 
-            <b-form-group 
+            <b-form-group class="control-label text-left"
                 id="input-group-6"
                 label="Phone Number:"
                 label-for="phone"
