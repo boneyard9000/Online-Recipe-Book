@@ -3,6 +3,11 @@
 <div class="recipe-of-day">
 <div class="rod-header">
 <h2>Recipe of the Day</h2>
+
+<ul v-for="item in testRecipes" :key="item.name">
+      <li>{{item.description}}</li>
+    </ul>
+
 <h2>{{recipes[0].name}}</h2>
 </div>
 <a :recipe="recipes[{id}]" :href="`/RecipeDetails/${recipes[0].id}`"><img :src="recipes[0].picSrc"> </a>
@@ -21,10 +26,9 @@
 
 <div class="extra-recipes-container">
 
-
-<div class="recipes" v-for="recipe in recipes" :key="recipe.name">
-<div> <h3>{{recipe.name}}</h3> </div>
-<a :href="`/RecipeDetails/${recipe.id}`"><img :src="recipe.picSrc"> </a>
+<div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
+<div> <h3>{{recipe.recipeName}}</h3> </div>
+<a :href="`/RecipeDetails/${recipe.recipeId}`"><img src="../assets/stock.jpg"> </a>
 <div><button>➕</button> Add to Favorites</div>
 </div>
 
@@ -45,6 +49,7 @@ export default {
 
     props: {
         recipes: Array,
+        testRecipes: Array
 
     },
     data() {

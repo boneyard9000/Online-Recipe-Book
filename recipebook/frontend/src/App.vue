@@ -15,7 +15,9 @@
     </header>
     
     </div>
-    <router-view :recipes="recipes"/>
+    <router-view :recipes="recipes" :testRecipes="testRecipes"/>
+
+    
   </div>
 </template>
 
@@ -30,14 +32,34 @@ export default {
   components: {
     
   },
+
   methods: {
     logout() {
       auth.logout();
     }
   },
+
+  created() {
+    fetch(`${process.env.VUE_APP_REMOTE_API}/api/recipes`, {
+      headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json', 
+          Authorization: 'Bearer ' + auth.getToken()
+        }
+    })
+    .then((response) => {
+      return response.json();
+    })
+    .then((test) => {
+      this.testRecipes = test;
+    })
+  },
   
     data() {
         return {
+
+          testRecipes: [],
+
             recipes: [
                 {id: 1, name: 'Chicken Cheesecake', picSrc: require('./assets/stock.jpg'), description: 'sounds weird...is weird', steps: ['get a chicken',
                 'kill and butcher, its easier if you do it quick', 'get a cheesecake', 'put chicken in to cheesecake', 'bake at 350 until golden brown'], 
