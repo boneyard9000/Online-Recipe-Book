@@ -11,30 +11,42 @@
         Thank you for registering, please sign in.
       </div>
 
-       <b-form-group id="input-group-1">
+       <b-form-group class="control-label text-left"
+          id="input-group-1"
+          label="Your Email:"
+          label-for="email"
+        >  
           <b-form-input
-            type="text"
+            type="email"
             id="email"
             class="form-control"
-            placeholder="email"
+            placeholder="Type your email here."
             v-model="user.email"
             required
             autofocus
           />
        </b-form-group>
       
-      <b-form-group id="input-group-2">
+      <b-form-group class="control-label text-left"
+          id="input-group-2"
+          label="Your Password:"
+          label-for="confirmPassword"
+          >
           <b-form-input
             type="password"
             id="password"
             class="form-control"
-            placeholder="Password"
+            placeholder="Type your password here."
             v-model="user.password"
             required
           />
       </b-form-group>
 
+<<<<<<< HEAD
       <b-button pill variant="success" type="submit">Sign in</b-button>
+=======
+      <b-button type="submit" pill variant="success">Sign in</b-button>
+>>>>>>> cab0935e19402eb022d439f4b4fafdd5e614f676
 
       <br/>
       

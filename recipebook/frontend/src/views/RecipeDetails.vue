@@ -1,23 +1,18 @@
 <template>
     <div id="recipe-details">
         this is recipe details page
-        <h2>Name: {{}}</h2>
-        <div>Cook Time: {{cookTime}}</div>
+        <h2>Name: {{recipes[1].name}}</h2>
+        <div>Cook Time: </div>
+        <div><button>➕</button> Add to Favorites</div>
         <img src="../assets/stock.jpg">
         <label>Ingredients</label>
-        <ul class="ingredients-list">
-            <li>list 1</li>
-            <li>list 2</li>
+        <ul class="ingredients-list" v-for="item in recipes[1].ingredients" :key="item">
+            <li>{{item}}</li>
         </ul>
         <label>Steps</label>
-        <ul class="steps-list">
-            <li>step 1</li>
-            <li>step 2</li>
-            <li>step 3</li>
-            <li>step 4</li>
-            <li>step 5</li>
-            <li>step 6</li>
-            <li>step 7</li>
+        <ul class="steps-list" v-for="step in recipes[1].steps" :key="step">
+            <li>{{step}}</li>
+           
         </ul>
 
 
@@ -27,10 +22,16 @@
 
 <script>
 export default {
-    name: 'RecipeDetails'
+    name: 'RecipeDetails',
+    props: {
+        recipes: Array,
+    }
 
 }
 </script>
 
 <style scoped>
+#recipe-details {
+    background-color: rgb(175, 240, 145);
+}
 </style>

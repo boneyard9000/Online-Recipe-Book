@@ -86,6 +86,7 @@ public class JdbcUserDao implements UserDao {
         String sqlSearchForUser = "SELECT * FROM users WHERE email = ?";
 
         SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSearchForUser, email);
+
         if (results.next()) {
             String storedSalt = results.getString("salt");
             String storedPassword = results.getString("password");
