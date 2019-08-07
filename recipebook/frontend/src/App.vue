@@ -3,12 +3,16 @@
     <div id="headerDiv">
     <header>
     <div id="nav">
-      
+      <img src="./assets/forkAndKnife.jpeg" style ="float:left;">
       <router-link to="/landingPage">Landing Page</router-link> |
-      <router-link to="/login"> Login </router-link>|
+      <router-link to="/login">
+        <b-button style="float:right;" pill variant="success" class="btn"> Login </b-button>
+      </router-link>      
       <router-link to="/register"> Register </router-link> |
-      <router-link :to="{name: 'HomePage'}" >HomePage</router-link> |
-      <button @click="logout"> Logout </button>
+      <router-link :to="{name: 'HomePage'}" >HomePage</router-link> 
+      <router-link to="/landingPage">
+        <b-button style="float:right;" pill variant="danger" @click="logout" class="btn"> Logout </b-button>
+      </router-link>
 
 
     </div>
@@ -24,9 +28,6 @@
 <script>
 import auth from './auth';
 
-
-
-
 export default {
 
   name: 'app',
@@ -37,6 +38,7 @@ export default {
   methods: {
     logout() {
       auth.logout();
+
     }
   },
 
@@ -107,13 +109,39 @@ export default {
   color: #42b983;
 }
 
+.btn {
 
-/* header {
-  background-image:url(./assets/cookingHeader.jpg);
-  background-size: cover;
-  background-position:center;
-  height: 150px;
-} */
+  color: #0099CC; 
+  background: transparent; 
+  border: 2px solid #0099CC;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
 
 * {
   padding: 0;

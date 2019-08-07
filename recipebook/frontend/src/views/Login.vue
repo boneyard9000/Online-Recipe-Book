@@ -20,7 +20,7 @@
             type="email"
             id="email"
             class="form-control"
-            placeholder="Type your email here."
+            placeholder="example@mail.com"
             v-model="user.email"
             required
             autofocus
@@ -36,7 +36,7 @@
             type="password"
             id="password"
             class="form-control"
-            placeholder="Type your password here."
+            placeholder="Type your password here"
             v-model="user.password"
             required
           />

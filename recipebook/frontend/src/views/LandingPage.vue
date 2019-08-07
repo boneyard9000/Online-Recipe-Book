@@ -1,9 +1,7 @@
 <template>
     <div id="LandingPage">
             <h1>Discover New Recipes</h1>
-            <div>
-                <p>This information describes what our website will do.</p>
-            </div>
+            <h1>Save And Share Your Own</h1>
     </div>
     
 </template>
@@ -38,6 +36,10 @@ export default {
 
 h1 {
     font-size: 60px;
+}
+
+p {
+    
 }
 
 
