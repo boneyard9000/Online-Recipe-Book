@@ -52,7 +52,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	public List<Recipe> getRecipesByCategory(String category) {
 		List<Recipe> recipes = new ArrayList<Recipe>();
 		
-		String sqlCategory = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE UPPER(category) = LIKE UPPER('%?%'";
+		String sqlCategory = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE UPPER(category) = LIKE UPPER('%?%')";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlCategory, category);
 		while (results.next()) {
 			Recipe recipe = populateRecipe(results);
