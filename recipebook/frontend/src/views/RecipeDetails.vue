@@ -1,7 +1,7 @@
 <template>
     <div id="recipe-details">
         this is recipe details page
-        <h2>Name: {{recipes[1].name}}</h2>
+        <h2>Name: {{currentRecipe.name}}</h2>
         <div>Cook Time: </div>
         <div><button>➕</button> Add to Favorites</div>
         <img src="../assets/stock.jpg">
@@ -35,7 +35,7 @@ export default {
         }
     },
     created() {
-         fetch(process.env.VUE_APP_REMOTE_API + "/api/recipeDetails/" + 2, {
+         fetch(`"${process.env.VUE_APP_REMOTE_API}/api/recipeDetails/${this.currentRecipeId}"`, {
       headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json', 

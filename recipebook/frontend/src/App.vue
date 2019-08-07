@@ -28,6 +28,7 @@ import auth from './auth';
 
 
 export default {
+
   name: 'app',
   components: {
     
@@ -58,6 +59,7 @@ export default {
     data() {
         return {
 
+          currentRecipe: {},
           testRecipes: [],
 
             recipes: [

@@ -10,7 +10,7 @@
 
 <h2>{{recipes[0].name}}</h2>
 </div>
-<a :recipe="recipes[{id}]" :href="`/RecipeDetails/${recipes[0].id}`"><img :src="recipes[0].picSrc"> </a>
+<a @click="updateCurrentRecipe" :recipe="recipes[{id}]" :href="`/RecipeDetails/${recipes[0].id}`"><img :src="recipes[0].picSrc"> </a>
 <div class="recipe-description">{{recipes[0].description}}
 </div>
 <div class="recipe-text">
@@ -28,7 +28,7 @@
 
 <div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
 <div> <h3>{{recipe.recipeName}}</h3> </div>
-<a v-on:click="this.currentRecipeId = recipe.recipeId" :href="`/RecipeDetails/${recipe.recipeId}`"><img src="../assets/stock.jpg"> </a>
+<router-link :to="{name: 'RecipeDetails', params: {recipeId: recipe.id}}"> <img src="../assets/stock.jpg"> </router-link>
 <div><button>➕</button> Add to Favorites</div>
 </div>
 
@@ -56,6 +56,14 @@ export default {
         return {
             currentRecipeId: 1
         }
+    },
+
+    methods:
+    {
+        updateCurrentRecipe() {
+            this.$emit('updateCurrentRecipe', this.currentRecipe);
+        }
+
     }
 
 }
