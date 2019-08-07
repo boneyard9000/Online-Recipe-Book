@@ -21,10 +21,10 @@ public class User {
     private String email;
 
     @NotBlank(message = "Phone number is required")
-    private int phoneNumber;
+    private String phoneNumber;
     
     @NotBlank
-    private String role;
+    private String role = "registered";
     
     @NotBlank(message = "Password is required")
     private String password;
@@ -80,11 +80,11 @@ public class User {
 		this.email = email;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

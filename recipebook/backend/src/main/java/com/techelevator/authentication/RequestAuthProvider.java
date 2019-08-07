@@ -37,8 +37,8 @@ public class RequestAuthProvider implements AuthProvider {
     }
 
     @Override
-    public boolean signIn(String username, String password) {
-        User authenticatedUser = dao.getValidUserWithPassword(username, password);
+    public boolean signIn(String email, String password) {
+        User authenticatedUser = dao.getValidUserWithPassword(email, password);
         if (authenticatedUser != null) {
             request.setAttribute(USER_KEY, authenticatedUser);
             return true;
@@ -68,7 +68,7 @@ public class RequestAuthProvider implements AuthProvider {
     }
 
     @Override
-    public void register(String firstName,String lastName, String email, int phoneNumber, String password, String role) {
+    public void register(String firstName,String lastName, String email, String phoneNumber, String password, String role) {
         dao.saveUser(firstName, lastName, email, phoneNumber, password, role);
     }
 

@@ -11,7 +11,7 @@ last_name varchar(255) NOT NULL,
 password varchar(32) NOT NULL,    
 salt varchar(256) NOT NULL,
 email varchar(200) NOT NULL UNIQUE,
-phone varchar(10) NOT NULL UNIQUE,
+phone varchar(15) NOT NULL UNIQUE,
 role varchar (10) Default 'registered',
 
 CONSTRAINT pk_users_user_id PRIMARY KEY (user_id)
@@ -37,9 +37,6 @@ CONSTRAINT pk_user_recipe_user_id_recipe_id PRIMARY KEY (user_id, recipe_id)
 );
 
 
-INSERT INTO users (first_name, last_name, password, salt, email, phone) VALUES ('Chef', 'Ramsey', 'cooking', 'jdklasjflasdj', 'lol@aol.com', 5133471111);
 
-
-SELECT * from users;
 
 

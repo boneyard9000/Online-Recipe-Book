@@ -16,8 +16,8 @@ public interface AuthProvider {
     User getCurrentUser();
 
     /**
-     * Signs in a user using the given username and password
-     * @param username the given username
+     * Signs in a user using the given email and password
+     * @param email the given email
      * @param password the given password
      * @return true if user was successfully signed in
      */
@@ -38,11 +38,11 @@ public interface AuthProvider {
 
     /**
      * Register a new user to the system
-     * @param username the new user's username
+     * @param email the new user's email
      * @param password the new user's password
      * @param role the new user's role
      */
-    void register(String firstName,String lastName, String email, int phoneNumber, String password, String role);
+    void register(String firstName, String lastName, String email, String phoneNumber, String password, String role);
 
     /**
      * Checks to see if the current user has one of the given roles

@@ -81,7 +81,7 @@
             id="phone"
             class="form-control"
             placeholder="Phone Number"
-            v-model="user.phone"
+            v-model="user.phoneNumber"
             required
             autofocus
           />
@@ -89,7 +89,7 @@
         
          
 
-          <b-button pill variant="success">
+          <b-button pill variant="success" type="submit">
             Create Account
           </b-button>
           
@@ -113,7 +113,7 @@ export default {
         password: '',
         confirmPassword: '',
         email: '',
-        phoneNumber: 9999999999,
+        phoneNumber: '',
       },
       registrationErrors: false,
     };

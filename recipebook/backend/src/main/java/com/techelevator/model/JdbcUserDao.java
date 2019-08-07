@@ -43,13 +43,13 @@ public class JdbcUserDao implements UserDao {
      * @return the new user
      */
     @Override
-    public User saveUser(String firstName,String lastName, String email, int phoneNumber, String password, String role) {
+    public User saveUser(String firstName,String lastName, String email, String phoneNumber, String password, String role) {
         byte[] salt = passwordHasher.generateRandomSalt();
         String hashedPassword = passwordHasher.computeHash(password, salt);
         String saltString = new String(Base64.getEncoder().encode(salt));
         long newId = jdbcTemplate.queryForObject(
-                "INSERT INTO users(first_name, last_name, password, salt, email, phone, role) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id", Long.class,
-                email, hashedPassword, saltString, role);
+                "INSERT INTO users(first_name, last_name, password, salt, email, phone, role) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING user_id", Long.class,
+                firstName, lastName, hashedPassword, saltString, email, phoneNumber, role);
 
         User newUser = new User();
         newUser.setId(newId);
@@ -124,7 +124,7 @@ public class JdbcUserDao implements UserDao {
         user.setFirstName(results.getString("first_name"));
         user.setLastName(results.getString("last_name"));
         user.setEmail(results.getString("email"));
-        user.setPhoneNumber(results.getInt("phone"));
+        user.setPhoneNumber(results.getString("phone"));
         user.setPassword(results.getString("password"));
         user.setRole(results.getString("role"));
         return user;
