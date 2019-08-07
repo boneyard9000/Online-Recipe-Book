@@ -7,6 +7,7 @@ import LandingPage from './views/LandingPage.vue'
 import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import RecipeDetails from './views/RecipeDetails.vue'
+import Greeting from './views/Greeting.vue'
 
 Vue.use(Router)
 
@@ -62,6 +63,14 @@ const router = new Router({
       component: LandingPage,
       meta: {
         requiresAuth: false
+      }
+    },
+    {
+      path: '/greeting',
+      name: 'greeting',
+      component: Greeting,
+      meta: {
+        requiresAuth: true
       }
     },
     {

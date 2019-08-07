@@ -42,7 +42,7 @@
           />
       </b-form-group>
 
-      <b-button pill variant="success" type="submit">Sign in</b-button>
+    <router-link to="/greeting"> <b-button pill variant="success" type="submit">Sign in</b-button></router-link>
 
       <br/>
       
