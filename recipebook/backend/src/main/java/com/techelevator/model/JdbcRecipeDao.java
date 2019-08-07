@@ -52,7 +52,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	public List<Recipe> getRecipesByCategory(String category) {
 		List<Recipe> recipes = new ArrayList<Recipe>();
 		
-		String sqlCategory = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE category = ?";
+		String sqlCategory = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE UPPER(category) = LIKE UPPER('%?%'";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlCategory, category);
 		while (results.next()) {
 			Recipe recipe = populateRecipe(results);
@@ -66,7 +66,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	public Recipe getRecipeByName(String searchName) {
 		Recipe r = new Recipe();
 		
-		String sqlRecipeName = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE name LIKE '%?%'";
+		String sqlRecipeName = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE UPPER(name) LIKE UPPER('%?%')";
 		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlRecipeName, searchName);
 		while (result.next()) {
 			r = populateRecipe(result);
@@ -79,7 +79,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	public List<Recipe> searchRecipesByName(String searchString) {
 		List<Recipe> recipes = new ArrayList<Recipe>();
 			
-			String sqlRecipeName = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE name LIKE '%?%'";
+			String sqlRecipeName = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE UPPER(name) LIKE UPPER('%?%')";
 			SqlRowSet results = jdbcTemplate.queryForRowSet(sqlRecipeName, searchString);
 			while (results.next()) {
 				Recipe recipe = populateRecipe(results);
@@ -107,7 +107,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	public List<Recipe> getRecipesByIngredients(String searchWords) {
 		List<Recipe> recipes = new ArrayList<Recipe>();
 		
-		String sqlRecipeIngredients = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE ingredients LIKE '%?%'";
+		String sqlRecipeIngredients = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE UPPER(ingredients) LIKE UPPER('%?%')";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlRecipeIngredients, searchWords);
 		while (results.next()) {
 			Recipe recipe = populateRecipe(results);
