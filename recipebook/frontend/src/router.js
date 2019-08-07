@@ -44,7 +44,7 @@ const router = new Router({
       name: 'HomePage',
       component: HomePage,
       meta: {
-        requiresAuth: false
+        requiresAuth: true
       }
     },
     {
