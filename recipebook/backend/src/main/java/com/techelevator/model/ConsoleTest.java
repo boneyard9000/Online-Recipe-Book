@@ -14,8 +14,8 @@ public class ConsoleTest {
 
 		recipeDao = new JdbcRecipeDao(dataSource);
 		
-		
-		System.out.println(recipeDao.getRecipeById(1).getDescription());
+
+		System.out.println(recipeDao.getRecipeByName("dirt"));
 	}
 
 }
