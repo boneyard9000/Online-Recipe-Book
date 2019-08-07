@@ -7,26 +7,34 @@
             There were problems registering this user.
           </div>
 
-          <b-form-group id="input-group-1">
-          <b-form-input
-            type="text"
+          <b-form-group class="control-label text-left"
+              id="input-group-1"
+              label="First Name:"
+              label-for="firstname"
+          >
+            <b-form-input
             id="firstname"
-            class="form-control"
-            placeholder="First Name:"
             v-model="user.firstName"
+            class="form-control"
+            placeholder="Example: Nelly"
+            type="text"
             required
             autofocus
-          />
+            />
           </b-form-group>
 
           
 
-          <b-form-group id="input-group-2">
+          <b-form-group class="control-label text-left"
+              id="input-group-2"
+              label="Last Name:"
+              label-for="lastname"   
+          >
           <b-form-input
             type="text"
             id="lastname"
             class="form-control"
-            placeholder="Last Name:"
+            placeholder="Example: Lovett"
             v-model="user.lastName"
             required
             autofocus
@@ -35,12 +43,16 @@
           
           
 
-          <b-form-group id="input-group-3">
+          <b-form-group class="control-label text-left"
+              id="input-group-3"
+              label="Password:"
+              label-for="password"  
+          >
           <b-form-input
             type="password"
             id="password"
             class="form-control"
-            placeholder="Password"
+            placeholder="Example: W0rstP13s1nL0nd0n"
             v-model="user.password"
             required
           />
@@ -48,12 +60,16 @@
           
           
 
-          <b-form-group id="input-group-4">
+          <b-form-group class="control-label text-left"
+              id="input-group-4"
+              label="Confirm Password:"
+              label-for="confirmPassword"
+          >
           <b-form-input
             type="password"
             id="confirmPassword"
             class="form-control"
-            placeholder="Confirm Password"
+            placeholder="Type your password again"
             v-model="user.confirmPassword"
             required
           />
@@ -61,12 +77,16 @@
           
           
 
-            <b-form-group id="input-group-5">
+            <b-form-group class="control-label text-left"
+                id="input-group-5"
+                label="Email:"
+                label-for="email"
+            >
           <b-form-input
-            type="text"
+            type="email"
             id="email"
             class="form-control"
-            placeholder="email"
+            placeholder="Example: n.lovett@sweeny.todd"
             v-model="user.email"
             required
             autofocus
@@ -75,12 +95,16 @@
           
           
 
-            <b-form-group id="input-group-6">
+            <b-form-group 
+                id="input-group-6"
+                label="Phone Number:"
+                label-for="phone"
+            >
           <b-form-input
             type="text"
             id="phone"
             class="form-control"
-            placeholder="Phone Number"
+            placeholder="Example: 999-999-9999"
             v-model="user.phoneNumber"
             required
             autofocus
@@ -150,8 +174,16 @@ export default {
 </script>
 
 <style>
+.input-group-1 label     {
+  font-weight: 500;
+  align-content: flex-start;
+}
+
+
+
 .form-register {
   max-width: 50%;
   margin: auto;
+  
 }
 </style>
