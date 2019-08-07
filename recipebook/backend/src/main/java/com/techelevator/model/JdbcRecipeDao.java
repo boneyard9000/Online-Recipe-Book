@@ -1,5 +1,6 @@
 package com.techelevator.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -15,12 +16,22 @@ public class JdbcRecipeDao implements RecipeDao{
 	@Autowired
 	public JdbcRecipeDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
+
 	}
 
 	@Override
 	public List<Recipe> getAllRecipes() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Recipe> recipes = new ArrayList<Recipe>();
+		String sqlSelectAllRecipes = "SELECT * FROM recipes\n" + 
+				" ORDER BY category LIMIT 5";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllRecipes);
+		
+		while (results.next()) {
+			Recipe recipe = populateRecipe(results);
+			recipes.add(recipe);
+		}
+		
+		return recipes;
 	}
 
 	@Override
