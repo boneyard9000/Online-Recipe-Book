@@ -28,7 +28,7 @@
 
 <div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
 <div> <h3>{{recipe.recipeName}}</h3> </div>
-<a :href="`/RecipeDetails/${recipe.recipeId}`"><img src="../assets/stock.jpg"> </a>
+<a v-on:click="this.currentRecipeId = recipe.recipeId" :href="`/RecipeDetails/${recipe.recipeId}`"><img src="../assets/stock.jpg"> </a>
 <div><button>➕</button> Add to Favorites</div>
 </div>
 
@@ -54,7 +54,7 @@ export default {
     },
     data() {
         return {
-            id: 1
+            currentRecipeId: 1
         }
     }
 

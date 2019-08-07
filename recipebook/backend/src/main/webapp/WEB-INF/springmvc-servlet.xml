@@ -30,11 +30,11 @@
 						<value>/login</value>
 						<value>/register</value>
 						
-						<!-- //Login  not sending token correctly.  currently unable to get in to api without turning off authentication.  /api/recipes path temporarily set to 
-						not need a token so that other work on pages can continue.
-						 -->
-						
 						<value>/api/recipes</value>
+						<value>/api/recipeDetails/2</value>
+						
+												
+						
 						
 					</list>
 				</property>

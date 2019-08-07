@@ -21,11 +21,35 @@
 </template>
 
 <script>
+import auth from '../auth';
+
 export default {
     name: 'RecipeDetails',
     props: {
         recipes: Array,
-    }
+        currentRecipeId: String
+    },
+    data() {
+        return {
+            currentRecipe: {}
+        }
+    },
+    created() {
+         fetch(process.env.VUE_APP_REMOTE_API + "/api/recipeDetails/" + 2, {
+      headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json', 
+          Authorization: 'Bearer ' + auth.getToken()
+        }
+    })
+    .then((response) => {
+      return response.json();
+    })
+    .then((test) => {
+      this.currentRecipe = test;
+    })
+  },
+    
 
 }
 </script>
