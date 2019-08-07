@@ -30,13 +30,11 @@ export default {
   components: {
     
   },
-<<<<<<< HEAD
   methods: {
     logout() {
       auth.logout();
     }
-  }
-=======
+  },
   
     data() {
         return {
@@ -60,7 +58,6 @@ export default {
             ]
         }
     }
->>>>>>> cab0935e19402eb022d439f4b4fafdd5e614f676
 }
 
 </script>

@@ -42,11 +42,7 @@
           />
       </b-form-group>
 
-<<<<<<< HEAD
       <b-button pill variant="success" type="submit">Sign in</b-button>
-=======
-      <b-button type="submit" pill variant="success">Sign in</b-button>
->>>>>>> cab0935e19402eb022d439f4b4fafdd5e614f676
 
       <br/>
       
