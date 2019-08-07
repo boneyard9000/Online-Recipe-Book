@@ -49,32 +49,71 @@ public class JdbcRecipeDao implements RecipeDao{
 
 	@Override
 	public List<Recipe> getRecipesByCategory(String category) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Recipe> recipes = new ArrayList<Recipe>();
+		
+		String sqlCategory = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE category = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlCategory, category);
+		while (results.next()) {
+			Recipe recipe = populateRecipe(results);
+			recipes.add(recipe);
+		}
+		System.out.println(recipes);
+		return recipes;
 	}
 
 	@Override
 	public Recipe getRecipeByName(String searchName) {
-		// TODO Auto-generated method stub
-		return null;
+		Recipe r = new Recipe();
+		
+		String sqlRecipeName = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE name LIKE '%?%'";
+		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlRecipeName, searchName);
+		while (result.next()) {
+			r = populateRecipe(result);
+		}
+		System.out.println(r.getRecipeName() + r.getDescription());
+		return r;
 	}
 
 	@Override
 	public List<Recipe> searchRecipesByName(String searchString) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Recipe> recipes = new ArrayList<Recipe>();
+			
+			String sqlRecipeName = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE name LIKE '%?%'";
+			SqlRowSet results = jdbcTemplate.queryForRowSet(sqlRecipeName, searchString);
+			while (results.next()) {
+				Recipe recipe = populateRecipe(results);
+				recipes.add(recipe);
+			}
+			System.out.println(recipes);
+			return recipes;
 	}
 
 	@Override
 	public List<Recipe> getRecipeByMaxCookTime(int maxCookTime) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Recipe> recipes = new ArrayList<Recipe>();
+		
+		String sqlRecipeTime = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE cook_time <= ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlRecipeTime, maxCookTime);
+		while (results.next()) {
+			Recipe recipe = populateRecipe(results);
+			recipes.add(recipe);
+		}
+		System.out.println(recipes);
+		return recipes;
 	}
 
 	@Override
-	public List<Recipe> getRecipesByIngredients(String[] searchWords) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Recipe> getRecipesByIngredients(String searchWords) {
+		List<Recipe> recipes = new ArrayList<Recipe>();
+		
+		String sqlRecipeIngredients = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category FROM recipes WHERE ingredients LIKE '%?%'";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlRecipeIngredients, searchWords);
+		while (results.next()) {
+			Recipe recipe = populateRecipe(results);
+			recipes.add(recipe);
+		}
+		System.out.println(recipes);
+		return recipes;
 	}
 	
 	private Recipe populateRecipe(SqlRowSet results) {

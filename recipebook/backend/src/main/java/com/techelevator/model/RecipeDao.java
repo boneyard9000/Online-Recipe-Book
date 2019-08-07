@@ -16,5 +16,5 @@ public interface RecipeDao {
 	
 	public List<Recipe> getRecipeByMaxCookTime(int maxCookTime);
 	
-	public List<Recipe> getRecipesByIngredients(String [] searchWords);
+	public List<Recipe> getRecipesByIngredients(String searchWords);
 }
