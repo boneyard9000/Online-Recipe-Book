@@ -1,6 +1,9 @@
 <template>
     <div id="LandingPage">
             <h1>Discover New Recipes</h1>
+            <div>
+                <p>This information describes what our website will do.</p>
+            </div>
     </div>
     
 </template>

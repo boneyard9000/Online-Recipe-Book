@@ -69,7 +69,7 @@ public class JdbcUserDao implements UserDao {
         String hashedPassword = passwordHasher.computeHash(newPassword, salt);
         String saltString = new String(Base64.getEncoder().encode(salt));
 
-        jdbcTemplate.update("UPDATE users SET password=?, salt=? WHERE id=?", hashedPassword, saltString, user.getId());
+        jdbcTemplate.update("UPDATE users SET password=?, salt=? WHERE user_id=?", hashedPassword, saltString, user.getId());
     }
 
     /**
@@ -82,10 +82,10 @@ public class JdbcUserDao implements UserDao {
      * @return true if the user is found and their password matches
      */
     @Override
-    public User getValidUserWithPassword(String userName, String password) {
-        String sqlSearchForUser = "SELECT * FROM users WHERE UPPER(username) = ?";
+    public User getValidUserWithPassword(String email, String password) {
+        String sqlSearchForUser = "SELECT * FROM users WHERE email = ?";
 
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSearchForUser, userName.toUpperCase());
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSearchForUser, email);
         if (results.next()) {
             String storedSalt = results.getString("salt");
             String storedPassword = results.getString("password");
@@ -107,7 +107,7 @@ public class JdbcUserDao implements UserDao {
     @Override
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<User>();
-        String sqlSelectAllUsers = "SELECT id, username, role FROM users";
+        String sqlSelectAllUsers = "SELECT user_id, email, role FROM users";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllUsers);
 
         while (results.next()) {
@@ -120,7 +120,7 @@ public class JdbcUserDao implements UserDao {
 
     private User mapResultToUser(SqlRowSet results) {
         User user = new User();
-        user.setId(results.getLong("id"));
+        user.setId(results.getLong("user_id"));
         user.setFirstName(results.getString("first_name"));
         user.setLastName(results.getString("last_name"));
         user.setEmail(results.getString("email"));
@@ -132,7 +132,7 @@ public class JdbcUserDao implements UserDao {
 
     @Override
     public User getUserByEmail(String email) {
-        String sqlSelectUserByEmail = "SELECT id, email, role FROM users WHERE email = ?";
+        String sqlSelectUserByEmail = "SELECT user_id, email, role FROM users WHERE email = ?";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectUserByEmail, email);
 
         if (results.next()) {
