@@ -45,8 +45,9 @@
     <router-link :to="{ name: 'landingPage' }"><b-button pill variant="success" v-on:click="login">Sign in</b-button></router-link>
 
       <br/>
+      <br/>
       
-    <router-link :to="{ name: 'Register' }">Need an account?</router-link>
+    <router-link class="needAcct" :to="{ name: 'Register' }">Need an account?</router-link>
       
     </b-form>
   </div>
@@ -103,5 +104,8 @@ export default {
 .form-signin {
   max-width: 50%;
   margin: auto;
+}
+.needAcct {
+  padding-right: 38px;
 }
 </style>
