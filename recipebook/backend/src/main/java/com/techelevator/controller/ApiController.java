@@ -4,6 +4,8 @@ import com.techelevator.authentication.AuthProvider;
 import com.techelevator.authentication.UnauthorizedException;
 import com.techelevator.model.Recipe;
 import com.techelevator.model.RecipeDao;
+import com.techelevator.model.User;
+import com.techelevator.model.UserDao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +30,8 @@ public class ApiController {
     private AuthProvider authProvider;
     @Autowired
     private RecipeDao recipeDao;
+    @Autowired
+    private UserDao userDao;
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String authorizedOnly() throws UnauthorizedException {
@@ -54,8 +58,12 @@ public class ApiController {
 	@GetMapping("/recipeDetails/{recipeId}")
 	public Recipe displayRecipeDetails(@PathVariable int recipeId) {
 		Recipe r = recipeDao.getRecipeById(recipeId);
-		return r;
-		
+		return r;	
+	}
+	@GetMapping("/user")
+	public User getUser() {
+		User u = authProvider.getCurrentUser();
+		return u;
 	}
 	
 }
