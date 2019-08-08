@@ -21,7 +21,7 @@ CREATE TABLE recipes(
   recipe_id serial NOT NULL,
   name varchar(69) NOT NULL,
   description varchar (255) NOT NULL,
-  cook_time integer NOT NULL,
+  cook_time varchar(15) NOT NULL,
   directions TEXT NOT NULL,
   ingredients TEXT NOT NULL,
   category varchar (40) NOT NULL,

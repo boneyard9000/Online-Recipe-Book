@@ -1,13 +1,27 @@
 package com.techelevator.model;
 
+import javax.validation.constraints.NotBlank;
+
 public class Recipe {
 
 	private int recipeId;
+	
+    @NotBlank(message = "Recipe name is required")
 	private String recipeName;
+    
+    @NotBlank(message = "Description is required")
 	private String description;
-	private int cookMins;
+    
+    @NotBlank(message = "Cook time is required")
+	private String cookMins;
+    
+    @NotBlank(message = "Directions is required")
 	private String directions;
+    
+    @NotBlank(message = "Ingredients is required")
 	private String ingredients;
+    
+    @NotBlank(message = "Cateogry is required")
 	private String category;
 	
 	
@@ -29,10 +43,10 @@ public class Recipe {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getCookMins() {
+	public String getCookMins() {
 		return cookMins;
 	}
-	public void setCookMins(int cookMins) {
+	public void setCookMins(String cookMins) {
 		this.cookMins = cookMins;
 	}
 	public String getDirections() {
