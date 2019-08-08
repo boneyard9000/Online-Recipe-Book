@@ -1,18 +1,21 @@
 <template>
     <div id="recipe-details">
         this is recipe details page
-        <h2>Name: {{currentRecipe.name}}</h2>
-        <div>Cook Time: </div>
-        <div><button>➕</button> Add to Favorites</div>
+        <h2>{{currentRecipe.recipeName}}<br>
+        {{currentRecipe.category}}</h2>
+        <div>Cook Time: {{currentRecipe.cookMins}}</div>
+        <!-- <div><button>➕</button> Add to Favorites</div> -->
         <img src="../assets/stock.jpg">
+
         <label>Ingredients</label>
-        <ul class="ingredients-list" v-for="item in recipes[1].ingredients" :key="item">
+         <ul v-for="item in ingredientsArray" :key="item">
             <li>{{item}}</li>
         </ul>
-        <label>Steps</label>
-        <ul class="steps-list" v-for="step in recipes[1].steps" :key="step">
+
+
+        <label>Directions</label>
+        <ul v-for="step in directionsArray" :key="step">
             <li>{{step}}</li>
-           
         </ul>
 
 
@@ -25,13 +28,11 @@ import auth from '../auth';
 
 export default {
     name: 'RecipeDetails',
-    props: {
-        recipes: Array,
-        currentRecipeId: String
-    },
+    
     data() {
         return {
-            currentRecipe: {}
+            currentRecipe: {},
+           
         }
     },
     created() {
@@ -49,7 +50,27 @@ export default {
       this.currentRecipe = test;
     })
   },
-    
+
+  computed: {
+  
+  directionsArray () {
+      if(this.currentRecipe.directions){
+      return this.currentRecipe.directions.split('. ');
+      }
+      else {
+          return [];
+      }
+  },
+   ingredientsArray () {
+      if(this.currentRecipe.ingredients){
+      return this.currentRecipe.ingredients.split(',');
+      }
+      else {
+          return [];
+      }
+  }
+
+  }
 
 }
 </script>
@@ -57,6 +78,9 @@ export default {
 <style scoped>
 #recipe-details {
     background-color: rgb(175, 240, 145);
-    color: white;
+    color: black;
+}
+ul {
+    background-color: rgb(175, 240, 145);
 }
 </style>
