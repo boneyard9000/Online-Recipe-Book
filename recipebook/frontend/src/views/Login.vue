@@ -90,7 +90,7 @@ export default {
               token = token.replace(/"/g, '');
             }
             auth.saveToken(token);
-            this.$router.push('/landingPage');
+            this.$router.push('/HomePage');
           }
         })
         .catch((err) => console.error(err));
