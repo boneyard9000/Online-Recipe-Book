@@ -35,7 +35,7 @@ export default {
         }
     },
     created() {
-         fetch(`"${process.env.VUE_APP_REMOTE_API}/api/recipeDetails/${this.currentRecipeId}"`, {
+         fetch(`${process.env.VUE_APP_REMOTE_API}/api/recipeDetails/${this.$route.params.id}`, {
       headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json', 
@@ -57,5 +57,6 @@ export default {
 <style scoped>
 #recipe-details {
     background-color: rgb(175, 240, 145);
+    color: white;
 }
 </style>

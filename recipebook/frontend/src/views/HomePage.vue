@@ -28,7 +28,7 @@
 
 <div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
 <div> <h3>{{recipe.recipeName}}</h3> </div>
-<router-link :to="{name: 'RecipeDetails', params: {recipeId: recipe.id}}"> <img src="../assets/stock.jpg"> </router-link>
+<router-link :to="{name: 'RecipeDetails', params: {id: recipe.recipeId}}"> <img src="../assets/stock.jpg"> </router-link>
 <div><button>➕</button> Add to Favorites</div>
 </div>
 
