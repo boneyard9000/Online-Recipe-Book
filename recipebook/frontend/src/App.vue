@@ -11,11 +11,11 @@
           <li><router-link :to="{name: 'SubmitRecipe'}" >SubmitRecipe</router-link></li>
 
           
-          <router-link to="/landingPage">
+          <router-link v-if="isLoggedIn()" to="/landingPage">
             <b-button style="float:right; " pill variant="outline-primary" @click="logout" class="btn"> Logout </b-button>
           </router-link>  
-          <router-link to="/login">
-            <b-button style="float:right; margin-right:15px;" pill variant="outline-primary" class="btn"> Login </b-button>
+          <router-link v-if="!isLoggedIn()" to="/login">
+            <b-button  style="float:right; margin-right:15px;" pill variant="outline-primary" class="btn"> Login </b-button>
           </router-link>
         </ul>
       </nav>
@@ -41,8 +41,17 @@ export default {
   methods: {
     logout() {
       auth.logout();
-    }
+    },
+    isLoggedIn(){
+       return auth.getToken() != null;
+     }
   },
+
+
+  computed: {  
+ 
+  },
+
 
   created() {
     fetch(`${process.env.VUE_APP_REMOTE_API}/api/recipes`, {
@@ -63,6 +72,7 @@ export default {
     data() {
         return {
           currentRecipe: {},
+          isFalse: false,
           testRecipes: [],
 
             recipes: [

@@ -22,6 +22,17 @@ export default {
     destroyToken() {
       localStorage.removeItem('Authorization');
     },
+
+    check(){
+      const token = localStorage.getItem('Authorization');
+      let isLoggedIn = false;
+      if (token.length > 0){
+         return isLoggedIn;
+      } else{
+         isLoggedIn = true; 
+      }
+      return isLoggedIn;
+    },
     /**
      * Returns the user represented by the authentication token (null if user is not authenticated).
      * @function

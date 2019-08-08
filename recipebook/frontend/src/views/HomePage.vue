@@ -2,9 +2,9 @@
 <div id="home-page">
 <div class="recipe-of-day">
 <div class="rod-header">
-<h1> Welcome {{currentUser.firstName}} </h1>
+<h1> Welcome to your Recipe Book {{currentUser.firstName}} {{currentUser.lastName}}!</h1>
+<p>Click on a recipe below to learn more information<p>
 <h2>Recipe of the Day</h2>
-
 
 <ul v-for="item in testRecipes" :key="item.name">
       <li>{{item.description}}</li>
@@ -140,5 +140,9 @@ h3 {
     height: 80%;
     border: 4px solid rgb(138, 184, 196);;
     border-radius: 3%;
+}
+
+p{
+    text-decoration: underline;
 }
 </style>
