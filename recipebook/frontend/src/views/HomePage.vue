@@ -2,7 +2,9 @@
 <div id="home-page">
 <div class="recipe-of-day">
 <div class="rod-header">
+<!-- <h1> Welcome {{user.firstName}}</h1> -->
 <h2>Recipe of the Day</h2>
+
 
 <ul v-for="item in testRecipes" :key="item.name">
       <li>{{item.description}}</li>
@@ -49,8 +51,8 @@ export default {
 
     props: {
         recipes: Array,
-        testRecipes: Array
-
+        testRecipes: Array,
+        // user: String 
     },
     data() {
         return {
@@ -63,7 +65,7 @@ export default {
         updateCurrentRecipe() {
             this.$emit('updateCurrentRecipe', this.currentRecipe);
         }
-
+        
     }
 
 }
