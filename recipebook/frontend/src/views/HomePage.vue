@@ -2,7 +2,9 @@
 <div id="home-page">
 <div class="recipe-of-day">
 <div class="rod-header">
+<h1> Welcome {{currentUser.firstName}} </h1>
 <h2>Recipe of the Day</h2>
+
 
 <ul v-for="item in testRecipes" :key="item.name">
       <li>{{item.description}}</li>
@@ -44,17 +46,19 @@
 </template>
 
 <script>
+import auth from '../auth';
+
 export default {
     name: 'HomePage',
 
     props: {
         recipes: Array,
-        testRecipes: Array
-
+        testRecipes: Array,
     },
     data() {
         return {
-            currentRecipeId: 1
+            currentRecipeId: 1,
+            currentUser: ''
         }
     },
 
@@ -63,8 +67,23 @@ export default {
         updateCurrentRecipe() {
             this.$emit('updateCurrentRecipe', this.currentRecipe);
         }
-
-    }
+        
+    },
+    created() {
+        fetch(`${process.env.VUE_APP_REMOTE_API}/api/user`, {
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json', 
+          Authorization: 'Bearer ' + auth.getToken()
+        }
+    })
+    .then((response) => {
+      return response.json();
+    })
+    .then((test) => {
+      this.currentUser = test;
+    })
+  },
 
 }
 </script>
