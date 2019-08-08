@@ -2,26 +2,27 @@
   <div id="app" style = "margin:0">
     <div id="headerDiv">
     <header>
-    <div id="nav">
-      <img src="./assets/forkAndKnife.jpeg" style ="float:left;">
-      <router-link to="/landingPage">Landing Page</router-link> |
-      <router-link to="/login">
-        <b-button style="float:right;" pill variant="success" class="btn"> Login </b-button>
-      </router-link>      
-      <router-link to="/register"> Register </router-link> |
-      <router-link :to="{name: 'HomePage'}" >HomePage</router-link> 
-      <router-link to="/landingPage">
-        <b-button style="float:right;" pill variant="danger" @click="logout" class="btn"> Logout </b-button>
-      </router-link>
 
+      <nav style="width:100%; float:right;">
+        <ul>
+          <li style="padding-left:20px;"><router-link to="/landingPage">Landing Page</router-link></li>
+          <li><router-link to="/register"> Register </router-link> </li>
+          <li><router-link :to="{name: 'HomePage'}" >HomePage</router-link></li>
+          
+          <router-link to="/landingPage">
+            <b-button style="float:right; " pill variant="outline-primary" @click="logout" class="btn"> Logout </b-button>
+          </router-link>  
+          <router-link to="/login">
+            <b-button style="float:right; margin-right:15px;" pill variant="outline-primary" class="btn"> Login </b-button>
+          </router-link>
+        </ul>
+      </nav>
 
-    </div>
+      
+
     </header>
-    
     </div>
     <router-view :recipes="recipes" :testRecipes="testRecipes"/>
-
-    
   </div>
 </template>
 
@@ -38,7 +39,6 @@ export default {
   methods: {
     logout() {
       auth.logout();
-
     }
   },
 
@@ -60,7 +60,6 @@ export default {
   
     data() {
         return {
-
           currentRecipe: {},
           testRecipes: [],
 
@@ -100,22 +99,20 @@ export default {
   padding: 30px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+
 
 .btn {
 
   color: #0099CC; 
   background: transparent; 
   border: 2px solid #0099CC;
+  margin-top: 5px;
+  margin-right: 50px;
 
 }
+
+
 
 ul {
   list-style-type: none;
@@ -141,6 +138,11 @@ li a:hover {
   background-color: #111;
 }
 
+#logo {
+  width: 75px;
+  height: 75px;
+  padding-left: 20px;
+}
 
 
 * {

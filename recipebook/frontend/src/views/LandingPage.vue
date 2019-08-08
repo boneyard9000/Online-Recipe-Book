@@ -1,4 +1,5 @@
 <template>
+
     <div id="LandingPage">
             <h1>Discover New Recipes</h1>
             <h1>Save And Share Your Own</h1>
@@ -25,8 +26,8 @@ export default {
 #LandingPage {
     background-image:url(../assets/cookingImageForLandingPage.jpg);
     background-size: cover;
-    background-position:center;
-    height: 700px;
+    background-position: center;
+    height: 900px;
 }
 
 #LandingPage h1 {
@@ -37,12 +38,5 @@ export default {
 h1 {
     font-size: 60px;
 }
-
-p {
-    
-}
-
-
-
 
 </style>

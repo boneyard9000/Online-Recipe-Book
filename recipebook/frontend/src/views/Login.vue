@@ -42,11 +42,11 @@
           />
       </b-form-group>
 
-    <router-link to="/greeting"> <b-button pill variant="success" type="submit">Sign in</b-button></router-link>
+    <router-link :to="{ name: 'landingPage' }"><b-button pill variant="success" v-on:click="login">Sign in</b-button></router-link>
 
       <br/>
       
-      <router-link :to="{ name: 'Register' }">Need an account?</router-link>
+    <router-link :to="{ name: 'Register' }">Need an account?</router-link>
       
     </b-form>
   </div>
@@ -90,7 +90,7 @@ export default {
               token = token.replace(/"/g, '');
             }
             auth.saveToken(token);
-            this.$router.push('/');
+            this.$router.push('/landingPage');
           }
         })
         .catch((err) => console.error(err));
