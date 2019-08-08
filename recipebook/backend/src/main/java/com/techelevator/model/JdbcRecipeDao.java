@@ -1,6 +1,7 @@
 package com.techelevator.model;
 
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -20,12 +21,18 @@ public class JdbcRecipeDao implements RecipeDao{
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 
 	}
+	
+	@Override
+    public void saveRecipe(Recipe recipe) {
+        String sqlCreateRecipe = "INSERT INTO recipes(name, description, cook_time, directions, ingredients, category) VALUES (?, ?, ?, ?, ?, ?) RETURNING recipe_id";
+        SqlRowSet result = jdbcTemplate.queryForRowSet(sqlCreateRecipe, recipe.getRecipeName(), recipe.getDescription(), recipe.getCookMins(), recipe.getDirections(), recipe.getIngredients(), recipe.getCategory());
+
+    }
 
 	@Override
 	public List<Recipe> getAllRecipes() {
 		List<Recipe> recipes = new ArrayList<Recipe>();
-		String sqlSelectAllRecipes = "SELECT * FROM recipes\n" + 
-				" ORDER BY category LIMIT 5";
+		String sqlSelectAllRecipes = "SELECT * FROM recipes";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllRecipes);
 		
 		while (results.next()) {
@@ -129,7 +136,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	private Recipe populateRecipe(SqlRowSet results) {
 		Recipe r = new Recipe();
 		r.setCategory(results.getString("category"));
-		r.setCookMins(results.getInt("cook_time"));
+		r.setCookMins(results.getString("cook_time"));
 		r.setDescription(results.getString("description"));
 		r.setDirections(results.getString("directions"));
 		r.setIngredients(results.getString("ingredients"));
