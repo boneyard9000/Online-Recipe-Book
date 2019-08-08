@@ -12,7 +12,7 @@ public interface RecipeDao {
 	
 	public Recipe getRecipeByName(String searchName); 
 	
-	public List<Recipe> searchRecipesByName(String searchString);
+//	public List<Recipe> searchRecipesByName(String searchString);
 	
 	public List<Recipe> getRecipeByMaxCookTime(int maxCookTime);
 	
