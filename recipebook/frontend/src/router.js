@@ -7,6 +7,7 @@ import LandingPage from './views/LandingPage.vue'
 import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import RecipeDetails from './views/RecipeDetails.vue'
+import SubmitRecipe from './views/SubmitRecipe.vue'
 
 Vue.use(Router)
 
@@ -44,7 +45,7 @@ const router = new Router({
       name: 'HomePage',
       component: HomePage,
       meta: {
-        requiresAuth: true
+        requiresAuth: false
       }
     },
     {
@@ -65,6 +66,14 @@ const router = new Router({
       }
     },
  
+    {
+      path:'/SubmitRecipe',
+      name: 'SubmitRecipe',
+      component: SubmitRecipe,
+      meta: {
+        requiresAuth: true
+      }
+    },
     {
       path: '/about',
       name: 'about',

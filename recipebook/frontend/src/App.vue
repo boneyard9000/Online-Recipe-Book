@@ -8,6 +8,8 @@
           <li style="padding-left:20px;"><router-link to="/landingPage">Landing Page</router-link></li>
           <li><router-link to="/register"> Register </router-link> </li>
           <li><router-link :to="{name: 'HomePage'}" >HomePage</router-link></li>
+          <li><router-link :to="{name: 'SubmitRecipe'}" >SubmitRecipe</router-link></li>
+
           
           <router-link to="/landingPage">
             <b-button style="float:right; " pill variant="outline-primary" @click="logout" class="btn"> Logout </b-button>
