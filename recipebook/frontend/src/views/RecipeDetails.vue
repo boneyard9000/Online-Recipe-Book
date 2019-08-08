@@ -1,8 +1,7 @@
 <template>
     <div id="recipe-details">
-        this is recipe details page
-        <h2>{{currentRecipe.recipeName}}<br>
-        {{currentRecipe.category}}</h2>
+        <h2>{{currentRecipe.recipeName}}</h2>
+        <h3>{{currentRecipe.category}}</h3>
         <div>Cook Time: {{currentRecipe.cookMins}}</div>
         <!-- <div><button>➕</button> Add to Favorites</div> -->
         <img src="../assets/stock.jpg">
@@ -82,5 +81,11 @@ export default {
 }
 ul {
     background-color: rgb(175, 240, 145);
+}
+h2 {
+    font-size: 4em;
+}
+h3 {
+    font-size: 3em;
 }
 </style>
