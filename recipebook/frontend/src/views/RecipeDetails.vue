@@ -4,7 +4,7 @@
 
         <div class="row my-row">
             <div class="lg-col-6 my-column">
-                <img class="img-fluid recipeImg" style="max-width:550px;" src="../assets/stock.jpg">
+                <img class="img-fluid recipeImg" style="max-width:550px;" src="../assets/forkAndKnife.jpeg">
             </div>
             <div class="lg-col-6 my-column-2" font-family: >
                  <h2>{{currentRecipe.recipeName}}<br>

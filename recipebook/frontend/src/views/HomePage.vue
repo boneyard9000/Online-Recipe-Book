@@ -2,38 +2,15 @@
 <div id="home-page">
 <h1> Welcome to your Recipe Book {{currentUser.firstName}} {{currentUser.lastName}}!</h1>
 <p>Click on a recipe below to learn more information<p>
-<<<<<<< Updated upstream
-<h2>Recipe of the Day</h2>
-<h2>{{recipes[0].name}}</h2>
-<!-- <ul v-for="item in testRecipes" :key="item.name">
-      <li>{{item.description}}</li>
-    </ul> -->
-
-</div>
-<a @click="updateCurrentRecipe" :recipe="recipes[{id}]" :href="`/RecipeDetails/${recipes[0].id}`"><img :src="recipes[0].picSrc"> </a>
-<h4 class="recipe-description">{{recipes[0].description}}
-</h4>
-<div class="recipe-text">
-    <ul class="recipe-steps" v-for="step in recipes[0].steps" :key="step">
-        <li>
-        {{step}}
-        </li>
-    </ul>
-</div>
-
-</div>
-=======
 
 
->>>>>>> Stashed changes
 
 
 <div class="extra-recipes-container">
 
 <div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
 <div> <h3>{{recipe.recipeName}}</h3> </div>
-<router-link :to="{name: 'RecipeDetails', params: {id: recipe.recipeId}}"> <img src="../assets/stock.jpg"> </router-link>
-<div><button>➕</button> Add to Favorites</div>
+<router-link :to="{name: 'RecipeDetails', params: {id: recipe.recipeId}}"> <img src="../assets/forkAndKnife.jpeg"> </router-link>
 </div>
 
 

@@ -46,11 +46,7 @@
           />
       </b-form-group>
 
-<<<<<<< Updated upstream
     <router-link :to="{ name: 'login' }"><b-button pill variant="success" v-on:click="login">Sign in</b-button></router-link>
-=======
-    <b-button pill variant="success" v-on:click="login">Sign in</b-button>
->>>>>>> Stashed changes
 
       <br/>
       <br/>
