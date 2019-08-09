@@ -118,8 +118,9 @@
           </b-button>
           
          <br/>
+         <br/>
 
-          <router-link :to="{ name: 'login' }">
+          <router-link class="haveAcct" :to="{ name: 'login' }">
             Have an account?
           </router-link>
     </b-form>
@@ -174,6 +175,11 @@ export default {
 </script>
 
 <style>
+
+.haveAcct{
+  padding-right: 43px;
+  text-decoration: underline;
+}
 .input-group-1 label     {
   font-weight: 500;
   align-content: flex-start;

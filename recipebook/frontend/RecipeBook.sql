@@ -60,7 +60,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         Refill pot with fresh, unboiled wter from the tap.  the less boiled the better.  You have now learned how to make unboiled water.  Profit', 'water, large pot, stove', 'beverage');
 
 
-select * from recipes;
+select * from user_recipes;
 
 
 select recipes.recipe_id, recipes.name, users.user_id, users.first_name 

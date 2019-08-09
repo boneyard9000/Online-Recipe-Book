@@ -5,8 +5,6 @@
 
       <nav style="width:100%; float:right;">
         <ul>
-          <li style="padding-left:20px;"><router-link to="/landingPage">Landing Page</router-link></li>
-          <li><router-link to="/register"> Register </router-link> </li>
           <li><router-link :to="{name: 'HomePage'}" >HomePage</router-link></li>
           <li><router-link :to="{name: 'SubmitRecipe'}" >SubmitRecipe</router-link></li>
 
@@ -14,6 +12,9 @@
           <router-link v-if="isLoggedIn()" to="/landingPage">
             <b-button style="float:right; " pill variant="outline-primary" @click="logout" class="btn"> Logout </b-button>
           </router-link>  
+            <router-link v-if="!isLoggedIn()" to="/Register">
+            <b-button style="float:right; " pill variant="outline-primary" class="btn"> Register </b-button>
+          </router-link> 
           <router-link v-if="!isLoggedIn()" to="/login">
             <b-button  style="float:right; margin-right:15px;" pill variant="outline-primary" class="btn"> Login </b-button>
           </router-link>

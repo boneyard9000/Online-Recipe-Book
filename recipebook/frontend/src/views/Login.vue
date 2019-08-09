@@ -11,6 +11,10 @@
         Thank you for registering, please sign in.
       </div>
 
+      <div class="alert alert-warning" role="alert" v-if="this.$route.query.landingPage">
+        You must log in to access the home page.
+      </div>
+
        <b-form-group class="control-label text-left"
           id="input-group-1"
           label="Your Email:"
@@ -42,7 +46,7 @@
           />
       </b-form-group>
 
-    <router-link :to="{ name: 'landingPage' }"><b-button pill variant="success" v-on:click="login">Sign in</b-button></router-link>
+    <router-link :to="{ name: 'login' }"><b-button pill variant="success" v-on:click="login">Sign in</b-button></router-link>
 
       <br/>
       <br/>
@@ -107,5 +111,6 @@ export default {
 }
 .needAcct {
   padding-right: 38px;
+  text-decoration: underline;
 }
 </style>

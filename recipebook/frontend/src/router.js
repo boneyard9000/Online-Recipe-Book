@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import auth from './auth'
-import Home from './views/Home.vue'
+// import Home from './views/Home.vue'
 import HomePage from './views/HomePage.vue'
 import LandingPage from './views/LandingPage.vue'
 import Login from './views/Login.vue'
@@ -16,13 +16,22 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home,
+
+      path:'/',
+      name: 'landingPage',
+      component: LandingPage,
       meta: {
         requiresAuth: false
       }
     },
+    // {
+    //   path: '/',
+    //   name: 'home',
+    //   component: Home,
+    //   meta: {
+    //     requiresAuth: true
+    //   }
+    // },
     {
       path: '/login',
       name: 'login',
@@ -53,19 +62,10 @@ const router = new Router({
       name: 'RecipeDetails',
       component: RecipeDetails,
       meta: {
-        requiresAuth: false
+        requiresAuth: true
       }
     },
-      {
 
-      path:'/landingPage',
-      name: 'landingPage',
-      component: LandingPage,
-      meta: {
-        requiresAuth: false
-      }
-    },
- 
     {
       path:'/SubmitRecipe',
       name: 'SubmitRecipe',
