@@ -5,36 +5,34 @@ DROP TABLE IF EXISTS user_recipes;
 
 CREATE TABLE users (
 
-user_id serial NOT NULL,
+user_id serial NOT NULL PRIMARY KEY,
 first_name varchar(255) NOT NULL,
 last_name varchar(255) NOT NULL,
 password varchar(32) NOT NULL,
 salt varchar(256) NOT NULL,
 email varchar(200) NOT NULL UNIQUE,
 phone varchar(15) NOT NULL UNIQUE,
-role varchar (10) Default 'registered',
+role varchar (10) Default 'registered'
 
-CONSTRAINT pk_users_user_id PRIMARY KEY (user_id)
 );
 
 CREATE TABLE recipes(
-recipe_id serial NOT NULL,
+recipe_id serial NOT NULL PRIMARY KEY,
 name varchar(69) NOT NULL,
 description varchar (255) NOT NULL,
 cook_time varchar(15) NOT NULL,
 directions TEXT NOT NULL,
 ingredients TEXT NOT NULL,
-category varchar (40) NOT NULL,
+category varchar (40) NOT NULL
 
-CONSTRAINT pk_recipe_recipe_id PRIMARY KEY (recipe_id)
+
 );
 
 CREATE TABLE user_recipes(
 user_id integer NOT NULL,
 recipe_id integer NOT NULL,
 
-CONSTRAINT fk_user_recipes_users FOREIGN KEY (user_id) REFERENCES users (user_id),
-CONSTRAINT fk_user_recipes_recipes FOREIGN KEY (recipe_id) REFERENCES recipes (recipe_id)
+PRIMARY KEY(user_id, recipe_id)
 
 );
 
@@ -61,6 +59,11 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
 
 
 select * from user_recipes;
+<<<<<<< Updated upstream
+=======
+SELECT * FROM users;
+SELECT * FROM recipes;
+>>>>>>> Stashed changes
 
 
 select recipes.recipe_id, recipes.name, users.user_id, users.first_name 

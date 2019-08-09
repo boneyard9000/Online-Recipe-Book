@@ -46,7 +46,11 @@
           />
       </b-form-group>
 
+<<<<<<< Updated upstream
     <router-link :to="{ name: 'login' }"><b-button pill variant="success" v-on:click="login">Sign in</b-button></router-link>
+=======
+    <b-button pill variant="success" v-on:click="login">Sign in</b-button>
+>>>>>>> Stashed changes
 
       <br/>
       <br/>
@@ -65,6 +69,7 @@ export default {
   components: {},
   data() {
     return {
+      userid: '',
       user: {
         username: '',
         password: '',
@@ -73,6 +78,7 @@ export default {
     };
   },
   methods: {
+
     login() {
       fetch(`${process.env.VUE_APP_REMOTE_API}/login`, {
         method: 'POST',
@@ -95,7 +101,8 @@ export default {
               token = token.replace(/"/g, '');
             }
             auth.saveToken(token);
-            this.$router.push('/HomePage');
+            this.userid = auth.getUser().uid;
+            this.$router.push('/HomePage/' + auth.getUser().uid);
           }
         })
         .catch((err) => console.error(err));

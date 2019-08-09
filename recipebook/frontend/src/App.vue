@@ -5,7 +5,13 @@
 
       <nav style="width:100%; float:right;">
         <ul>
+<<<<<<< Updated upstream
           <li><router-link :to="{name: 'HomePage'}" >HomePage</router-link></li>
+=======
+          <li style="padding-left:20px;"><router-link to="/landingPage">Landing Page</router-link></li>
+          <li><router-link to="/register"> Register </router-link> </li>
+          <li><router-link :to="{name: 'HomePage', params: {userId: getUserId()}}" >HomePage</router-link></li>
+>>>>>>> Stashed changes
           <li><router-link :to="{name: 'SubmitRecipe'}" >SubmitRecipe</router-link></li>
 
           
@@ -45,6 +51,14 @@ export default {
     },
     isLoggedIn(){
        return auth.getToken() != null;
+     },
+     getUserId() {
+       if(auth.getUser() != null){
+       return auth.getUser().uid;
+       }
+       else {
+         return 0;
+       }
      }
   },
 

@@ -106,7 +106,7 @@
             />
             </b-form-group>
 
-            <b-button pill variant="success" type="submit">
+            <b-button @click="redirect" pill variant="success" type="submit">
                 Add Recipe
             </b-button>
             
@@ -145,8 +145,12 @@ export default {
           Authorization: 'Bearer ' + auth.getToken()
         },
         body: JSON.stringify(this.recipe),
+      })
+      .then (() => {
+          this.$router.push('/HomePage/' + auth.getUser().uid)
       });
     },
+    
   },
 
 }

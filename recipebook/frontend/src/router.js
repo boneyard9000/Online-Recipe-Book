@@ -51,7 +51,7 @@ const router = new Router({
     },
     
     {
-      path:'/HomePage',
+      path:'/HomePage/:userId',
       name: 'HomePage',
       component: HomePage,
       meta: {

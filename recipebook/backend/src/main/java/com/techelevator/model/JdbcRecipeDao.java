@@ -1,6 +1,7 @@
 package com.techelevator.model;
 
 import java.util.ArrayList;
+
 import java.util.Base64;
 import java.util.List;
 
@@ -11,10 +12,14 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
+import com.techelevator.controller.ApiController;
+
 @Component
 public class JdbcRecipeDao implements RecipeDao{
 	
 	private JdbcTemplate jdbcTemplate;
+	private ApiController apiController;
+	
 	
 	@Autowired
 	public JdbcRecipeDao(DataSource dataSource) {
@@ -23,9 +28,15 @@ public class JdbcRecipeDao implements RecipeDao{
 	}
 	
 	@Override
-    public void saveRecipe(Recipe recipe) {
+    public void saveRecipe(Recipe recipe, User u) {
         String sqlCreateRecipe = "INSERT INTO recipes(name, description, cook_time, directions, ingredients, category) VALUES (?, ?, ?, ?, ?, ?) RETURNING recipe_id";
         SqlRowSet result = jdbcTemplate.queryForRowSet(sqlCreateRecipe, recipe.getRecipeName(), recipe.getDescription(), recipe.getCookMins(), recipe.getDirections(), recipe.getIngredients(), recipe.getCategory());
+        if (result.next()) {
+        	recipe.setRecipeId(result.getInt("recipe_id"));
+            String sqlCreateFavorite = "INSERT INTO user_recipes(user_id, recipe_id) VALUES (?, ?)";
+            jdbcTemplate.update(sqlCreateFavorite, u.getId(), recipe.getRecipeId());
+        }	
+        
 
     }
 
@@ -34,6 +45,27 @@ public class JdbcRecipeDao implements RecipeDao{
 		List<Recipe> recipes = new ArrayList<Recipe>();
 		String sqlSelectAllRecipes = "SELECT * FROM recipes";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllRecipes);
+		
+		while (results.next()) {
+			Recipe recipe = populateRecipe(results);
+			recipes.add(recipe);
+		}
+		for(Recipe r : recipes) {
+			System.out.println(r.getRecipeName() + r.getDescription());
+		}
+		
+		return recipes;
+	}
+	
+	@Override
+	public List<Recipe> getAllRecipesByUserId(int userId) {
+		List<Recipe> recipes = new ArrayList<Recipe>();
+		String sqlSelectAllRecipes = "SELECT *\n" + 
+				"FROM recipes\n" + 
+				"JOIN user_recipes ON recipes.recipe_id = user_recipes.recipe_id\n" + 
+				"JOIN users ON users.user_id = user_recipes.user_id\n" + 
+				"WHERE users.user_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllRecipes, userId);
 		
 		while (results.next()) {
 			Recipe recipe = populateRecipe(results);

@@ -6,6 +6,8 @@ public interface RecipeDao {
 
 	public List<Recipe> getAllRecipes();
 	
+	public List<Recipe> getAllRecipesByUserId(int userId);
+	
 	public Recipe getRecipeById(int recipeId);
 	
 	public List<Recipe> getRecipesByCategory(String category);
@@ -18,5 +20,5 @@ public interface RecipeDao {
 	
 	public List<Recipe> getRecipesByIngredients(String searchWords);
 	
-	public void saveRecipe(Recipe recipe);
+	public void saveRecipe(Recipe recipe, User u);
 }

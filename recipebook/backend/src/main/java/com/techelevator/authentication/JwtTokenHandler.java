@@ -30,7 +30,7 @@ public class JwtTokenHandler {
     @Autowired
     private UserDao dao;
 
-    public String createToken(String email, String role) {
+    public String createToken(User u) {
         Date now = new Date();
 
         // We will sign our JWT with our ApiKey secret
@@ -38,7 +38,9 @@ public class JwtTokenHandler {
         Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
 
         // Let's set the JWT Claims
-        JwtBuilder builder = Jwts.builder().setIssuedAt(now).setSubject(email).claim("rol", role)
+        JwtBuilder builder = Jwts.builder().setIssuedAt(now).setSubject(u.getEmail())
+        		.claim("rol", u.getRole())
+        		.claim("uid", u.getId())
                 .signWith(signingKey, signatureAlgorithm);
 
         // if it has been specified, let's add the expiration

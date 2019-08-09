@@ -34,7 +34,7 @@ public class AccountController {
     public String login(@RequestBody User user) throws UnauthorizedException {
         if(auth.signIn(user.getEmail(), user.getPassword())) {
             User currentUser = auth.getCurrentUser();
-            return tokenHandler.createToken(user.getEmail(), currentUser.getRole());
+            return tokenHandler.createToken(currentUser);
         } else {
             throw new UnauthorizedException();
         }

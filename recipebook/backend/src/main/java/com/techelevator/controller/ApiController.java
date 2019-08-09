@@ -55,10 +55,17 @@ public class ApiController {
         return "Success";
     }
 
-
-	@GetMapping("/recipes")
-	public List<Recipe> displayDefaultRecipes() {
+    @GetMapping("/recipes")
+	public List<Recipe> displayAllRecipes() {
 		List <Recipe> l = recipeDao.getAllRecipes();
+		return l;
+	}
+
+	@GetMapping("/recipes/user")
+	public List<Recipe> displayUserRecipes() {
+		User u = authProvider.getCurrentUser();
+
+		List <Recipe> l = recipeDao.getAllRecipesByUserId((int)u.getId());
 		return l;
 	}
 	
@@ -67,6 +74,7 @@ public class ApiController {
 		Recipe r = recipeDao.getRecipeById(recipeId);
 		return r;	
 	}
+	
 	@GetMapping("/user")
 	public User getUser() {
 		User u = authProvider.getCurrentUser();
@@ -75,7 +83,8 @@ public class ApiController {
 	
 	@PostMapping("/SubmitRecipe")
 	public void addRecipe(@Valid @RequestBody Recipe recipe) {
-		recipeDao.saveRecipe(recipe);
+		User u = authProvider.getCurrentUser();
+		recipeDao.saveRecipe(recipe, u);
 	} 
 	
 }

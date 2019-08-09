@@ -1,9 +1,8 @@
 <template>
 <div id="home-page">
-<div class="recipe-of-day">
-<div class="rod-header">
 <h1> Welcome to your Recipe Book {{currentUser.firstName}} {{currentUser.lastName}}!</h1>
 <p>Click on a recipe below to learn more information<p>
+<<<<<<< Updated upstream
 <h2>Recipe of the Day</h2>
 <h2>{{recipes[0].name}}</h2>
 <!-- <ul v-for="item in testRecipes" :key="item.name">
@@ -23,6 +22,10 @@
 </div>
 
 </div>
+=======
+
+
+>>>>>>> Stashed changes
 
 
 <div class="extra-recipes-container">
@@ -57,7 +60,8 @@ export default {
     data() {
         return {
             currentRecipeId: 1,
-            currentUser: ''
+            currentUser: auth.getUser(),
+
         }
     },
 
@@ -75,13 +79,27 @@ export default {
           'Content-Type': 'application/json', 
           Authorization: 'Bearer ' + auth.getToken()
         }
-    })
-    .then((response) => {
-      return response.json();
-    })
-    .then((test) => {
-      this.currentUser = test;
-    })
+        })
+        .then((response) => {
+        return response.json();
+        })
+        .then((test) => {
+        this.currentUser = test;
+        });
+
+        fetch(`${process.env.VUE_APP_REMOTE_API}/api/recipes/user`, {
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json', 
+          Authorization: 'Bearer ' + auth.getToken()
+        }
+        })
+        .then((response) => {
+        return response.json();
+        })
+        .then((recipe) => {
+        this.testRecipes = recipe;
+        });
   },
 
 }
