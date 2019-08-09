@@ -92,33 +92,74 @@ export default {
         background-color: lightgrey;
     }
     #home-page {
-        background-color: rgb(86, 133, 64);
+        /* background-color: rgb(86, 133, 64); */
     }
     h2 {
         font-size: 2.5em;
     }
 
+    .left {
+    display: flex;
+    float: left;
+    font-family: 'Open Sans';
+    text-decoration: underline;
+    font-weight: 800;
+    font-size: 18pt;
+    }
+
     .rod-header {
         line-height: 2px;
     }
+      .rod-header h2 {
+        font-family: 'Open Sans';
+        color:white;
+        background: rgb(175, 240, 145);
+        font-weight: 600;
+        margin-top: 1em;
+        padding: 10px;
+        width: 100%;
 
-    .recipe-of-day img {
-            border: 7px solid rgb(138, 184, 196);
-            border-radius: 3%;
     }
+    .RofDay {
+        height: auto;
+        padding: 2em;
+        display: flex;
+        text-align: left;
+        
+    }
+    .myRow {
+        width:100%;
+        align-content: center;
+    }
+    .myCol1 {
 
+    }
+    .myCol2 {
+        margin-left: 2em;
+    }
+    .myCol2 h2 {
+        font-family: 'Open Sans';
+        color:white;
+        background: rgb(175, 240, 145);
+        font-weight: 600;
+        padding: 10px;
+        padding-right: 3em;
+        
+    }
     .extra-recipes-container {
         padding-bottom: 30px;
     }
-
+    .detailList {
+        background-color: transparent;
+    }
     .recipe-steps{
         display: flex;
         flex-direction: column;
         list-style-position: inside;
         text-align: justify;
         text-justify: left;
-
-        padding-left: 400px;
+        background-color: transparent;
+        
     }
 
 h3 {
@@ -129,7 +170,7 @@ h3 {
     width: 18%;
     border: 1px solid rgb(138, 184, 196);
     padding-bottom: 15px;
-    background-color: rgb(175, 240, 145);
+    /* background-color: rgb(175, 240, 145); */
 
 }
 
@@ -137,11 +178,11 @@ h3 {
     display: block;
 }
 
-.recipes img {
-    width: 80%;
-    height: 80%;
-    border: 4px solid rgb(138, 184, 196);;
-    border-radius: 3%;
+.dialyImg {
+    margin-left: 20px;
+    width:90%;
+    height:auto;
+    max-width: 300px;
 }
 
 p{
