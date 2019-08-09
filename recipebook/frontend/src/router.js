@@ -40,6 +40,7 @@ const router = new Router({
         requiresAuth: false
       }
     },
+    
     {
       path:'/Register',
       name: 'Register',

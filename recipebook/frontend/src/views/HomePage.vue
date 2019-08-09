@@ -5,16 +5,15 @@
 <h1> Welcome to your Recipe Book {{currentUser.firstName}} {{currentUser.lastName}}!</h1>
 <p>Click on a recipe below to learn more information<p>
 <h2>Recipe of the Day</h2>
-
-<ul v-for="item in testRecipes" :key="item.name">
-      <li>{{item.description}}</li>
-    </ul>
-
 <h2>{{recipes[0].name}}</h2>
+<!-- <ul v-for="item in testRecipes" :key="item.name">
+      <li>{{item.description}}</li>
+    </ul> -->
+
 </div>
 <a @click="updateCurrentRecipe" :recipe="recipes[{id}]" :href="`/RecipeDetails/${recipes[0].id}`"><img :src="recipes[0].picSrc"> </a>
-<div class="recipe-description">{{recipes[0].description}}
-</div>
+<h4 class="recipe-description">{{recipes[0].description}}
+</h4>
 <div class="recipe-text">
     <ul class="recipe-steps" v-for="step in recipes[0].steps" :key="step">
         <li>
@@ -89,6 +88,14 @@ export default {
 </script>
 
 <style scoped>
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 20px;
+        overflow: hidden;
+        background-color: lightgrey;
+    }
     #home-page {
         background-color: rgb(86, 133, 64);
     }

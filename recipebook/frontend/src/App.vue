@@ -9,7 +9,7 @@
           <li><router-link :to="{name: 'SubmitRecipe'}" >SubmitRecipe</router-link></li>
 
           
-          <router-link v-if="isLoggedIn()" to="/landingPage">
+          <router-link v-if="isLoggedIn()" to="/">
             <b-button style="float:right; " pill variant="outline-primary" @click="logout" class="btn"> Logout </b-button>
           </router-link>  
             <router-link v-if="!isLoggedIn()" to="/Register">
