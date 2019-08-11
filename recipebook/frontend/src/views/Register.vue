@@ -71,6 +71,7 @@
             class="form-control"
             placeholder="Type your password again"
             v-model="user.confirmPassword"
+            v-on:blur="password_match"
             required
           />
           </b-form-group>
@@ -170,6 +171,12 @@ export default {
         })
         .catch((err) => console.log(err));
     },
+    password_match() {
+      if (this.user.password != this.user.confirmPassword) {
+        alert("Passwords do not match!");
+      }
+      console.log("Did it work?");
+    }
   },
 };
 </script>

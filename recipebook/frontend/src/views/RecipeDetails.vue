@@ -36,7 +36,7 @@ export default {
     data() {
         return {
             currentRecipe: {},
-           
+            imageName: 'logo.png'
         }
     },
     created() {
