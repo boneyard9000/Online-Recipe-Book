@@ -32,12 +32,12 @@ export default {
 
     props: {
         recipes: Array,
-        testRecipes: Array,
     },
     data() {
         return {
-            currentRecipeId: 1,
             currentUser: auth.getUser(),
+            testRecipes: []
+
 
         }
     },

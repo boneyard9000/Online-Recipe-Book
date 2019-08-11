@@ -2,11 +2,12 @@
   <div id="app" style = "margin:0">
     <div id="headerDiv">
     <header>
-
-      <nav style="width:100%; float:right;">
+      
+      <nav style="width:100%; float:right;"> 
         <ul>
-          <li><router-link :to="{name: 'HomePage', params: {userId: getUserId()}}" >HomePage</router-link></li>
-          <li><router-link :to="{name: 'SubmitRecipe'}" >SubmitRecipe</router-link></li>
+          <li><a style="pointer-events: none; color: green; font-weight: 900;">CHEF'S CORNER</a></li>
+          <li><router-link v-if="isLoggedIn()" :to="{name: 'HomePage', params: {userId: getUserId()}}" >My Recipes</router-link></li>
+          <li><router-link v-if="isLoggedIn()" :to="{name: 'SubmitRecipe'}" >Submit Recipe</router-link></li>
 
           
           <router-link v-if="isLoggedIn()" to="/">
@@ -20,8 +21,6 @@
           </router-link>
         </ul>
       </nav>
-
-      
 
     </header>
     </div>
@@ -116,6 +115,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
 #nav {
   padding: 30px;
 }
@@ -140,7 +140,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
 }
 
 li {
@@ -159,11 +159,7 @@ li a:hover {
   background-color: #111;
 }
 
-#logo {
-  width: 75px;
-  height: 75px;
-  padding-left: 20px;
-}
+
 
 
 * {
