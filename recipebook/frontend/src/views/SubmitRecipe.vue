@@ -95,7 +95,44 @@
               label="Category:"
               label-for="category"
           >
-            <b-form-input
+ 
+    <select v-model="recipe.category">
+    <option disabled value="">Please select one</option>
+    <option v-for="option in recipe.categories">{{option.name}}</option>
+    </select>
+    
+  <!-- <label for="Category">Please select a Category</label>
+            <select class="form-control" name="category" id="category" v-model="category">
+              <option :value="null" disabled selected>Select a Category</option>
+              <option v-for="option in recipe.categories" :value="option.id" v-bind:key="option.name">{{option.name}}</option>
+            </select> -->
+
+          <!-- <v-menu offset-y>
+         <template v-slot:activator="{ on }">
+        <v-btn v-on="on" color="grey">
+            <v-icon left>expand_more</v-icon>
+            <span>Categories</span>
+            </v-btn>
+         </template>
+            <v-list>
+              <v-list-tile v-for="category in categories" :key="category.name">
+                <v-list-tile-title>{{category.name}} </v-list-tile-title>
+              </v-list-tile>
+            </v-list>
+          </v-menu> -->
+          <!-- <div>
+  <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
+    <b-dropdown-item text="hahaha">First Action</b-dropdown-item>
+    <b-dropdown-item>Second Action</b-dropdown-item>
+    <b-dropdown-item>Third Action</b-dropdown-item>
+    <b-dropdown-divider></b-dropdown-divider>
+    <b-dropdown-item active>Active action</b-dropdown-item>
+    <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+  </b-dropdown>
+</div> -->
+
+
+             <!-- <b-form-input
             id="firstname"
             class="form-control"
             placeholder="Example: Desserts, Breakfast amd Brunch, Appetizers and Snacks, Dinner, or Drinks"
@@ -103,17 +140,16 @@
             type="text"
             required
             autofocus
-            />
+            /> -->
+
             </b-form-group>
 
             <b-button @click="redirect" pill variant="success" type="submit">
                 Add Recipe
             </b-button>
-            
-
-
         </b-form>
     </div>
+    
 
 </template>
 
@@ -130,7 +166,15 @@ export default {
             cookMins: '',
             directions: '',
             ingredients: '',
-            category: ''
+            category: '',
+            categories: [
+              {name:"Appetizer", id: 1},
+              {name:"Beverage", id: 2},
+              {name:"Breakfast", id: 3},
+              {name:"Desert", id: 4},
+              {name:"Dinner", id: 5},
+              {}
+            ]
         },
         recipeErrors: false
       };
@@ -150,7 +194,6 @@ export default {
           this.$router.push('/HomePage/' + auth.getUser().uid)
       });
     },
-    
   },
 
 }

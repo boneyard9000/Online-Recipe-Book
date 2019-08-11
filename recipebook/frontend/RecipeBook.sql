@@ -59,11 +59,8 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
 
 
 select * from user_recipes;
-<<<<<<< Updated upstream
-=======
-SELECT * FROM users;
 SELECT * FROM recipes;
->>>>>>> Stashed changes
+SELECT * FROM users;
 
 
 select recipes.recipe_id, recipes.name, users.user_id, users.first_name 
