@@ -103,7 +103,7 @@ export default {
 }
 
 .detailList {
-
+    padding: 10px;
     background-color: white;
 }
 .my-row {
@@ -117,15 +117,17 @@ export default {
    
     width: 100%;
     padding:10px;
-    background-color: aquamarine;
+    background-color: slategrey;
 }
 .my-column h2 {
     font-family: 'Open Sans';
     color:white;
     text-align: left;
+    border: 2px solid darkslategrey;
+    border-radius: 25px;
     background: rgb(175, 240, 145);
     font-weight: 600;
-    margin-top: 1em;
+    margin-top: .5em;
     padding: 10px;
     width: 100%;
     
@@ -133,6 +135,7 @@ export default {
 .my-row label {
     font-family: 'Open Sans';
     text-decoration: underline;
+    color:white;
     font-weight: 800;
     font-size: 18pt;
 }
