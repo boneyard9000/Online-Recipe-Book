@@ -5,11 +5,16 @@
         <div class="row my-row">
             <div class="my-column">
                 <div class="imgDiv">
-                    <img class="recipeImg"  src="../assets/Chicken Kiev.jpeg">
+                    <!-- <img class="recipeImg"  src="../assets/Chicken Kiev.jpeg"> -->
+                    <img class="recipeImg"  v-bind:src="require('../assets/' + currentRecipe.recipeName + '.jpeg')">
+
                 </div>
-                 <h2>{{currentRecipe.recipeName}}<br>
-                        {{currentRecipe.category}}</h2>
-             <div >Cook Time: {{currentRecipe.cookMins}}</div>
+                <div class="titleBlock">
+                 <h2>{{currentRecipe.recipeName}}</h2>
+                 <p>{{currentRecipe.description}}</p>
+                </div>    
+             <div class="detailList">Cook Time: {{currentRecipe.cookMins}}<br>
+             Category: {{currentRecipe.category}}</div>
             <br>
             <label>Ingredients</label>
             <ul class="detailList" v-for="item in ingredientsArray" :key="item">
@@ -113,22 +118,25 @@ export default {
     margin-left: auto;
     margin-right: auto;
 }
+
 .my-column {
    
     width: 100%;
     padding:10px;
     background-color: slategrey;
 }
-.my-column h2 {
+.titleBlock {
     font-family: 'Open Sans';
     color:white;
     text-align: left;
     border: 2px solid darkslategrey;
     border-radius: 25px;
-    background: rgb(175, 240, 145);
+    background: tomato;
     font-weight: 600;
     margin-top: .5em;
+    margin-bottom: 1em;
     padding: 10px;
+    padding-left: 20px;
     width: 100%;
     
 }
