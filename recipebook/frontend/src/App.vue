@@ -101,10 +101,6 @@ export default {
 #app {
   
   background-image: url("assets/foodBG.jpg");
- 
-  /* padding-top: 20px;
-  height: 100%;
-  width: auto; */
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-attachment: fixed;

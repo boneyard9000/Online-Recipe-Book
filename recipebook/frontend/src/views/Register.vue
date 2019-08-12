@@ -182,6 +182,13 @@ export default {
 </script>
 
 <style>
+.control-label {
+  color:white;
+}
+
+.h3 {
+  color:white;
+}
 
 .haveAcct{
   padding-right: 43px;

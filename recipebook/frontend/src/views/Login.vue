@@ -108,6 +108,9 @@ export default {
 </script>
 
 <style scoped>
+.control-label {
+  color:white;
+}
 .form-signin {
   max-width: 50%;
   margin: auto;

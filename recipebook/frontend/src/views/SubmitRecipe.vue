@@ -199,7 +199,10 @@ export default {
 }
 </script>
 
-<style>
+<style >
+h1 {
+  color: white;
+}
 .input-group-1 label     {
   font-weight: 500;
   align-content: flex-start;
