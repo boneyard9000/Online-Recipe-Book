@@ -23,17 +23,6 @@
             autofocus
             />
             </b-form-group>
-                    <b-form-group class="control-label text-left"
-              id="input-group-6"
-              label="Category:"
-              label-for="category"
-          >
- 
-        <select v-model="recipe.category" class="form-control">
-          <option disabled value="">Please select one</option>
-          <option v-for="option in recipe.categories" :key="option">{{option.name}}</option>
-        </select>
-         </b-form-group>
 
             <b-form-group class="control-label text-left"
               id="input-group-6"
