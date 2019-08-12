@@ -3,21 +3,21 @@
      <div id="recipe-details"><br><br>
        
         <div class="row my-row">
-            <div class="lg-col-6 my-column">
-                <img class="img-fluid recipeImg" style="max-width:550px;" src="../assets/Chicken Kiev.jpeg">
-            </div>
-            <div class="lg-col-6 my-column-2" font-family: >
+            <div class="my-column">
+                <div class="imgDiv">
+                    <img class="recipeImg"  src="../assets/Chicken Kiev.jpeg">
+                </div>
                  <h2>{{currentRecipe.recipeName}}<br>
                         {{currentRecipe.category}}</h2>
-             <div class="left" >Cook Time: {{currentRecipe.cookMins}}</div>
+             <div >Cook Time: {{currentRecipe.cookMins}}</div>
             <br>
-            <label class="left">Ingredients</label>
+            <label>Ingredients</label>
             <ul class="detailList" v-for="item in ingredientsArray" :key="item">
                 <li>{{item}}</li>
             </ul>
             <br>
 
-            <label class="left">Directions</label>
+            <label>Directions</label>
             <ul class="detailList" v-for="step in directionsArray" :key="step">
                 <li>{{step}}</li>
             </ul>
@@ -101,27 +101,25 @@ export default {
   
   
 }
-.left {
-    display: flex;
-    float: left;
-}
+
 .detailList {
 
     background-color: white;
 }
 .my-row {
+    position: relative;
     height: 100%;
-    width: 100%;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.my-column-2 {
-    display: flex;
-    flex-direction: column;
+.my-column {
+   
     width: 100%;
-    padding-top: 0em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding:10px;
+    background-color: aquamarine;
 }
-.my-column-2 h2 {
+.my-column h2 {
     font-family: 'Open Sans';
     color:white;
     text-align: left;
@@ -145,13 +143,16 @@ export default {
     padding: 0;
     position: relative;
 }
+.imgDiv {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
 .recipeImg {
-    margin-left: 20px;
     
     width:90%;
     height:auto;
-    max-width: 300px;
-    border: 4px solid black;
+    border: 8px solid lightgrey;
     border-radius: 25px;
 }
 </style>

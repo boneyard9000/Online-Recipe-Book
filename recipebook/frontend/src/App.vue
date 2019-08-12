@@ -95,13 +95,13 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  
   color: #2c3e50;
 }
 #app {
   
-  background-image: url("assets/foodBG.jpg");
-  background-repeat: no-repeat;
+  background-image: url("assets/food2BG.jpg");
+  background-repeat: repeat-y;
   background-size: 100% auto;
   background-attachment: fixed;
   
