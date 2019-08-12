@@ -1,7 +1,7 @@
 <template>
     
     <div id="recipe-details" class="container my-container"><br><br>
-        <div class="hero-image">
+       
         <div class="row my-row">
             <div class="lg-col-6 my-column">
                 <img class="img-fluid recipeImg" style="max-width:550px;" src="../assets/Chicken Kiev.jpeg">
@@ -24,7 +24,6 @@
             </div>
         </div>
 
-        </div>
     </div>
 </template>
 
@@ -88,19 +87,7 @@ export default {
     color: black;
 }
 
-.hero-image {
-  display:block;
-  background-image: url("../assets/foodBG.jpg");
-  z-index: 2;
-  padding-top: 20px;
-  height: 100%;
-  width: auto;
-  background-position: stretch;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-  
-}
+
 .left {
     display: flex;
     float: left;

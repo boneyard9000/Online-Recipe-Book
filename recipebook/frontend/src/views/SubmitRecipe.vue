@@ -96,17 +96,10 @@
               label-for="category"
           >
  
-<<<<<<< Updated upstream
-    <select v-model="recipe.category" class="form-control">
-    <option disabled value="">Please select one</option>
-    <option v-for="option in recipe.categories" :key="option">{{option.name}}</option>
-    </select>
-=======
         <select v-model="recipe.category">
           <option disabled value="">Please select one</option>
           <option v-for="option in recipe.categories">{{option.name}}</option>
         </select>
->>>>>>> Stashed changes
     
   <!-- <label for="Category">Please select a Category</label>
             <select class="form-control" name="category" id="category" v-model="category">
