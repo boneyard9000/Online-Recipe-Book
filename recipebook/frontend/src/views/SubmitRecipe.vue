@@ -96,7 +96,7 @@
               label-for="category"
           >
  
-    <select v-model="recipe.category">
+    <select v-model="recipe.category" class="form-control">
     <option disabled value="">Please select one</option>
     <option v-for="option in recipe.categories">{{option.name}}</option>
     </select>
@@ -173,7 +173,7 @@ export default {
               {name:"Breakfast", id: 3},
               {name:"Desert", id: 4},
               {name:"Dinner", id: 5},
-              {}
+              {name: "Lunch", id: 6}
             ]
         },
         recipeErrors: false
