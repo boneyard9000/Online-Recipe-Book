@@ -1,6 +1,7 @@
+DROP TABLE IF EXISTS user_recipes;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS recipes;
-DROP TABLE IF EXISTS user_recipes;
+
 
 
 CREATE TABLE users (

@@ -1,6 +1,6 @@
 <template>
     
-    <div id="recipe-details" class="container my-container"><br><br>
+     <div id="recipe-details"><br><br>
        
         <div class="row my-row">
             <div class="lg-col-6 my-column">
