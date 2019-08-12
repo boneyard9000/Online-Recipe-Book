@@ -3,19 +3,19 @@
     <div class="home-page-background">
         <div class="page-wrapper">
 <div class="greeting"><h1> Welcome {{currentUser.firstName}}!</h1></div>
-<p>Click on a recipe below to learn more information<p>
+<div class="click-info">Click on a recipe below to learn more information</div>
 
         <h4 class="rod-header">Recipe Of The Day</h4>
 <div class="container recipe-of-day recipes">
-        <h2>{{recipes[1].recipeName}}</h2> 
-        <h3>{{recipes[1].description}}</h3>
+        <h2>{{recipes[randomRecipeId].recipeName}}</h2> 
+        <h3>{{recipes[randomRecipeId].description}}</h3>
 
-    <router-link :to="{name: 'RecipeDetails', params: {id: recipes[1].recipeId}}"> <img class="img-fluid rod-pic" src="../assets/stock.jpg"> </router-link>
-    <div class="btn like-button"><button @click="saveToUser(recipes[1].recipeId, currentUser.id)"><div>Add to Favorites</div></button></div>
+    <router-link :to="{name: 'RecipeDetails', params: {id: recipes[randomRecipeId].recipeId}}"> <img class="img-fluid rod-pic" src="../assets/stock.jpg"> </router-link>
+    <b-button class="btn-sm" @click="saveToUser(recipes[randomRecipeId].recipeId, currentUser.id)">Add To Favorites</b-button>
 </div>
 
 
-<div class="extra-recipes-container">
+<div class=" extra-recipes-container">
 
 <div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
     <h3>{{recipe.recipeName}} <div class="personal-category">{{recipe.category}}</div></h3>
@@ -49,7 +49,8 @@ export default {
     data() {
         return {
             currentUser: auth.getUser(),
-            testRecipes: []
+            testRecipes: [],
+            randomRecipeId: 3
 
         }
     },
@@ -93,6 +94,8 @@ export default {
         .then((recipe) => {
         this.testRecipes = recipe;
         });
+
+        this.randomRecipeId = Math.floor((Math.random() * this.recipes.length()));
         
   },
 
@@ -119,6 +122,13 @@ export default {
         font-size: 1em;
         color: white ;
     }
+
+    .click-info {
+        color: white;
+        text-align: left;
+        padding-left: 2%;
+    }
+
 
     ul {
         list-style-type: none;
@@ -163,6 +173,7 @@ export default {
     }
     .extra-recipes-container {
         padding-bottom: 30px;
+        width: 100%;
     }
     .detailList {
         background-color: transparent;
@@ -186,13 +197,13 @@ h4 {
 }
 .recipes {
     display: block;
-    height: 160px;
-    width: 65%;
+    height: 170px;
+    width: 72%;
     padding-bottom: 15px;
     background-color: rgb(175, 240, 145);
     margin-bottom: 10px;
     margin-left: 2%;
-    border: 5px solid black;
+    border: 5px solid rgb(121, 107, 128);
     border-radius: 25px;
 
 }
@@ -201,17 +212,19 @@ h4 {
 
 .recipes h3 {
     text-align: left;
-    padding-left: 1.2%;
+    padding-left: 4%;
     font-size: 1.5em;
+    padding-top: .5%;
+    font-weight: 800;
 }
 
 .recipes .personal-recipe-pic {
-    height: 80%;
+    height: 75%;
     width: 35%;
     float: left;
     margin-left: 1%;
-    border: 4px solid black;
-    border-radius: 25px;
+    border: 4px solid white;
+    border-radius: 20px;
 }
 
 .personal-category {
@@ -227,9 +240,10 @@ h4 {
 }
 
 .personal-cook-time {
-    float: right;
-    bottom: 2%;
-    padding-right: 1%;
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    padding-top: 10px;
 }
 
 
@@ -242,33 +256,22 @@ p{
     color: white;
 }
  .recipe-of-day {
-        width: 40%;
-        background-color: rgb(175, 240, 145);
-        height: 400px;
-        border: 7px solid black;
-        border-radius: 25px;  
-        margin: 1% auto 1% auto;
-
-    }
-
-    .recipe-of-day .like-button {
-        padding-top: 3%;
-        margin-top: 1%;
-        margin: auto;
-        margin-top: .6%;
         width: 35%;
-        font-weight: 900;
-        color: black;
-        border-color: black;
-        background-color: rgb(131, 219, 91);
-
+        background-color: rgb(175, 240, 145);
+        height: 25%;
+        border: 7px solid rgb(121, 107, 128);
+        border-radius: 25px;  
+        margin: 1.5% auto 1% auto;
     }
 
-        .recipe-of-day .like-button div {
-        background-color: rgb(131, 219, 91);
-        border: none;
-        }
+    .recipe-of-day h2 {
+        padding-top: 1%;
+        font-weight: 900;
+    }
 
+    .btn {
+        margin: 2% auto auto auto;
+    }
 
        
     .rod-header {
@@ -279,8 +282,8 @@ p{
 
     .rod-pic {
         height: 60%;
-        width: 100%;
-        border: 4px solid black;
+        width: 95%;
+        border: 4px solid white;
         border-radius: 25px;
     }
       .rod-header h2 {
