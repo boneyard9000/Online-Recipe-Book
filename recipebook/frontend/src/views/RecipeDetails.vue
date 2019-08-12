@@ -87,9 +87,6 @@ export default {
     color: black;
 }
 
-<<<<<<< Updated upstream
-
-=======
 .hero-image {
   display:block;
   background-image: url("../assets/foodBG.jpg");
@@ -104,7 +101,6 @@ export default {
   
   
 }
->>>>>>> Stashed changes
 .left {
     display: flex;
     float: left;
