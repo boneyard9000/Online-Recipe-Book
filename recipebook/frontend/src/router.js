@@ -8,6 +8,8 @@ import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import RecipeDetails from './views/RecipeDetails.vue'
 import SubmitRecipe from './views/SubmitRecipe.vue'
+import GroceryList from './views/GroceryList.vue'
+
 
 Vue.use(Router)
 
@@ -71,6 +73,14 @@ const router = new Router({
       path:'/SubmitRecipe',
       name: 'SubmitRecipe',
       component: SubmitRecipe,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path:'/GroceryList',
+      name: 'GroceryList',
+      component: GroceryList,
       meta: {
         requiresAuth: true
       }

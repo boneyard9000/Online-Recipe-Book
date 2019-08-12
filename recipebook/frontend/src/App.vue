@@ -8,6 +8,8 @@
           <li><a style="pointer-events: none; color: green; font-weight: 900;">CHEF'S CORNER</a></li>
           <li><router-link v-if="isLoggedIn()" :to="{name: 'HomePage', params: {userId: getUserId()}}" >My Recipes</router-link></li>
           <li><router-link v-if="isLoggedIn()" :to="{name: 'SubmitRecipe'}">Submit Recipe</router-link></li>
+          <li><router-link v-if="isLoggedIn()" :to="{name: 'GroceryList'}">Grocery List</router-link></li>
+
 
           
           <router-link v-if="isLoggedIn()" to="/">
