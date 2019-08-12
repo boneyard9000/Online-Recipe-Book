@@ -1,10 +1,10 @@
 <template>
-    <div id="recipe-details" class="container my-container">
-        <br><br><br>
-
+    
+    <div id="recipe-details" class="container my-container"><br><br>
+        <div class="hero-image">
         <div class="row my-row">
             <div class="lg-col-6 my-column">
-                <img class="img-fluid recipeImg" style="max-width:550px;" src="../assets/forkAndKnife.jpeg">
+                <img class="img-fluid recipeImg" style="max-width:550px;" src="../assets/Chicken Kiev.jpeg">
             </div>
             <div class="lg-col-6 my-column-2" font-family: >
                  <h2>{{currentRecipe.recipeName}}<br>
@@ -24,6 +24,7 @@
             </div>
         </div>
 
+        </div>
     </div>
 </template>
 
@@ -82,8 +83,23 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 #recipe-details {
+
     /* background-color: rgb(175, 240, 145); */
     color: black;
+}
+
+.hero-image {
+  display:block;
+  background-image: url("../assets/foodBG.jpg");
+  z-index: 2;
+  padding-top: 20px;
+  height: 100%;
+  width: auto;
+  background-position: stretch;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
 }
 .left {
     display: flex;
@@ -91,7 +107,7 @@ export default {
 }
 .detailList {
 
-    background-color: transparent;
+    background-color: white;
 }
 .my-row {
     height: 100%;
@@ -124,16 +140,18 @@ export default {
 }
 .my-container {
     
-    margin-top: 100px;
-  
-    margin: auto;
-    padding: 1em;
+    margin-top: 3em;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 .recipeImg {
     margin-left: 20px;
-    align-self: auto;
+    
     width:90%;
     height:auto;
     max-width: 300px;
+    border: 4px solid black;
+    border-radius: 25px;
 }
 </style>

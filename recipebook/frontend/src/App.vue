@@ -3,7 +3,7 @@
     <div id="headerDiv">
     <header>
       
-      <nav style="width:100%; float:right;"> 
+      <nav style="width:100%; float:right; z-index:1"> 
         <ul>
           <li><a style="pointer-events: none; color: green; font-weight: 900;">CHEF'S CORNER</a></li>
           <li><router-link v-if="isLoggedIn()" :to="{name: 'HomePage', params: {userId: getUserId()}}" >My Recipes</router-link></li>
@@ -24,7 +24,7 @@
 
     </header>
     </div>
-    <router-view :recipes="recipes" :testRecipes="testRecipes"/>
+    <router-view :recipes="recipes" :testRecipes="testRecipes" style="z-index:2"/>
   </div>
 </template>
 
