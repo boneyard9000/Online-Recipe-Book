@@ -1,6 +1,5 @@
 <template>
-    
-    <div id="recipe-details" class="container my-container"><br><br>
+    <div id="recipe-details" ><br><br>
        
         <div class="row my-row">
             <div class="lg-col-6 my-column">
@@ -59,7 +58,7 @@ export default {
   
   directionsArray () {
       if(this.currentRecipe.directions){
-      return this.currentRecipe.directions.split('. ');
+      return this.currentRecipe.directions.split('\n');
       }
       else {
           return [];
@@ -67,7 +66,7 @@ export default {
   },
    ingredientsArray () {
       if(this.currentRecipe.ingredients){
-      return this.currentRecipe.ingredients.split(',');
+      return this.currentRecipe.ingredients.split('\n');
       }
       else {
           return [];
