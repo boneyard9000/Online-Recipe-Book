@@ -36,6 +36,19 @@
          </b-form-group>
 
             <b-form-group class="control-label text-left"
+              id="input-group-6"
+              label="Category:"
+              label-for="category"
+          >
+ 
+        <select v-model="recipe.category" class="form-control">
+          <option disabled value="">Please select one</option>
+          <option v-for="option in recipe.categories" :key="option">{{option.name}}</option>
+        </select>
+
+        </b-form-group>
+
+            <b-form-group class="control-label text-left"
               id="input-group-2"
               label="Description:"
               label-for="description"
@@ -69,6 +82,22 @@
             />
             </b-form-group>
 
+             <b-form-group class="control-label text-left"
+              id="input-group-5"
+              label="Ingredients:"
+              label-for="ingredients"
+          >
+            <b-form-textarea
+            id="ingredients"
+            placeholder="Example: Buns, Patty, BBQ Sauce"
+            v-model="recipe.ingredients"
+            type="text"
+
+            rows="3"
+            max-rows="20"
+            />
+            </b-form-group>
+
             <b-form-group class="control-label text-left"
               id="input-group-4"
               label="Directions:"
@@ -76,34 +105,14 @@
           >
                 <b-form-textarea
                     id="textarea"
-                    placeholder="STEP 1: Cook patty for 15 minutes. STEP 2: Do this next."
+                    placeholder="Put each direction on a new line"
                     v-model="recipe.directions"
 
                     rows="3"
-                    max-rows="6"
+                    max-rows="20"
                 >
                 </b-form-textarea>
             </b-form-group>
-
-            <b-form-group class="control-label text-left"
-              id="input-group-5"
-              label="Ingredients:"
-              label-for="ingredients"
-          >
-            <b-form-input
-            id="ingredients"
-            class="form-control"
-            placeholder="Example: Buns, Patty, BBQ Sauce"
-            v-model="recipe.ingredients"
-            type="text"
-            required
-            autofocus
-            />
-            </b-form-group>
-    
-  
-           
-
             <b-button @click="redirect" pill variant="success" type="submit">
                 Add Recipe
             </b-button>
