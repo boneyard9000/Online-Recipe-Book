@@ -98,7 +98,7 @@
  
         <select v-model="recipe.category">
           <option disabled value="">Please select one</option>
-          <option v-for="option in recipe.categories">{{option.name}}</option>
+          <option v-for="option in recipe.categories" :key="option">{{option.name}}</option>
         </select>
     
   <!-- <label for="Category">Please select a Category</label>

@@ -42,6 +42,9 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'get a chicken.  kill and butcher.  Its easier if you do it quick.  Get a cheesecake.  Put chicken in to cheesecake.  Bake at 350 until golden brown',
         'Chicken (live), Cheesecake, Killing Block', 'dessert'),
 
+        ('Bananalogne platter', 'all your cheap n quick lazy foods wrapped up in to 1 delicious(?) meal', '5 minutes', 'peel bananas.  wrap each banana in its own piece of bologne, like a warm blanket, a warm lil blanket.  cover all the sleeping banana piggies in american cheese slices.  
+        get a soufle torch and melt the cheese ever so gently over the piggie party.  enjoy with a knife and fork, or just a fork, or really you can handle it with just your fingers, its your life.','5 minutes, 4 bananas, american cheese, bologne', 'dinner'),
+
         ('Breakfast Pizza', 'The Breakfast of Champions.  Minimal effort.  maximal reward', '1 Night', 'Order Pizza from your favorite local establishment.  Eat no more than half of said pizza, you have to be considerate of your morning self.
         Leave the rest of said pizza anywhere except the refrigerator, that defeats the point.  The stovetop, the foot of a couch, or a bedroom dresser are commonly accepted locations.  You will know your pizza is ready because you will wake up and be hungry
         and it will exist; however, you must not allow yourself to consume the pizza before it has properly cured.  Double check the the ZA is room temperature and the cheese has completely resolidified.  Be aware that it cannot truly be considered breakfast pizza 

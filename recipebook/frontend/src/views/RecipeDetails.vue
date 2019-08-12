@@ -87,7 +87,24 @@ export default {
     color: black;
 }
 
+<<<<<<< Updated upstream
 
+=======
+.hero-image {
+  display:block;
+  background-image: url("../assets/foodBG.jpg");
+  z-index: 2;
+  padding-top: 20px;
+  height: 100%;
+  width: auto;
+  background-position: stretch;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1200px;
+  
+  
+}
+>>>>>>> Stashed changes
 .left {
     display: flex;
     float: left;
