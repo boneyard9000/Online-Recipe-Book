@@ -1,16 +1,25 @@
 <template>
 <div id="home-page">
-<h1> Welcome to your Recipe Book {{currentUser.firstName}} {{currentUser.lastName}}!</h1>
+<div class="greeting"><h1> Welcome {{currentUser.firstName}}!</h1></div>
 <p>Click on a recipe below to learn more information<p>
 
+        <h4 class="rod-header">Recipe Of The Day</h4>
+<div class="container recipe-of-day recipes rounded ">
+        <h2>{{recipes[1].recipeName}}</h2> 
+        <h3>{{recipes[1].description}}</h3>
 
+    <router-link :to="{name: 'RecipeDetails', params: {id: recipes[1].recipeId}}"> <img class="img-fluid rounded rod-pic" src="../assets/stock.jpg"> </router-link>
+    <div class="btn btn-success like-button"><button @click="saveToUser(recipes[1].recipeId, currentUser.id)"></button>Add to Favorites</div>
+</div>
 
 
 <div class="extra-recipes-container">
 
 <div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
-<div> <h3>{{recipe.recipeName}}</h3> </div>
-<router-link :to="{name: 'RecipeDetails', params: {id: recipe.recipeId}}"> <img src="../assets/forkAndKnife.jpeg"> </router-link>
+    <h3>{{recipe.recipeName}} <div class="personal-category">{{recipe.category}}</div></h3>
+    <router-link :to="{name: 'RecipeDetails', params: {id: recipe.recipeId}}"> <img class="rounded personal-recipe-pic" src="../assets/forkAndKnife.jpeg"> </router-link>
+    <div class="personal-description">{{recipe.description}}</div>
+    <div class="personal-cook-time">Cook Time: {{recipe.cookMins}}</div>
 </div>
 
 
@@ -38,7 +47,6 @@ export default {
             currentUser: auth.getUser(),
             testRecipes: []
 
-
         }
     },
 
@@ -46,8 +54,12 @@ export default {
     {
         updateCurrentRecipe() {
             this.$emit('updateCurrentRecipe', this.currentRecipe);
-        }
-        
+        },
+        createRandomId() {
+            return Math.floor((Math.random() * this.recipes.length()) + 1)
+
+        },
+       
     },
     created() {
         fetch(`${process.env.VUE_APP_REMOTE_API}/api/user`, {
@@ -77,12 +89,23 @@ export default {
         .then((recipe) => {
         this.testRecipes = recipe;
         });
+        
   },
 
 }
 </script>
 
 <style scoped>
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .greeting {
+        float: right;
+        padding-right: 3.4%;
+        font-size: 1em;
+    }
 
     ul {
         list-style-type: none;
@@ -92,10 +115,11 @@ export default {
         background-color: lightgrey;
     }
     #home-page {
-        /* background-color: rgb(86, 133, 64); */
+    background-color:rgb(197, 214, 208);
     }
     h2 {
-        font-size: 2.5em;
+        font-size: 1.5em;
+        font-weight: 800;
     }
 
     .left {
@@ -107,33 +131,11 @@ export default {
     font-size: 18pt;
     }
 
-    .rod-header {
-        line-height: 2px;
-    }
-      .rod-header h2 {
-        font-family: 'Open Sans';
-        color:white;
-        background: rgb(175, 240, 145);
-        font-weight: 600;
-        margin-top: 1em;
-        padding: 10px;
-        width: 100%;
-
-    }
-    .RofDay {
-        height: auto;
-        padding: 2em;
-        display: flex;
-        text-align: left;
-        
-    }
     .myRow {
         width:100%;
         align-content: center;
     }
-    .myCol1 {
-
-    }
+    
     .myCol2 {
         margin-left: 2em;
     }
@@ -163,29 +165,111 @@ export default {
     }
 
 h3 {
+    font-size: 1em;
+}
+
+h4 {
     font-size: 2em;
 }
 .recipes {
-    display: inline-block;
-    width: 18%;
-    border: 1px solid rgb(138, 184, 196);
+    display: block;
+    height: 160px;
+    width: 65%;
     padding-bottom: 15px;
-    /* background-color: rgb(175, 240, 145); */
+    background-color: rgb(229, 243, 223);
+        margin-bottom: 10px;
 
 }
+
+ 
+
+.recipes h3 {
+    text-align: left;
+    padding-left: 1.2%;
+    font-size: 1.5em;
+}
+
+.recipes .personal-recipe-pic {
+    height: 80%;
+    width: 35%;
+    border: 5px solid rgb(137, 156, 240);
+    float: left;
+    margin-left: 1%;
+}
+
+.personal-category {
+    float: right;
+    font-size: .7em;
+    padding-right: 1%;
+}
+
+.personal-description {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.personal-cook-time {
+    float: right;
+    bottom: 2%;
+    padding-right: 1%;
+}
+
 
 .recipes div:first-of-type {
     display: block;
 }
 
-.dialyImg {
-    margin-left: 20px;
-    width:90%;
-    height:auto;
-    max-width: 300px;
-}
-
 p{
     text-decoration: underline;
 }
+ .recipe-of-day {
+        width: 40%;
+        background-color: rgb(229, 243, 223);
+        margin-top: 1%;
+        height: 400px;
+        margin-bottom: 1%;
+        border: 10px solid rgb(172, 175, 216);
+
+    }
+
+    .recipe-of-day .like-button {
+        padding-top: 3%;
+        margin-top: 1%;
+        margin: auto;
+        margin-top: .6%;
+        width: 35%;
+        font-weight: 900;
+
+    }
+
+       
+    .rod-header {
+        line-height: 2px;
+        margin-top: 20px;
+    }
+
+    .rod-pic {
+        height: 60%;
+        width: 100%;
+        border: 5px solid rgb(137, 156, 240);
+    }
+      .rod-header h2 {
+        font-family: 'Open Sans';
+        color:white;
+        background: rgb(175, 240, 145);
+        font-weight: 600;
+        margin-top: 1em;
+        padding: 10px;
+        width: 100%;
+
+    }
+    .RofDay {
+        height: auto;
+        padding: 2em;
+        display: flex;
+        text-align: left;
+        
+    }
+
+    
 </style>
