@@ -178,4 +178,10 @@ public class JdbcRecipeDao implements RecipeDao{
 		return r;
 	}
 
+	@Override
+	public void saveRecipeToUser(int recipeId, int userId) {
+		String sqlSaveRecipeToUser = "INSERT INTO user_recipes (user_id, recipe_id) VALUES (?, ?)";
+			jdbcTemplate.update(sqlSaveRecipeToUser, recipeId, userId);
+	}
+
 }

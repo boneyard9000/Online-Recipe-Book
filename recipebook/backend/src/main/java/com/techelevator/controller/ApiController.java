@@ -87,4 +87,10 @@ public class ApiController {
 		recipeDao.saveRecipe(recipe, u);
 	} 
 	
+	@PostMapping
+	("/saveRecipeToUser") 
+	public void saveRecipeToUser(@Valid @RequestBody int recipeId, int userId){
+		recipeDao.saveRecipeToUser(recipeId, userId);
+	}
+	
 }
