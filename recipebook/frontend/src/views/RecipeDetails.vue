@@ -103,15 +103,12 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 #recipe-details {
-
-    /* background-color: rgb(175, 240, 145); */
     color: black;
 }
 
 .hero-image {
   display:block;
   background-image: url("../assets/foodBG.jpg");
-  z-index: 2;
   padding-top: 20px;
   height: 100%;
   width: auto;

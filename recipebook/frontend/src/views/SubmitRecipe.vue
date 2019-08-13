@@ -172,6 +172,10 @@ h1 {
   max-width: 50%;
   margin: auto;
   
+  
+}
+.container {
+  background-color: rgb(50, 58, 66);
 }
 
 
