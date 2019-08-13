@@ -15,7 +15,6 @@
         <h4 style="color: white; ">SHARE</h4>
 
         <br>
-        <a class="mybtn" href="#">Get Started</a>
 
       </div>
 

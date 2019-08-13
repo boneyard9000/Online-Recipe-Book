@@ -6,7 +6,7 @@
             <div class="my-column">
                 <div class="imgDiv">
                     <!-- <img class="recipeImg"  src="../assets/Chicken Kiev.jpeg"> -->
-                    <img class="recipeImg"  v-bind:src="require('../assets/' + currentRecipe.recipeName + '.jpeg')">
+                    <img class="recipeImg"  v-bind:src="require('../assets/forkAndKnife.jpeg')">
 
                 </div>
                 <div class="titleBlock">
@@ -26,6 +26,7 @@
             <ul class="detailList" v-for="step in directionsArray" :key="step">
                 <li>{{step}}</li>
             </ul>
+            <button type="button" >Add Ingredients to Grocery List!</button>
             </div>
         </div>
 
@@ -41,7 +42,8 @@ export default {
     data() {
         return {
             currentRecipe: {},
-            imageName: 'logo.png'
+            imageName: 'logo.png',
+            currentUser: auth.getUser()
         }
     },
     created() {
@@ -57,7 +59,21 @@ export default {
     })
     .then((test) => {
       this.currentRecipe = test;
-    })
+    });
+    
+    fetch(`${process.env.VUE_APP_REMOTE_API}/api/user`, {
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json', 
+          Authorization: 'Bearer ' + auth.getToken()
+        }
+        })
+        .then((response) => {
+        return response.json();
+        })
+        .then((myUser) => {
+        this.currentUser = myUser;
+        });
   },
 
   computed: {

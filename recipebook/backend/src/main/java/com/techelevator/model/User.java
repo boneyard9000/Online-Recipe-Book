@@ -26,6 +26,8 @@ public class User {
     @NotBlank
     private String role = "registered";
     
+    private String groceryList;
+    
     @NotBlank(message = "Password is required")
     private String password;
     private String confirmPassword;
@@ -108,4 +110,11 @@ public class User {
 		this.passwordMatching = passwordMatching;
 	}
 
+	public String getGroceryList() {
+		return groceryList;
+	}
+	
+	public void setGroceryList(String groceryList) {
+		this.groceryList = groceryList;
+	}
 }
