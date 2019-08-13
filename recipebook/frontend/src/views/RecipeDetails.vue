@@ -26,7 +26,7 @@
             <ul class="detailList" v-for="step in directionsArray" :key="step">
                 <li>{{step}}</li>
             </ul>
-            <button type="button" >Add Ingredients to Grocery List!</button>
+            <button type="button" v-on:click="addToGroceryList">Add Ingredients to Grocery List!</button>
             </div>
         </div>
         <div class="recipeActions">
@@ -47,7 +47,11 @@ export default {
         return {
             currentRecipe: {},
             imageName: 'logo.png',
-            currentUser: auth.getUser()
+            currentUser: auth.getUser(),
+            groceries: '',
+            currentGroceryList: {
+                allGroceries: ''
+            }
         }
     },
     methods: {
@@ -82,6 +86,7 @@ export default {
         })
         .then((myUser) => {
         this.currentUser = myUser;
+        this.groceries = myUser.groceryList;
         });
   },
 
@@ -89,21 +94,53 @@ export default {
   
   directionsArray () {
       if(this.currentRecipe.directions){
-      return this.currentRecipe.directions.split('\n');
+        return this.currentRecipe.directions.split('\n');
       }
       else {
-          return [];
+        return [];
       }
   },
    ingredientsArray () {
       if(this.currentRecipe.ingredients){
-      return this.currentRecipe.ingredients.split('\n');
+        return this.currentRecipe.ingredients.split('\n');
       }
       else {
           return [];
       }
   }
 
+  },
+
+  methods: {
+      addToGroceryList() {
+          
+          for (let i = 0; i < this.ingredientsArray.length; i++) {
+              if (this.ingredientsArray[i] == '') {
+                  console.log("is null");
+              }
+
+              else {
+                this.groceries += ", " + this.ingredientsArray[i] ;
+              }
+          }
+        this.currentGroceryList.allGroceries = this.groceries;
+        this.contactDatabase();
+      },
+      contactDatabase() {
+          fetch(`${process.env.VUE_APP_REMOTE_API}/api/groceries`, {
+              method: 'PUT',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json', 
+          Authorization: 'Bearer ' + auth.getToken()
+        },
+        body: JSON.stringify(this.currentGroceryList)
+        }).then(() => {
+             this.$router.push('/GroceryList');
+        }
+        )
+
+      }
   }
 
 }

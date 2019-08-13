@@ -90,7 +90,6 @@ INSERT INTO user_recipes (user_id, recipe_id)
 ALTER TABLE users ADD COLUMN grocery_list TEXT;
 
 select * from user_recipes;
-SELECT * FROM users;
 SELECT * FROM recipes
 
 
@@ -99,5 +98,13 @@ from users
 join recipes on recipes.recipe_id = users.user_id
 where recipes.recipe_id = 1
 
+ALTER TABLE users
+ADD COLUMN grocery_list TEXT;
 
+SELECT *
+FROM users
+
+UPDATE users
+SET grocery_list = "Chicken"
+WHERE user_id = 4;
 
