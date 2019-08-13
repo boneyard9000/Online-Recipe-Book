@@ -106,7 +106,7 @@ export default {
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-attachment: fixed;
-  
+  min-height: 1000px;
   
 }
 #nav {

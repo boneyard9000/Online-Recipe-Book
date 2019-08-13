@@ -2,6 +2,8 @@
 <div id="grocery-list">
     
     {{currentUser.firstName}}
+    {{ currentUser.lastName}}
+    {{currentUser.groceryList}}
 </div>
   
 </template>
