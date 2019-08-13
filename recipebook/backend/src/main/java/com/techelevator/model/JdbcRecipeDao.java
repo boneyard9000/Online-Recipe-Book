@@ -3,7 +3,9 @@ package com.techelevator.model;
 import java.util.ArrayList;
 
 import java.util.Base64;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.sql.DataSource;
 
@@ -19,6 +21,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	
 	private JdbcTemplate jdbcTemplate;
 	private ApiController apiController;
+	private Map<Integer, Recipe> recipes = new HashMap<>();
 	
 	
 	@Autowired
@@ -117,6 +120,12 @@ public class JdbcRecipeDao implements RecipeDao{
 		}
 		System.out.println(r.getRecipeName() + r.getDescription());
 		return r;
+	}
+	
+	@Override
+	public Recipe update(Recipe recipe) {
+		recipes.put(recipe.getRecipeId(), recipe);
+		return recipe;
 	}
 
 //	@Override

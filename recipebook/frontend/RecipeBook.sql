@@ -87,7 +87,7 @@ INSERT INTO user_recipes (user_id, recipe_id)
                 (2, 1),
                 (2, 3),
                 (2, 5);               
-
+ALTER TABLE users ADD COLUMN grocery_list TEXT;
 
 select * from user_recipes;
 SELECT * FROM users;

@@ -29,6 +29,10 @@
             <button type="button" >Add Ingredients to Grocery List!</button>
             </div>
         </div>
+        <div class="recipeActions">
+            <a href="#" class="edit-recipe" @click="editRecipe(currentRecipe)">Edit
+            </a>
+        </div>
 
     </div>
 </template>
@@ -44,6 +48,11 @@ export default {
             currentRecipe: {},
             imageName: 'logo.png',
             currentUser: auth.getUser()
+        }
+    },
+    methods: {
+        editRecipe (currentRecipe) {
+            this.$emit("editRecipe", currentRecipe)
         }
     },
     created() {

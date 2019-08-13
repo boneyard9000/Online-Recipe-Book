@@ -32,7 +32,7 @@
  
         <select v-model="recipe.category" class="form-control">
           <option disabled value="">Please select one</option>
-          <option v-for="option in recipe.categories" :key="option">{{option.name}}</option>
+          <option v-for="option in categories" :key="option.id">{{option.name}}</option>
         </select>
 
         </b-form-group>
@@ -102,7 +102,7 @@
                 >
                 </b-form-textarea>
             </b-form-group>
-            <b-button @click="redirect" pill variant="success" type="submit">
+            <b-button pill variant="success" type="submit">
                 Add Recipe
             </b-button>
         </b-form>
@@ -113,44 +113,71 @@
 
 <script>
 import auth from '../auth';
+import { isNull } from 'util';
 
 export default {
     name: 'SubmitRecipe',
-    data() {
-      return {
-        recipe: {
+    props: {
+      recipeToEdit: {
+        type: Object,
+        default() {
+          return {
+            recipeId: null,
             recipeName: '',
             description: '',
             cookMins: '',
             directions: '',
             ingredients: '',
             category: '',
-            categories: [
+          }
+        }
+      }  
+    },
+
+    data() {
+      return {
+        categories: [
               {name:"Appetizer", id: 1},
               {name:"Beverage", id: 2},
               {name:"Breakfast", id: 3},
               {name:"Desert", id: 4},
               {name:"Dinner", id: 5},
               {name: "Lunch", id: 6}
-            ]
-        },
+            ],
+
+        recipe: this.recipeToEdit,
         recipeErrors: false
       };
     },
     methods: {
     addRecipe() {
-      fetch(`${process.env.VUE_APP_REMOTE_API}/api/SubmitRecipe`, {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-          Authorization: 'Bearer ' + auth.getToken()
-        },
-        body: JSON.stringify(this.recipe),
-      })
-      .then (() => {
-          this.$router.push('/HomePage/' + auth.getUser().uid)
-      });
+      if(this.recipe.recipeId==null) {
+        fetch(`${process.env.VUE_APP_REMOTE_API}/api/SubmitRecipe`, {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + auth.getToken()
+          },
+          body: JSON.stringify(this.recipe),
+        })
+        .then (() => {
+            this.$router.push('/HomePage/' + auth.getUser().uid)
+        });
+      } else {
+        fetch(`${process.env.VUE_APP_REMOTE_API}/api/SubmitRecipe`, {
+          method: 'PUT',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + auth.getToken()
+          },
+          body: JSON.stringify(this.recipe),
+        })
+        .then (() => {
+            this.$router.push('/HomePage/' + auth.getUser().uid)
+        });
+      }
     },
   },
 

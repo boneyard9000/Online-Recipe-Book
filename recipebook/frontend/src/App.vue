@@ -26,7 +26,8 @@
 
     </header>
     </div>
-    <router-view :recipes="recipes" :testRecipes="testRecipes" :groceryList="groceryList" style="z-index:2"/>
+    <router-view :recipes="recipes" :testRecipes="testRecipes" 
+        @editRecipe="editRecipe" :recipeToEdit="currentRecipe" :groceryList="groceryList" style="z-index:2"/>
   </div>
 </template>
 
@@ -54,6 +55,10 @@ export default {
        else {
          return 0;
        }
+     },
+     editRecipe(recipe) {
+       this.currentRecipe=recipe;
+       this.$router.push ("/SubmitRecipe");
      }
   },
 
@@ -86,6 +91,7 @@ export default {
           currentRecipe: {},
           isFalse: false,
           testRecipes: [],
+          recipes: [],
           groceryList: ['kiwi', 'chicken nuggs', 'capri suns']
     }
     }
