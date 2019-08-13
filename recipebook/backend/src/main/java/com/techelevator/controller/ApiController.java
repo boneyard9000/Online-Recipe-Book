@@ -2,6 +2,7 @@ package com.techelevator.controller;
 
 import com.techelevator.authentication.AuthProvider;
 import com.techelevator.authentication.UnauthorizedException;
+import com.techelevator.model.GroceryList;
 import com.techelevator.model.Recipe;
 import com.techelevator.model.RecipeDao;
 import com.techelevator.model.User;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -85,6 +87,12 @@ public class ApiController {
 	public void addRecipe(@Valid @RequestBody Recipe recipe) {
 		User u = authProvider.getCurrentUser();
 		recipeDao.saveRecipe(recipe, u);
-	} 
+	}
+	
+	@PutMapping("/groceries")
+	public void addGroceries(@Valid @RequestBody GroceryList currentGroceryList) {
+		User u = authProvider.getCurrentUser();
+		userDao.addToGroceryList((int) u.getId(), currentGroceryList.getAllGroceries());
+	}
 	
 }

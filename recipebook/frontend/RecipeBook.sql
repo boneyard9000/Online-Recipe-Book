@@ -104,4 +104,7 @@ ADD COLUMN grocery_list TEXT;
 SELECT *
 FROM users
 
+UPDATE users
+SET grocery_list = "Chicken"
+WHERE user_id = 4;
 
