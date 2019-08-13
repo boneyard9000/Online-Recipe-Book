@@ -54,11 +54,7 @@ export default {
             }
         }
     },
-    methods: {
-        editRecipe (currentRecipe) {
-            this.$emit("editRecipe", currentRecipe)
-        }
-    },
+  
     created() {
          fetch(`${process.env.VUE_APP_REMOTE_API}/api/recipeDetails/${this.$route.params.id}`, {
       headers: {
@@ -112,6 +108,11 @@ export default {
   },
 
   methods: {
+
+       editRecipe(currentRecipe) {
+            this.$emit("editRecipe", currentRecipe)
+        },
+        
       addToGroceryList() {
           
           for (let i = 0; i < this.ingredientsArray.length; i++) {

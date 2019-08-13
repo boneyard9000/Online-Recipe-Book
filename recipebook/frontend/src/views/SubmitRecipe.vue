@@ -165,7 +165,7 @@ export default {
             this.$router.push('/HomePage/' + auth.getUser().uid)
         });
       } else {
-        fetch(`${process.env.VUE_APP_REMOTE_API}/api/SubmitRecipe`, {
+        fetch(`${process.env.VUE_APP_REMOTE_API}/api/recipes/`+this.recipe.recipeId, {
           method: 'PUT',
           headers: {
             Accept: 'application/json',
