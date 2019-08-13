@@ -95,4 +95,10 @@ public class ApiController {
 		userDao.addToGroceryList((int) u.getId(), currentGroceryList.getAllGroceries());
 	}
 	
+	@PostMapping
+	("/saveRecipeToUser") 
+	public void saveRecipeToUser(@Valid @RequestBody int recipeId, int userId){
+		recipeDao.saveRecipeToUser(recipeId, userId);
+	}
+	
 }

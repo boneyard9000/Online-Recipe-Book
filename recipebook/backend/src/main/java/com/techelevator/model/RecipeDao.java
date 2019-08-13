@@ -21,4 +21,6 @@ public interface RecipeDao {
 	public List<Recipe> getRecipesByIngredients(String searchWords);
 	
 	public void saveRecipe(Recipe recipe, User u);
+	
+	public void saveRecipeToUser(int recipeId, int userId);
 }

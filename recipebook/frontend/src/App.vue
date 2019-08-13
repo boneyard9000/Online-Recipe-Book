@@ -26,7 +26,7 @@
 
     </header>
     </div>
-    <router-view :recipes="recipes" :testRecipes="testRecipes" style="z-index:2"/>
+    <router-view :recipes="recipes" :testRecipes="testRecipes" :groceryList="groceryList" style="z-index:2"/>
   </div>
 </template>
 
@@ -85,7 +85,8 @@ export default {
         return {
           currentRecipe: {},
           isFalse: false,
-          testRecipes: []
+          testRecipes: [],
+          groceryList: ['kiwi', 'chicken nuggs', 'capri suns']
     }
     }
 }
