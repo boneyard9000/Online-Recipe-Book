@@ -7,6 +7,7 @@ import com.techelevator.model.Recipe;
 import com.techelevator.model.RecipeDao;
 import com.techelevator.model.User;
 import com.techelevator.model.UserDao;
+import com.techelevator.recipe.exception.RecipeNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,6 +88,21 @@ public class ApiController {
 	public void addRecipe(@Valid @RequestBody Recipe recipe) {
 		User u = authProvider.getCurrentUser();
 		recipeDao.saveRecipe(recipe, u);
+	}
+	
+	@PutMapping("/recipes/{recipeId}")
+	public Recipe update(@PathVariable int recipeId, @RequestBody Recipe recipe) {
+//		System.out.println("Spencer testing here " + recipe.getRecipeId());
+//		System.out.println(recipeId);
+
+		Recipe requestedRecipe= recipeDao.getRecipeById(recipeId);
+		if (requestedRecipe != null) {
+			recipe.setRecipeId(recipeId);
+			return recipeDao.update(recipe);
+		}
+		else {
+			throw new RecipeNotFoundException(recipeId);
+		}
 	}
 	
 	@PutMapping("/groceries")

@@ -125,6 +125,11 @@ public class JdbcRecipeDao implements RecipeDao{
 	@Override
 	public Recipe update(Recipe recipe) {
 		recipes.put(recipe.getRecipeId(), recipe);
+		
+		String sqlRecipeUpdate = "UPDATE recipes SET name = ?, category = ?, description = ?, cook_time = ?, ingredients = ?, directions = ? WHERE recipe_id = ?";
+		jdbcTemplate.update(sqlRecipeUpdate, recipe.getRecipeName(), recipe.getCategory(), recipe.getDescription(), 
+				recipe.getCookMins(), recipe.getIngredients(), recipe.getDirections(), recipe.getRecipeId());
+		
 		return recipe;
 	}
 

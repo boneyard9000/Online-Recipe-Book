@@ -108,3 +108,6 @@ UPDATE users
 SET grocery_list = "Chicken"
 WHERE user_id = 4;
 
+UPDATE recipes
+SET  name = 'Chicken Kevin'
+WHERE recipe_id = 9;

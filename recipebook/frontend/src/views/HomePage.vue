@@ -24,7 +24,7 @@
         </div>
 
         <div class="extra-recipes-container">
-          <div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
+          <div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeId">
             <h3>
               {{recipe.recipeName}}
               <div class="personal-category">{{recipe.category}}</div>
@@ -109,7 +109,7 @@ export default {
         this.testRecipes = recipe;
       });
 
-    this.randomRecipeId = Math.floor(Math.random() * this.recipes.length());
+    this.randomRecipeId = Math.floor(Math.random() * this.recipes.length);
   }
 };
 </script>
