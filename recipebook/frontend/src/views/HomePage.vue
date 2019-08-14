@@ -124,7 +124,6 @@ export default {
       });
 
     this.randomRecipeId = Math.floor(Math.random() * this.recipes.length);
-    this.rodPic = require(`../assets/${this.recipes[randomRecipeId].category}.jpg`);
   },
 };
 </script>

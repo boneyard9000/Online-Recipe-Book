@@ -85,7 +85,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	public Recipe getRecipeById(int recipeId) {
 		Recipe r = new Recipe();
 		
-		String sqlRecipeId = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category, recipePic FROM recipes WHERE recipe_id = ?";
+		String sqlRecipeId = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category, recipe_pic FROM recipes WHERE recipe_id = ?";
 		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlRecipeId, recipeId);
 		while (result.next()) {
 			r = populateRecipe(result);
@@ -113,7 +113,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	public Recipe getRecipeByName(String searchName) {
 		Recipe r = new Recipe();
 		
-		String sqlRecipeName = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category, recipePic FROM recipes WHERE name ILIKE ?";
+		String sqlRecipeName = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category, recipe_pic FROM recipes WHERE name ILIKE ?";
 		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlRecipeName, "%" + searchName + "%");
 		while (result.next()) {
 			r = populateRecipe(result);
@@ -153,7 +153,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	public List<Recipe> getRecipeByMaxCookTime(int maxCookTime) {
 		List<Recipe> recipes = new ArrayList<Recipe>();
 		
-		String sqlRecipeTime = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category, recipePic FROM recipes WHERE cook_time <= ?";
+		String sqlRecipeTime = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category, recipe_pic FROM recipes WHERE cook_time <= ?";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlRecipeTime, maxCookTime);
 		while (results.next()) {
 			Recipe recipe = populateRecipe(results);
@@ -169,7 +169,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	public List<Recipe> getRecipesByIngredients(String searchWords) {
 		List<Recipe> recipes = new ArrayList<Recipe>();
 		
-		String sqlRecipeIngredients = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category, recipePic FROM recipes WHERE ingredients ILIKE ?";
+		String sqlRecipeIngredients = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category, recipe_pic FROM recipes WHERE ingredients ILIKE ?";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlRecipeIngredients, "%" + searchWords + "%");
 		while (results.next()) {
 			Recipe recipe = populateRecipe(results);
