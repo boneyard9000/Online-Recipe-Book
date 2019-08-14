@@ -155,7 +155,7 @@ export default {
               {name:"Appetizer", id: 1},
               {name:"Beverage", id: 2},
               {name:"Breakfast", id: 3},
-              {name:"Desert", id: 4},
+              {name:"Dessert", id: 4},
               {name:"Dinner", id: 5},
               {name: "Lunch", id: 6}
             ],

@@ -72,7 +72,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           1 whole left-over cheesecake
           1 oven
           1 killing block
-          ', 'Desert'); --category
+          ', 'Dessert'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
         'Bananalogne platter',  --name
@@ -105,7 +105,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           '1 Normal cake
           1 Calendar with birth-date marked
           1 amount of wait time', 
-          'Desert'); --category
+          'Dessert'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
         'Breakfast Pizza',  --name
