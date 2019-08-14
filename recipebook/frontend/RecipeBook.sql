@@ -13,8 +13,8 @@ password varchar(32) NOT NULL,
 salt varchar(256) NOT NULL,
 email varchar(200) NOT NULL UNIQUE,
 phone varchar(15) NOT NULL UNIQUE,
-role varchar (10) Default 'registered'
-
+role varchar (10) Default 'registered',
+grocery_list text Default ''
 );
 
 CREATE TABLE recipes(
@@ -345,29 +345,8 @@ INSERT INTO user_recipes (user_id, recipe_id)
                 (1, 5),
                 (2, 1),
                 (2, 3),
-                (2, 5);               
-ALTER TABLE users ADD COLUMN grocery_list TEXT;
-ALTER TABLE users ALTER COLUMN grocery_list SET DEFAULT 'Sample Ingredient';
+                (2, 5);
 
-select * from user_recipes;
-SELECT * FROM recipes
 
-select recipes.recipe_id, recipes.name, users.user_id, users.first_name 
-from users
-join recipes on recipes.recipe_id = users.user_id
-where recipes.recipe_id = 1
 
-ALTER TABLE users ALTER COLUMN grocery_list SET DEFAULT '';
-
-SELECT *
-FROM recipes
-
-UPDATE users
-SET grocery_list = "Chicken"
-WHERE user_id = 4;
-
-UPDATE recipes
-SET  name = 'Chicken Kevin'
-WHERE recipe_id = 9;
-
-DELETE FROM users
+Select * From users
