@@ -20,15 +20,15 @@
             <ul class="detailList" v-for="item in ingredientsArray" :key="item">
                 <li>{{item}}</li>
             </ul>
+            <b-button squared variant="info" type="button" v-on:click="addToGroceryList">Add Ingredients to Grocery List!</b-button>
             <br>
 
             <label>Directions</label>
             <ul class="detailList" v-for="step in directionsArray" :key="step">
                 <li>{{step}}</li>
             </ul>
-            <b-button pill variant="info" type="button" v-on:click="addToGroceryList">Add Ingredients to Grocery List!</b-button>
             <div class="recipeActions">
-            <b-button pill variant="info" href="#" class="edit-recipe" @click="editRecipe(currentRecipe)">Edit Recipe
+            <b-button squared variant="info" href="#" class="edit-recipe" @click="editRecipe(currentRecipe)">Edit This Recipe
             
             </b-button>
         </div>
@@ -185,7 +185,7 @@ export default {
    
     width: 100%;
     padding:10px;
-    background-color: slategrey;
+    background-color: rgb(50, 58, 66);
 }
 .titleBlock {
     font-family: 'Open Sans';

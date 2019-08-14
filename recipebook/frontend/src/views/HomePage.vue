@@ -43,6 +43,7 @@
 
 <script>
 import auth from "../auth";
+import { createHash } from 'crypto';
 
 export default {
   name: "HomePage",
@@ -59,6 +60,9 @@ export default {
   },
 
   methods: {
+      emptyRecipe(currentRecipe){
+      this.$emit('emptyRecipe', this.currentRecipe)
+    },
     updateCurrentRecipe() {
       this.$emit("updateCurrentRecipe", this.currentRecipe);
     },

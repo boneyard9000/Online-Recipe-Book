@@ -7,7 +7,7 @@
         <ul id="nav-bar">
           <li><a style="pointer-events: none; color: green; font-weight: 900;">CHEF'S CORNER</a></li>
           <li><router-link v-if="isLoggedIn()" :to="{name: 'HomePage', params: {userId: getUserId()}}" >My Recipes</router-link></li>
-          <li><router-link v-if="isLoggedIn()" :to="{name: 'SubmitRecipe'}">Submit Recipe</router-link></li>
+          <li><router-link v-if="isLoggedIn()" :to="{name: 'SubmitRecipe'}" >Submit Recipe</router-link></li>
           <li><router-link v-if="isLoggedIn()" :to="{name: 'GroceryList'}">Grocery List</router-link></li>
 
 
@@ -27,7 +27,7 @@
     </header>
     </div>
     <router-view :recipes="recipes" :testRecipes="testRecipes" 
-        @editRecipe="editRecipe" :recipeToEdit="currentRecipe" :groceryList="groceryList" style="z-index:2"/>
+        @editRecipe="editRecipe" @emptyRecipe="emptyRecipe" :recipeToEdit="currentRecipe" :groceryList="groceryList" style="z-index:2"/>
   </div>
 </template>
 
@@ -57,8 +57,12 @@ export default {
        }
      },
      editRecipe(recipe) {
-       this.currentRecipe=recipe;
+       this.currentRecipe = recipe;
        this.$router.push ("/SubmitRecipe");
+     },
+     emptyRecipe(){
+       this.currentRecipe = {};
+      //  this.$router.push("/HomePage/" + auth.getUser().uid);
      }
   },
 

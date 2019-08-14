@@ -150,8 +150,11 @@ export default {
       };
     },
     methods: {
+    emptyRecipe(currentRecipe){
+      this.$emit('emptyRecipe', currentRecipe)
+    },
     addRecipe() {
-      if(this.recipe.recipeId==null) {
+      if(this.recipe.recipeId == null) {
         fetch(`${process.env.VUE_APP_REMOTE_API}/api/SubmitRecipe`, {
           method: 'POST',
           headers: {
@@ -161,7 +164,9 @@ export default {
           },
           body: JSON.stringify(this.recipe),
         })
+        .then(this.$emit('emptyRecipe', this.currentRecipe))
         .then (() => {
+           
             this.$router.push('/HomePage/' + auth.getUser().uid)
         });
       } else {
@@ -174,6 +179,7 @@ export default {
           },
           body: JSON.stringify(this.recipe),
         })
+        .then (this.$emit('emptyRecipe', this.currentRecipe))
         .then (() => {
             this.$router.push('/HomePage/' + auth.getUser().uid)
         });
