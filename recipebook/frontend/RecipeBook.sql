@@ -334,7 +334,9 @@ INSERT INTO users (first_name, last_name, password, salt, email, phone)
                 ('b', 'b', 'Ni28xocRqR+/yshSizUEBA==', 'kgrv1tiu697SYYwHN79eQeeb41YSeFfYjXY7HMqzz3wTc3WL89+dFNJ+ANqJzzyy9FBP+xo+8mAZJUdKZDY3CS767a9EzgNJIU4Z8MgcEP6mJxJVV+4IwrFc1aG+BXbb+gkZIRSSpjS+1KYL3ZCOpA0s5hArrdOXEci2MbDnapE=', 
                 'b@b', '2222222222'),
                 ('c', 'c', 'cP0qmLqLa9WLAN+VjwIeaA==', '1VQ6uANweIdt9kF83M5wozKTCu/TPm1UX4CgSKlRPqCXNahvNa/AIK84omqOs+f7V9I8emO1rodr/5u5ZsmO0QtIofaIcRtgKuXpvG/BhglK3ezdGKUN1MJtUD7eW3kWtDvmQw5ouXz8fu/z53+8JDTWzLcy20mZ1U4G4xeLrxA=', 
-                'c@c', '3333333333');
+                'c@c', '3333333333'),
+                ('Dennis', 'Dover', 'pass', 'KDGNyZWHXoyN1xsgIcRzkw==', 'jQ2QubYEQMS0n4c5SYocrGXpQg48XeAu331nCbOtvAMykYHZi0+h2iJdnHEm49/CrOK6qAwMXGZv5gtSwB+ycJefPTFVk4EjQbKCFsstERYjQNg85zuFX2616m3Fo5bO+tNEKFqOYBr7Ex6y2+SmuRYsh4YQLReihQ72GEaAz9c=',
+                'dennis@gmail.com', '9998675309');
 
 
 INSERT INTO user_recipes (user_id, recipe_id)
@@ -343,6 +345,16 @@ INSERT INTO user_recipes (user_id, recipe_id)
                 (1, 3), 
                 (1, 4),
                 (1, 5),
+                (1, 6),
+                (1, 7),
+                (1, 8), 
+                (1, 9),
+                (1, 10),
+                (1, 11),
+                (1, 12),
+                (1, 13), 
+                (1, 14),
+                (1, 15),
                 (2, 1),
                 (2, 3),
                 (2, 5);
@@ -350,3 +362,4 @@ INSERT INTO user_recipes (user_id, recipe_id)
 
 
 Select * From users
+Select * From recipes
