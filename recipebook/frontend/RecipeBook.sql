@@ -113,7 +113,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         480, --cook_time in minutes
                  -- Start of Directions, by steps
          'Step 1 Order Pizza from your favorite local establishment.  
-          Step Eat no more than half of said pizza, you have to be considerate of your morning self. 
+          Step 2 Eat no more than half of said pizza, you have to be considerate of your morning self. 
           Step 3 Leave the rest of said pizza anywhere except the refrigerator, that defeats the point.
           Step 4 The stovetop, the foot of a couch, or a bedroom dresser are commonly accepted locations.
           Step 5 You will know your pizza is ready because you will wake up and be hungry and it will exist.
@@ -335,7 +335,7 @@ INSERT INTO users (first_name, last_name, password, salt, email, phone)
                 'b@b', '2222222222'),
                 ('c', 'c', 'cP0qmLqLa9WLAN+VjwIeaA==', '1VQ6uANweIdt9kF83M5wozKTCu/TPm1UX4CgSKlRPqCXNahvNa/AIK84omqOs+f7V9I8emO1rodr/5u5ZsmO0QtIofaIcRtgKuXpvG/BhglK3ezdGKUN1MJtUD7eW3kWtDvmQw5ouXz8fu/z53+8JDTWzLcy20mZ1U4G4xeLrxA=', 
                 'c@c', '3333333333'),
-                ('Dennis', 'Dover', 'pass', 'KDGNyZWHXoyN1xsgIcRzkw==', 'jQ2QubYEQMS0n4c5SYocrGXpQg48XeAu331nCbOtvAMykYHZi0+h2iJdnHEm49/CrOK6qAwMXGZv5gtSwB+ycJefPTFVk4EjQbKCFsstERYjQNg85zuFX2616m3Fo5bO+tNEKFqOYBr7Ex6y2+SmuRYsh4YQLReihQ72GEaAz9c=',
+                ('Dennis', 'Dover', 'KDGNyZWHXoyN1xsgIcRzkw==', 'jQ2QubYEQMS0n4c5SYocrGXpQg48XeAu331nCbOtvAMykYHZi0+h2iJdnHEm49/CrOK6qAwMXGZv5gtSwB+ycJefPTFVk4EjQbKCFsstERYjQNg85zuFX2616m3Fo5bO+tNEKFqOYBr7Ex6y2+SmuRYsh4YQLReihQ72GEaAz9c=',
                 'dennis@gmail.com', '9998675309');
 
 
@@ -358,8 +358,3 @@ INSERT INTO user_recipes (user_id, recipe_id)
                 (2, 1),
                 (2, 3),
                 (2, 5);
-
-
-
-Select * From users
-Select * From recipes
