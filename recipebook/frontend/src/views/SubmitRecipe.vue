@@ -190,7 +190,11 @@ export default {
 }
 </script>
 
-<style >
+<style>
+
+/* #addRecipe {
+  opacity: .9;
+} */
 h1 {
   color: white;
 }

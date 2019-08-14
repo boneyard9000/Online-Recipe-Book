@@ -38,5 +38,7 @@ public interface UserDao {
     public User getUserByEmail(String email);
     
     public void addToGroceryList(int userId, String groceryList);
+    
+    public void updateGroceryList(int userId, String groceryList);
 
 }

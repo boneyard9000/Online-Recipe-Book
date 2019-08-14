@@ -153,5 +153,12 @@ public class JdbcUserDao implements UserDao {
 		jdbcTemplate.update(sqlUpdateGroceries, groceryList, userId);
 		
 	}
+	
+	@Override
+	public void updateGroceryList(int userId, String groceryList) {
+		String sqlUpdateGroceryList = "UPDATE users SET grocery_list = ? WHERE user_id = ?";
+		jdbcTemplate.update(sqlUpdateGroceryList, groceryList, userId);
+
+	}
 
 }

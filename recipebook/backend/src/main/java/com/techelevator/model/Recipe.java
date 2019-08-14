@@ -23,6 +23,8 @@ public class Recipe {
     
     @NotBlank(message = "Cateogry is required")
 	private String category;
+    
+    private String recipePic;
 	
 	
 	public int getRecipeId() {
@@ -68,5 +70,11 @@ public class Recipe {
 		this.category = category;
 	}
 	
+	public void setRecipePic(String recipePic) {
+		this.recipePic = recipePic;
+	}
+	public String getRecipePic() {
+	return recipePic;
+	}
 	
 }

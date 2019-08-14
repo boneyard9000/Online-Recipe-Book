@@ -15,7 +15,7 @@
           <router-link
             :to="{name: 'RecipeDetails', params: {id: recipes[randomRecipeId].recipeId}}"
           >
-            <img class="img-fluid rod-pic" src="../assets/stock.jpg" />
+            <img class="img-fluid rod-pic" :src="recipes[randomRecipeId].recipePic" />
           </router-link>
           <b-button
             class="btn-sm"
@@ -24,16 +24,21 @@
         </div>
 
         <div class="extra-recipes-container">
-          <div class="recipes" v-for="recipe in testRecipes" :key="recipe.recipeId">
-            <h3>
+          <div class="container recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
+             <div class="recipe-left-side">
+
+            <div class="recipes-name">
               {{recipe.recipeName}}
-              <div class="personal-category">{{recipe.category}}</div>
-            </h3>
+            </div>
             <router-link :to="{name: 'RecipeDetails', params: {id: recipe.recipeId}}">
-              <img class="personal-recipe-pic" src="../assets/forkAndKnife.jpeg" />
+              <img class="personal-recipe-pic" :src="recipe.recipePic" />
             </router-link>
+          </div>
+            <div class="recipe-right-side">
+            <div class="personal-category">{{recipe.category}}</div>
             <div class="personal-description">{{recipe.description}}</div>
             <div class="personal-cook-time">Cook Time: {{recipe.cookMins}}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -55,20 +60,22 @@ export default {
     return {
       currentUser: auth.getUser(),
       testRecipes: [],
-      randomRecipeId: 3
+      randomRecipeId: 3,
+      recipePic: ''
     };
   },
 
   methods: {
       emptyRecipe(currentRecipe){
       this.$emit('emptyRecipe', this.currentRecipe)
+      },
+    getRecipeImg(category) {
+      return `../assets/${category}.jpg`
     },
     updateCurrentRecipe() {
       this.$emit("updateCurrentRecipe", this.currentRecipe);
     },
-    createRandomId() {
-      return Math.floor(Math.random() * this.recipes.length() + 1);
-    },
+    
     saveToUser(recipeId, userId) {
           fetch(`${process.env.VUE_APP_REMOTE_API}/api/saveRecipeToUser`, {
         method: 'POST',
@@ -111,22 +118,19 @@ export default {
       })
       .then(recipe => {
         this.testRecipes = recipe;
+        this.testRecipes.forEach((item) => {
+          item.recipePic = require(`../assets/${item.category}.jpg`);
+        })
       });
 
     this.randomRecipeId = Math.floor(Math.random() * this.recipes.length);
-  }
+    this.rodPic = require(`../assets/${this.recipes[randomRecipeId].category}.jpg`);
+  },
 };
 </script>
 
 <style scoped>
-.home-page-background {
-  background-image: url(../assets/foodBG.jpg);
-  padding-top: 20px;
-  background-position: stretch;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: auto;
-}
+
 h1 {
   font-size: 1.5em;
 }
@@ -136,12 +140,14 @@ h1 {
   padding-right: 3.4%;
   font-size: 1em;
   color: white;
+  font-weight: 800;
 }
 
 .click-info {
   color: white;
   text-align: left;
   padding-left: 2%;
+  font-weight: 800;
 }
 
 ul {
@@ -151,9 +157,7 @@ ul {
   overflow: hidden;
   background-color: lightgrey;
 }
-#home-page {
-  background-color: rgb(197, 214, 208);
-}
+
 h2 {
   font-size: 1.5em;
   font-weight: 800;
@@ -208,70 +212,103 @@ h4 {
   font-size: 2em;
 }
 .recipes {
-  display: block;
+  display: flex;
   height: 170px;
   width: 72%;
-  padding-bottom: 15px;
-  background-color: rgba(175, 240, 145, 0.4);
+  padding-bottom: 0px;
+  padding-top: 10px;
+  background-color: rgba(86, 110, 75, 0.8);
   margin-bottom: 10px;
   margin-left: 2%;
   border: 3px solid rgb(121, 107, 128);
   border-radius: 25px;
 }
 
-.recipes h3 {
+.recipe-left-side{
+  display: inline-block;
+  width: 35%;
+  height: 95%;
+}
+
+.recipe-right-side {
+  display: inline-block;
+  width: 70%;
+  height: 95%;
+
+}
+
+.recipes .recipes-name {
   text-align: left;
   padding-left: 4%;
-  font-size: 1.5em;
+  height: 25%;
+  font-size: 1.7vw;
   padding-top: 0.5%;
-  font-weight: 800;
+  font-weight: 900;
+  color: rgb(41, 38, 38);
+  white-space: nowrap;
 }
 
 .recipes .personal-recipe-pic {
-  height: 75%;
-  width: 35%;
-  float: left;
+  height: 70%;
+  width: 95%;
   margin-left: 1%;
   border: 4px solid white;
   border-radius: 20px;
 }
 
 .personal-category {
-  float: right;
-  font-size: 0.7em;
+  font-size: 1.3vw;
+  text-align: right;
   padding-right: 1%;
+  color: rgb(41, 38, 38);
+  font-weight: 800;
 }
 
 .personal-description {
   margin-top: auto;
   margin-bottom: auto;
-  font-size: 1.5em;
+  font-size: 2.3vw;
   text-align: center;
+    color: rgb(41, 38, 38);
+    font-weight: 700;
+
 }
 
 .personal-cook-time {
-  position: relative;
-  right: 0px;
-  bottom: 0px;
-  padding-top: 10px;
-  text-align: center;
-}
+  text-align: right;
+   color: rgb(41, 38, 38);
+  font-weight: 700;
+  font-size: 1.3vw;
+  }
 
 .recipes div:first-of-type {
   display: block;
 }
 
+
+
 p {
   text-decoration: underline;
   color: white;
 }
+
+button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .recipe-of-day {
   width: 35%;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(96, 121, 86);
   height: 25%;
   border: 4px solid rgb(121, 107, 128);
   border-radius: 25px;
   margin: 1.5% auto 1% auto;
+  align-content: center;
+  margin-bottom: 60px;
+
 }
 
 .recipe-of-day h2 {
@@ -280,10 +317,16 @@ p {
   text-align: center;
 }
 
+.recipe-of-day h3 {
+  text-align: center;
+}
+
+
 .btn {
-  margin: 2% auto auto auto;
   opacity: 0.8;
 }
+
+
 
 .rod-header {
   line-height: 2px;
@@ -293,8 +336,7 @@ p {
 }
 
 .rod-pic {
-  height: 60%;
-  width: 95%;
+  width: auto;
   border: 4px solid white;
   border-radius: 25px;
   margin: 0 auto 0 auto;

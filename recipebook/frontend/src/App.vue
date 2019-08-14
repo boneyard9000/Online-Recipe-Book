@@ -86,6 +86,9 @@ export default {
     .then((test) => {
       this.testRecipes = test;
       this.recipes = test;
+      this.recipes.forEach((item) => {
+          item.recipePic = require(`./assets/${item.category}.jpg`);
+        })
 
     })
   },

@@ -6,7 +6,7 @@
             <div class="my-column">
                 <div class="imgDiv">
                     <!-- <img class="recipeImg"  src="../assets/Chicken Kiev.jpeg"> -->
-                    <img class="recipeImg"  v-bind:src="require('../assets/forkAndKnife.jpeg')">
+                    <img class="recipeImg"  :src="currentRecipe.recipePic">
 
                 </div>
                 <div class="titleBlock">
@@ -56,7 +56,6 @@ export default {
             }
         }
     },
-  
     created() {
          fetch(`${process.env.VUE_APP_REMOTE_API}/api/recipeDetails/${this.$route.params.id}`, {
       headers: {
@@ -70,6 +69,7 @@ export default {
     })
     .then((test) => {
       this.currentRecipe = test;
+      this.currentRecipe.recipePic = require(`../assets/${this.currentRecipe.category}.jpg`);
     });
     
     fetch(`${process.env.VUE_APP_REMOTE_API}/api/user`, {
