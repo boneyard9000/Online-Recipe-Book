@@ -102,6 +102,21 @@
                 >
                 </b-form-textarea>
             </b-form-group>
+            
+            <b-form-group class="control-label text-left"
+              id="input-group-3"
+              label="Image URL (optional):"
+              label-for="Img"
+          >
+            <b-form-input
+            id="Img"
+            class="form-control"
+            placeholder="Example: http://foodpictureURL.com"
+
+            type="url"
+            autofocus
+            />
+            </b-form-group>
             <b-button pill variant="success" type="submit">
                 Add Recipe
             </b-button>
