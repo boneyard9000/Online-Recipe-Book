@@ -5,33 +5,34 @@
         <div class="row my-row">
             <div class="my-column">
                 <div class="imgDiv">
-                    <!-- <img class="recipeImg"  src="../assets/Chicken Kiev.jpeg"> -->
+                        <!-- <img class="recipeImg"  src="../assets/Chicken Kiev.jpeg"> -->
                     <img class="recipeImg"  :src="currentRecipe.recipePic">
-
                 </div>
+                    
                 <div class="titleBlock">
-                 <h2>{{currentRecipe.recipeName}}</h2>
-                 <p>{{currentRecipe.description}}</p>
-                </div>    
-             <div class="detailList">Cook Time: {{currentRecipe.cookMins}}<br>
-             Category: {{currentRecipe.category}}</div>
-            <br>
-            <label>Ingredients</label>
-            <ul class="detailList" v-for="item in ingredientsArray" :key="item">
-                <li>{{item}}</li>
-            </ul>
-            <b-button squared variant="info" type="button" v-on:click="addToGroceryList">Add Ingredients to Grocery List!</b-button>
-            <br>
+                    <h2>{{currentRecipe.recipeName}}</h2>
+                    <p>{{currentRecipe.description}}</p>
+                </div> 
 
-            <label>Directions</label>
-            <ul class="detailList" v-for="step in directionsArray" :key="step">
-                <li>{{step}}</li>
-            </ul>
-            <div class="recipeActions">
-            <b-button squared variant="info" href="#" class="edit-recipe" @click="editRecipe(currentRecipe)">Edit This Recipe
-            
-            </b-button>
-        </div>
+                <div class="detailList">Cook Time: {{currentRecipe.cookMins}}<br>
+                Category: {{currentRecipe.category}}</div>
+                <br>
+
+                <label>Ingredients</label>
+                    <ul class="detailList" v-for="item in ingredientsArray" :key="item">
+                        <li>{{item}}</li>
+                    </ul>
+                <b-button squared variant="info" type="button" v-on:click="addToGroceryList">Add Ingredients to Grocery List!</b-button>
+                <br>
+
+                <label>Directions</label>
+                    <ul class="detailList" v-for="step in directionsArray" :key="step">
+                        <li>{{step}}</li>
+                    </ul>
+                <div class="recipeActions">
+                    <b-button squared variant="info" href="#" class="edit-recipe" @click="editRecipe(currentRecipe)">Edit This Recipe
+                    </b-button>
+                </div>
             </div>
         </div>
         
