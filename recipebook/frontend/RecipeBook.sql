@@ -24,9 +24,8 @@ description varchar (255) NOT NULL,
 cook_time varchar(50) NOT NULL,
 directions TEXT NOT NULL,
 ingredients TEXT NOT NULL,
-category varchar (40) NOT NULL
-
-
+category varchar (40) NOT NULL,
+recipe_pic varchar(80) DEFAULT ''
 );
 
 CREATE TABLE user_recipes(
