@@ -1,5 +1,5 @@
 <template>
-
+<div class="text-color">
  <div class="extra-recipes-container">
           <div class="container recipes" v-for="recipe in testRecipes" :key="recipe.recipeName">
              <div class="recipe-left-side">
@@ -18,6 +18,7 @@
             </div>
           </div>
         </div>
+</div>
 </template>
 
 <script>
@@ -81,6 +82,10 @@ export default {
   margin-left: 1%;
   border: 4px solid white;
   border-radius: 20px;
+}
+
+.text-color{
+    color: white;
 }
 
 </style>
