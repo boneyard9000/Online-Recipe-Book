@@ -115,8 +115,7 @@ export default {
   color: #2c3e50;
 }
 #app {
-  
-  background-image: url("assets/food2BG.jpg");
+  background-image: url("assets/stainless.jpg");
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-attachment: fixed;

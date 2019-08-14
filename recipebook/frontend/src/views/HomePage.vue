@@ -251,7 +251,7 @@ h4 {
 
 .recipes .personal-recipe-pic {
   height: 70%;
-  width: 95%;
+  width: 75%;
   margin-left: 1%;
   border: 4px solid white;
   border-radius: 20px;

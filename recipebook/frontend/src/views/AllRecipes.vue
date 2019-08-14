@@ -8,7 +8,7 @@
               {{recipe.recipeName}}
             </div>
             <router-link :to="{name: 'RecipeDetails', params: {id: recipe.recipeId}}">
-              <img class="personal-recipe-pic" :src="recipe.recipePic" />
+              <img  class="personal-recipe-pic" :src="recipe.recipePic" />
             </router-link>
           </div>
             <div class="recipe-right-side">
@@ -77,8 +77,8 @@ export default {
 <style scoped>
 
 .personal-recipe-pic{
-  height: 70%;
-  width: 95%;
+  height: 30%;
+  width: 30%;
   margin-left: 1%;
   border: 4px solid white;
   border-radius: 20px;
@@ -86,6 +86,10 @@ export default {
 
 .text-color{
     color: white;
+    display: flex;
+    padding: 30px;
+
+
 }
 
 </style>
