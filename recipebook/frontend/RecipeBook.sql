@@ -25,7 +25,7 @@ cook_time varchar(50) NOT NULL,
 directions TEXT NOT NULL,
 ingredients TEXT NOT NULL,
 category varchar (40) NOT NULL,
-recipe_pic varchar(80) DEFAULT ''
+recipe_pic varchar(300) DEFAULT ''
 );
 
 CREATE TABLE user_recipes(
@@ -358,3 +358,8 @@ INSERT INTO user_recipes (user_id, recipe_id)
                 (2, 1),
                 (2, 3),
                 (2, 5);
+
+
+
+Select * From users
+SELECT * FROM recipes

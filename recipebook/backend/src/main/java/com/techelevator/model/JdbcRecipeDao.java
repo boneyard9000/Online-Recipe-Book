@@ -32,8 +32,8 @@ public class JdbcRecipeDao implements RecipeDao{
 	
 	@Override
     public void saveRecipe(Recipe recipe, User u) {
-        String sqlCreateRecipe = "INSERT INTO recipes(name, description, cook_time, directions, ingredients, category) VALUES (?, ?, ?, ?, ?, ?) RETURNING recipe_id";
-        SqlRowSet result = jdbcTemplate.queryForRowSet(sqlCreateRecipe, recipe.getRecipeName(), recipe.getDescription(), recipe.getCookMins(), recipe.getDirections(), recipe.getIngredients(), recipe.getCategory());
+        String sqlCreateRecipe = "INSERT INTO recipes(name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING recipe_id";
+        SqlRowSet result = jdbcTemplate.queryForRowSet(sqlCreateRecipe, recipe.getRecipeName(), recipe.getDescription(), recipe.getCookMins(), recipe.getDirections(), recipe.getIngredients(), recipe.getCategory(), recipe.getRecipePic());
         if (result.next()) {
         	recipe.setRecipeId(result.getInt("recipe_id"));
             String sqlCreateFavorite = "INSERT INTO user_recipes(user_id, recipe_id) VALUES (?, ?)";

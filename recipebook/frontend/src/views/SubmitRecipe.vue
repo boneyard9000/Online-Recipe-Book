@@ -112,7 +112,7 @@
             id="Img"
             class="form-control"
             placeholder="Example: http://foodpictureURL.com"
-
+            v-model="recipe.recipePic"
             type="url"
             autofocus
             />
@@ -144,6 +144,7 @@ export default {
             directions: '',
             ingredients: '',
             category: '',
+            recipePic: ''
           }
         }
       }  
@@ -169,6 +170,9 @@ export default {
       this.$emit('emptyRecipe', currentRecipe)
     },
     addRecipe() {
+      if(this.recipe.recipePic == null) {
+        this.recipe.recipePic = '';
+      }
       if(this.recipe.recipeId == null) {
         fetch(`${process.env.VUE_APP_REMOTE_API}/api/SubmitRecipe`, {
           method: 'POST',

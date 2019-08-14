@@ -118,8 +118,10 @@ export default {
       })
       .then(recipe => {
         this.testRecipes = recipe;
-        this.testRecipes.forEach((item) => {
+        this.testRecipes.forEach((item) => { 
+          if(item.recipePic === '') {
           item.recipePic = require(`../assets/${item.category}.jpg`);
+          }
         })
       });
 

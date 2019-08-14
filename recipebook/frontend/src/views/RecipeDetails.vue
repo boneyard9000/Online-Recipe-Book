@@ -69,7 +69,9 @@ export default {
     })
     .then((test) => {
       this.currentRecipe = test;
+      if(this.currentRecipe.recipePic === '') {
       this.currentRecipe.recipePic = require(`../assets/${this.currentRecipe.category}.jpg`);
+      }
     });
     
     fetch(`${process.env.VUE_APP_REMOTE_API}/api/user`, {
