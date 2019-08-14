@@ -26,13 +26,15 @@
             <ul class="detailList" v-for="step in directionsArray" :key="step">
                 <li>{{step}}</li>
             </ul>
-            <button type="button" v-on:click="addToGroceryList">Add Ingredients to Grocery List!</button>
+            <b-button pill variant="info" type="button" v-on:click="addToGroceryList">Add Ingredients to Grocery List!</b-button>
+            <div class="recipeActions">
+            <b-button pill variant="info" href="#" class="edit-recipe" @click="editRecipe(currentRecipe)">Edit Recipe
+            
+            </b-button>
+        </div>
             </div>
         </div>
-        <div class="recipeActions">
-            <a href="#" class="edit-recipe" @click="editRecipe(currentRecipe)">Edit
-            </a>
-        </div>
+        
 
     </div>
 </template>
@@ -225,5 +227,8 @@ export default {
     height:auto;
     border: 8px solid lightgrey;
     border-radius: 25px;
+}
+b-button {
+    background-color: blue;
 }
 </style>
