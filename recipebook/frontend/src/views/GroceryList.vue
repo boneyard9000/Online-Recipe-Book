@@ -1,14 +1,28 @@
 <template>
-<div id="entire-page">
-    <h1 style="text-align: center;">WELCOME TO YOUR GROCERY LIST</h1>
-    <div style="text-align:center;">PUSH IT DOWN!!!!!</div>
+<div id="entire-page" style="background-color:transparent;">
+    <h2 style="text-align: center; color: white;">WELCOME TO YOUR GROCERY LIST</h2>
+    <h2 style="text-align: center; color: white;">----------------------------------------------------------</h2>
     <div id="todo-list">
-        <div id="child" >
-            <h1>My Groceries</h1> <button v-on:click="updateGroceryList">SAVE GROCERY LIST</button>
-            <ul id="my-list">
-                <li v-for="(thing, index) in groceriesArray" class="all-li">
+        <div id="child" style="transparent: none; border-radius: 50px;">
+            <h1 style="background-color: green; color: black;">My Groceries</h1> 
+            <b-button pill variant="success" type="submit" v-on:click="updateGroceryList" style="margin: auto; margin-top:10px;">SAVE GROCERY LIST</b-button>
+            <br>
+            
+            <b-button pill variant="danger" v-on:click="clearGroceryList" style="margin: auto; margin-top:10px; margin-bottom: 10px;">Empty Grocery List</b-button>
+            
+            <form v-on:submit.prevent="addGrocery">
+                <input v-model="currentGrocery" type="text" style="margin-top: 10px;" maxlength="35">
+                <b-button type="submit" style="float:right;">Add Grocery</b-button>
+            </form>
+            
+            <br>
+            <br>
+            
+            <ul id="my-list" style="background-color: white; border-radius: 50px;">
+
+                <li v-for="(thing, index) in groceriesArray" class="all-li" style="width: 450px; text-align: left; border-radius: 20px;">
                     {{thing}}
-                    <button class="da-btn" v-on:click="deleteGrocery(index)" >REMOVE</button>
+                    <b-button v-on:click="deleteGrocery(index)" style="float: right;"><i class="material-icons">X</i></b-button>
                 </li>
                 
             </ul>
@@ -28,16 +42,10 @@ export default {
             currentUser: auth.getUser(),
             groceries: '',
             groceriesArray: {},
-            todos: [
-               { task: 'Wake up' },
-               { task: '5 Minute Morning Movement' },
-               { task: 'Meditate' },
-               { task: 'Brush Teeth' },
-               { task: 'Shower' },
-           ],
-           currentGroceryList: {
-               allGroceries: ''
-           }
+            currentGrocery: '',
+            currentGroceryList: {
+                allGroceries: ''
+            }
             
 
         }
@@ -57,19 +65,42 @@ export default {
         .then((test) => {
         this.currentUser = test;
         this.groceries = test.groceryList;
-        this.groceriesArray = test.groceryList.split(", ");
+        if (this.groceries.substring(0,1)===",") {
+            this.groceries = this.groceries.substring(2);
+        }
+        this.groceriesArray = this.groceries.split(", ");
+        if (this.groceriesArray[0] === "") {
+            this.groceriesArray = [];
+        }
         });
+
+        
     },
 
     methods: {
         deleteGrocery: function(index) {
             this.groceriesArray.splice(index, 1);
         },
+        addGrocery: function() {
+            this.currentGrocery = this.currentGrocery.trim();
+            if (this.currentGrocery.length > 0) {
+                this.groceriesArray.push(this.currentGrocery);
+                this.currentGrocery = '';
+            }
+        },
+        clearGroceryList: function() {
+            this.groceriesArray = [];
+        },
         updateGroceryList() {
             this.groceries = '';
             for (let i = 0; i < this.groceriesArray.length; i++) {
-                this.groceries += this.groceriesArray[i] + ", "
+                if (this.groceriesArray === ", ") {
+                    continue;
+                } else {
+                    this.groceries += this.groceriesArray[i] + ", ";
+                }
             }
+            
             this.groceries = this.groceries.substring(0, this.groceries.length - 2);
             this.currentGroceryList.allGroceries = this.groceries
           fetch(`${process.env.VUE_APP_REMOTE_API}/api/groceries`, {
@@ -133,9 +164,7 @@ h1 {
     border-bottom:1px solid #f2f2f2;
     padding:10px 20px;
 }
-li:nth-child(odd) {
-    /* background-color: rgb(129, 182, 129); */
-}
+
 li:last-child{
     border:0px;
 }

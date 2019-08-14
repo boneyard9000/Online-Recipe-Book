@@ -78,7 +78,7 @@
           >
             <b-form-textarea
             id="ingredients"
-            placeholder="Example: Buns, Patty, BBQ Sauce"
+            placeholder="Put each ingredient on a new line (ex: 1 Cup of Milk)"
             v-model="recipe.ingredients"
             type="text"
 
@@ -94,7 +94,7 @@
           >
                 <b-form-textarea
                     id="textarea"
-                    placeholder="Put each direction on a new line"
+                    placeholder="Put each direction on a new line (ex: Preheat the oven to 325 °F)"
                     v-model="recipe.directions"
 
                     rows="3"

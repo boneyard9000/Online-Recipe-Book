@@ -98,8 +98,7 @@ from users
 join recipes on recipes.recipe_id = users.user_id
 where recipes.recipe_id = 1
 
-ALTER TABLE users
-ADD COLUMN grocery_list TEXT;
+ALTER TABLE users ALTER COLUMN grocery_list SET DEFAULT '';
 
 SELECT *
 FROM recipes
@@ -111,3 +110,5 @@ WHERE user_id = 4;
 UPDATE recipes
 SET  name = 'Chicken Kevin'
 WHERE recipe_id = 9;
+
+DELETE FROM users

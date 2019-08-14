@@ -118,7 +118,7 @@ export default {
       addToGroceryList() {
           
           for (let i = 0; i < this.ingredientsArray.length; i++) {
-              if (this.ingredientsArray[i] == '') {
+              if (this.ingredientsArray[i] === '') {
                   console.log("is null");
               }
 
