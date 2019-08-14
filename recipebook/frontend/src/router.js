@@ -9,6 +9,7 @@ import Register from './views/Register.vue'
 import RecipeDetails from './views/RecipeDetails.vue'
 import SubmitRecipe from './views/SubmitRecipe.vue'
 import GroceryList from './views/GroceryList.vue'
+import AllRecipes from './views/AllRecipes.vue'
 
 
 Vue.use(Router)
@@ -26,14 +27,15 @@ const router = new Router({
         requiresAuth: false
       }
     },
-    // {
-    //   path: '/',
-    //   name: 'home',
-    //   component: Home,
-    //   meta: {
-    //     requiresAuth: true
-    //   }
-    // },
+    {
+      path: '/AllRecipes',
+      name: 'AllRecipes',
+      component: AllRecipes,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    
     {
       path: '/login',
       name: 'login',

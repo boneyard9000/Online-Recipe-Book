@@ -9,6 +9,7 @@
           <li><router-link v-if="isLoggedIn()" :to="{name: 'HomePage', params: {userId: getUserId()}}" >My Recipes</router-link></li>
           <li><router-link v-if="isLoggedIn()" :to="{name: 'SubmitRecipe'}" >Submit Recipe</router-link></li>
           <li><router-link v-if="isLoggedIn()" :to="{name: 'GroceryList'}">Grocery List</router-link></li>
+          <li><router-link v-if="isLoggedIn()" :to="{name: 'AllRecipes'}">All Recipes</router-link></li>
 
 
           
