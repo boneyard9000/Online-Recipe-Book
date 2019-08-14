@@ -326,7 +326,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         2 (750-mL) bottles chilled champagne, sparkling white wine, or sparkling mineral water
 Optional: ice, garnishes of mint, lemon or lime slices
 
-          ', 'Appetizer'); --category          
+          ', 'Beverage'); --category          
 
 INSERT INTO users (first_name, last_name, password, salt, email, phone)
         VALUES ('a', 'a', 'TkcxOZ+G2JaDh2cg0YMuxg==', '+GbyRIz87EbaECurSAvolcYBK3LwzLhwBmk2FyQ+/3xauT/pwa7pIBdFuGXfrDCO2+WrPyeEGTEoGL4B7ujl5XCv8C0DMWrtB9GEGmtdV5CgKSEHSHYkWKqDrV+StLh3CeiQP4qyX7l7KNLQW1uXY4cnjk6Mjh9W5lhUmnA+3/w=',
