@@ -117,4 +117,10 @@ public class ApiController {
 		recipeDao.saveRecipeToUser(recipeId, userId);
 	}
 	
+	@PutMapping("/GroceryList")
+	public void updateGroceries(@Valid @RequestBody GroceryList currentGroceryList) {
+		User u = authProvider.getCurrentUser();
+		userDao.addToGroceryList((int) u.getId(), currentGroceryList.getAllGroceries());
+	}
+	
 }
