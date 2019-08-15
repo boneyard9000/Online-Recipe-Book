@@ -7,7 +7,7 @@
         <div class="imgBox">
           <img :src="recipe.recipePic" style="width: 100%; height: 250px;">
         </div>
-        <div class="content">
+        <div class="content" >
         <h3>{{ recipe.recipeName }}</h3>
         <p>Category: {{ recipe.category }}<br>
           <br>Description: {{ recipe.description }}<br>
@@ -133,7 +133,7 @@ body {
   background: #fff;
   transition: 0.5s;
   overflow: hidden;
-  padding: 15px;
+  padding: 5px;
   box-sizing: border-box;
 }
 
@@ -142,12 +142,15 @@ body {
   height: 100%;
   bottom: 0;
   left: 0;
+  vertical-align: center;
 }
 
 .box .content h3 {
   margin: 0;
   padding: 0;
   font-size: 20px;
+  text-align: center;
+  vertical-align: center;
 }
 
 .box .content p {
