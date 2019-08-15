@@ -18,7 +18,7 @@
           </router-link>
           <b-button
             class="btn-sm"
-            @click="saveToUser(recipes[randomRecipeId].recipeId, currentUser.id)"
+            @click="saveToUser(recipes[randomRecipeId])"
           >Add To Favorites</b-button>
         </div>
 
@@ -75,7 +75,7 @@ export default {
       this.$emit("updateCurrentRecipe", this.currentRecipe);
     },
     
-    saveToUser(recipeId, userId) {
+    saveToUser(recipe) {
           fetch(`${process.env.VUE_APP_REMOTE_API}/api/saveRecipeToUser`, {
         method: 'POST',
         headers: {
@@ -83,10 +83,10 @@ export default {
           'Content-Type': 'application/json',
           Authorization: 'Bearer ' + auth.getToken()
         },
-        body: JSON.stringify(this.recipeId, this.userId),
+        body: JSON.stringify(this.recipes[this.randomRecipeId]),
       })
       .then (() => {
-          this.$router.push('/HomePage/' + auth.getUser().uid)
+             location.reload();
       });
     }
   },

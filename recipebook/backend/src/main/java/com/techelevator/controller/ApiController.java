@@ -113,8 +113,9 @@ public class ApiController {
 	
 	@PostMapping
 	("/saveRecipeToUser") 
-	public void saveRecipeToUser(@Valid @RequestBody int recipeId, int userId){
-		recipeDao.saveRecipeToUser(recipeId, userId);
+	public void saveRecipeToUser(@Valid @RequestBody Recipe recipe){
+		User u = authProvider.getCurrentUser();
+		recipeDao.saveRecipeToUser((int)u.getId(), recipe.getRecipeId());
 	}
 	
 	@PutMapping("/GroceryList")

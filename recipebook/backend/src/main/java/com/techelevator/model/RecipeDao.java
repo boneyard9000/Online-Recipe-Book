@@ -22,7 +22,7 @@ public interface RecipeDao {
 	
 	public void saveRecipe(Recipe recipe, User u);
 	
-	public void saveRecipeToUser(int recipeId, int userId);
+	public void saveRecipeToUser(int userId, int recipeId);
 	
 	public Recipe update(Recipe recipe);
 }
