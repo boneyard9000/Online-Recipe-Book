@@ -376,7 +376,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           ', 'Breakfast'); --category       
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
-        'Breakfast Appit pies',  --name
+        'Breakfast Apple pies',  --name
         'Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist.', --description
         25, --cook_time
                 -- Start of Directions, by steps
