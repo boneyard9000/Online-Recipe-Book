@@ -46,7 +46,7 @@ public class JdbcRecipeDao implements RecipeDao{
 	@Override
 	public List<Recipe> getAllRecipes() {
 		List<Recipe> recipes = new ArrayList<Recipe>();
-		String sqlSelectAllRecipes = "SELECT * FROM recipes";
+		String sqlSelectAllRecipes = "SELECT recipe_id, name, description, cook_time, directions, ingredients, category, recipe_pic FROM recipes ORDER BY name";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllRecipes);
 		
 		while (results.next()) {
@@ -67,7 +67,7 @@ public class JdbcRecipeDao implements RecipeDao{
 				"FROM recipes\n" + 
 				"JOIN user_recipes ON recipes.recipe_id = user_recipes.recipe_id\n" + 
 				"JOIN users ON users.user_id = user_recipes.user_id\n" + 
-				"WHERE users.user_id = ?";
+				"WHERE users.user_id = ? ORDER BY name";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllRecipes, userId);
 		
 		while (results.next()) {

@@ -1,6 +1,8 @@
 <template>
+
 <div class="text-color">
   <!-- The main-page div includes the nav bar -->
+  <div class="click-info" style="font-size: 30px; text-align: center; color: slate">Welcome {{currentUser.firstName}}! Click on a recipe below to learn more information</div>
   <div id="main-page" style="text-align: center;">
     <div class="container" style="background: lightgray;">
       <div class="box" v-for="recipe in testRecipes" :key="recipe.recipeName" style="float:left; margin: 10px;"> 
@@ -35,6 +37,7 @@ export default {
 
     data(){
         return{
+            currentUser: auth.getUser(),
             testRecipes: [],
             recipes: [],
         };
@@ -64,7 +67,7 @@ export default {
         .then((response) => {
         return response.json();
         })
-        
+    
         .then(recipe => {
         this.testRecipes = recipe;
         this.testRecipes.forEach((item) => {
@@ -72,6 +75,19 @@ export default {
           item.recipePic = require(`../assets/${item.category}.jpg`);
             }
         })
+      });
+          fetch(`${process.env.VUE_APP_REMOTE_API}/api/user`, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + auth.getToken()
+      }
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(test => {
+        this.currentUser = test;
       });
     }
 }

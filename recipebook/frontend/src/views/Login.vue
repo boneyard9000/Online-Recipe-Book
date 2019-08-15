@@ -98,7 +98,7 @@ export default {
             }
             auth.saveToken(token);
             this.userid = auth.getUser().uid;
-            this.$router.push('/HomePage/' + auth.getUser().uid);
+            this.$router.push('/AllRecipes');
           }
         })
         .catch((err) => console.error(err));
