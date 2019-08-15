@@ -1,7 +1,7 @@
 <template>
 
     <div id="addRecipe" class="container">
-        <h1>Submit a new recipe</h1>
+        <h1>Your recipe</h1>
         <b-form cols="4" @submit.prevent="addRecipe">
 
             <div class="alert alert-danger" role="alert" v-if="recipeErrors">
@@ -118,7 +118,7 @@
             />
             </b-form-group>
             <b-button pill variant="success" type="submit">
-                Add Recipe
+                Save Recipe
             </b-button>
         </b-form>
     </div>
