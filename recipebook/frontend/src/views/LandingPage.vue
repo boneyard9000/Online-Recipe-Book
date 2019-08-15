@@ -8,11 +8,8 @@
 
       <div class="content">
 
-        <h1>CHEF'S CORNER</h1>
-        <h4 style="color: white; ">SEARCH</h4>
-        <h4 style="color: white; ">CREATE</h4>
-        <h4 style="color: white; ">SAVE</h4>
-        <h4 style="color: white; ">SHARE</h4>
+        <h1 style="font-style: black">CHEF'S CORNER</h1>
+        <h4 style="color: white; text-align: left; width: 600px; ">The best way to store your favorite recipes and search for new ones. Whether you are a seasoned chef or just "sampling" the culinary field our website will serve all your needs.</h4>
 
         <br>
 
@@ -121,7 +118,7 @@ html, body {
 }
 
 .content h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Arial', sans-serif;
   color: #F9F3F4;
   text-shadow: 0px 0px 300px #000;
   font-size: 500%;
