@@ -250,7 +250,7 @@ h4 {
 
 .recipes .personal-recipe-pic {
   height: 70%;
-  width: 75%;
+  width: auto;
   margin-left: 1%;
   border: 4px solid white;
   border-radius: 20px;
@@ -323,9 +323,12 @@ button {
 
 .btn {
   opacity: 0.8;
+
 }
 
-
+.btn-sm {
+  color:white;
+}
 
 .rod-header {
   line-height: 2px;
