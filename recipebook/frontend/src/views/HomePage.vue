@@ -254,17 +254,19 @@ button {
   margin-bottom: 60px;
   box-shadow: 0 50px 50px rgba(0,0,0,0.7);
   opacity: .9;
-
+  margin-top: 5vh;
 }
 
 .recipe-of-day h2 {
   padding-top: 1%;
   font-weight: 900;
   text-align: center;
+  font-size: 2vw;
 }
 
 .recipe-of-day h3 {
   text-align: center;
+  font-size: 2vw;
 }
 
 
