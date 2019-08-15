@@ -363,3 +363,4 @@ INSERT INTO user_recipes (user_id, recipe_id)
 
 Select * From users
 SELECT * FROM recipes
+Select * from user_recipes;

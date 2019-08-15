@@ -98,8 +98,8 @@ body {
   position: relative;
   width: 300px;
   height: 400px;
-  background: black;
-  box-shadow: 0 30px 30px rgba(0,0,0,.5);
+  background: rgba(0,0,0,0.7);
+  box-shadow: 0 30px 30px rgba(0,0,0,0.7);
 }
 
 .box .imgBox {
@@ -163,14 +163,5 @@ body {
   opacity: 1;
   transition-delay: 0.3s
 }
-
-
-
-
-
-
-
-
-
 
 </style>

@@ -8,7 +8,11 @@
                         <!-- <img class="recipeImg"  src="../assets/Chicken Kiev.jpeg"> -->
                     <img class="recipeImg"  :src="currentRecipe.recipePic">
                 </div>
-                    
+                    <div><b-button
+            class="btn-sm"
+            @click="saveToUser(currentRecipe[recipeId])"
+          >Add To Favorites</b-button>
+          </div>
                 <div class="titleBlock">
                     <h2>{{currentRecipe.recipeName}}</h2>
                     <p>{{currentRecipe.description}}</p>
@@ -113,6 +117,20 @@ export default {
   },
 
   methods: {
+       saveToUser(recipe) {
+        fetch(`${process.env.VUE_APP_REMOTE_API}/api/saveRecipeToUser`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          Authorization: 'Bearer ' + auth.getToken()
+        },
+        body: JSON.stringify(this.currentRecipe),
+      })
+      .then (() => {
+             location.reload();
+      });
+    },
 
        editRecipe(currentRecipe) {
             this.$emit("editRecipe", currentRecipe)
