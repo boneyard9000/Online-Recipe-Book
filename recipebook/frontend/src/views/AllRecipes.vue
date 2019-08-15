@@ -3,9 +3,9 @@
 <div class="text-color">
   <!-- The main-page div includes the nav bar -->
   <div id="main-page" style="text-align: center;">
-    <div class="container" style="background: lightgray;">
-        <div class="click-info" style="font-size: 30px; text-align: center; color: slate">Welcome {{currentUser.firstName}}!</div>
-        <div class="click-info" style="font-size: 30px; text-align: center; color: slate">Hover over a recipe below to learn more information</div>
+    <div class="container" style="background: gray;">
+        <div class="click-info" style="font-size: 30px; text-align: center; color: white;">Welcome {{currentUser.firstName}}!</div>
+        <div class="click-info" style="font-size: 30px; text-align: center; color: white;">Hover over a recipe below to learn more information</div>
 
       <div class="box" v-for="recipe in testRecipes" :key="recipe.recipeName" style="float:left; margin: 10px;"> 
         <div class="imgBox">
