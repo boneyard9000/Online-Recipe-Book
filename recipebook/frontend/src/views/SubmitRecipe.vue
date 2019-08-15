@@ -119,7 +119,8 @@
             </b-form-group>
             <b-button pill variant="success" type="submit">
                 Save Recipe
-            </b-button>
+            </b-button><br>
+            <div class="space">.</div>
         </b-form>
     </div>
     
@@ -234,6 +235,8 @@ h1 {
   background-color: rgba(50, 58, 66, 0.8);
 }
 
-
+.space {
+  margin:1px;
+}
 
 </style>
