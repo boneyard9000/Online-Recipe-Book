@@ -485,10 +485,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'Chock-full of poultry, potatoes, peas and corn, this recipe for easy chicken pot pie makes two golden pies, so you can serve one at supper and save the other for a busy night.', --description
         75, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Preheat oven to 425°. Place potatoes and carrots in a large saucepan; add water to cover. Bring to a boil. Reduce heat; cook, covered, 8-10 minutes or until crisp-tender; drain.
-         Step 2 In a large skillet, heat butter over medium-high heat. Add onion; cook and stir until tender. Stir in flour and seasonings until blended. Gradually stir in broth and milk. Bring to a boil, stirring constantly; cook and stir 2 minutes or until thickened. Stir in chicken, peas, corn and potato mixture; remove from heat.
-         Step 3 Unroll a pie crust into each of two 9-in. pie plates; trim even with rims. Add chicken mixture. Unroll remaining crusts; place over filling. Trim, seal and flute edges. Cut slits in tops.
-         Step 4 Bake 35-40 minutes or until crust is lightly browned. Let stand 15 minutes before cutting. Freeze option: Cover and freeze unbaked pies. To use, remove from freezer 30 minutes before baking (do not thaw). Preheat oven to 425°. Place pies on baking sheets; cover edges loosely with foil. Bake 30 minutes. Reduce oven setting to 350°; bake 70-80 minutes longer or until crust is golden brown and a thermometer inserted in center reads 165°.
+         'Step 1 Preheat oven to 425°. Place potatoes and carrots in a large saucepan, add water to cover. Bring to a boil. Reduce heat, cook, covered, 8-10 minutes or until crisp-tender, drain.
+         Step 2 In a large skillet, heat butter over medium-high heat. Add onion, cook and stir until tender. Stir in flour and seasonings until blended. Gradually stir in broth and milk. Bring to a boil, stirring constantly, cook and stir 2 minutes or until thickened. Stir in chicken, peas, corn and potato mixture, remove from heat.
+         Step 3 Unroll a pie crust into each of two 9-in. pie plates, trim even with rims. Add chicken mixture. Unroll remaining crusts, place over filling. Trim, seal and flute edges. Cut slits in tops.
+         Step 4 Bake 35-40 minutes or until crust is lightly browned. Let stand 15 minutes before cutting. Freeze option: Cover and freeze unbaked pies. To use, remove from freezer 30 minutes before baking (do not thaw). Preheat oven to 425°. Place pies on baking sheets, cover edges loosely with foil. Bake 30 minutes. Reduce oven setting to 350°, bake 70-80 minutes longer or until crust is golden brown and a thermometer inserted in center reads 165°.
          ', 
                 --Start of Ingredients
         '2 cups diced peeled potatoes
@@ -512,7 +512,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'A good old-fashioned easy beef stew recipe with rich beef gravy that lets the flavor of the potatoes and carrots come through.', --description
         60, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 In an oven-safe Dutch oven, brown beef in batches in oil; drain. Return all meat to the pan. Add onions, tomatoes, broth, tapioca, garlic, parsley, salt, pepper and bay leaf. Bring to a boil.
+         'Step 1 In an oven-safe Dutch oven, brown beef in batches in oil, drain. Return all meat to the pan. Add onions, tomatoes, broth, tapioca, garlic, parsley, salt, pepper and bay leaf. Bring to a boil.
          Step 2 Cover stew and bake at 350° for 1 hour. Stir in carrots, potatoes and celery. Bake, covered, 1 hour longer or until meat and vegetables are tender. Discard bay leaf.
          ', 
                 --Start of Ingredients
@@ -534,12 +534,12 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
         'Skillet Mac & Cheese',  --name
-        'This super creamy mac 'n' cheese is so simple it seems almost too easy!', --description
-        25, --cook_time
+        'This super creamy mac and cheese is so simple it seems almost too easy!', --description
+        25, --cooktime
                 -- Start of Directions, by steps
-         'Step 1 Cook macaroni according to package directions; drain.
-         Step 2 Meanwhile, in a large cast-iron or other heavy skillet, melt butter over medium heat. Stir in flour until smooth; gradually whisk in cream. Bring to a boil, stirring constantly. Cook and stir until thickened, about 2 minutes. Reduce heat; stir in cheese until melted.
-         Step 3 Add macaroni; cook and stir until heated through. Top as desired.
+         'Step 1 Cook macaroni according to package directions, drain.
+         Step 2 Meanwhile, in a large cast-iron or other heavy skillet, melt butter over medium heat. Stir in flour until smooth, gradually whisk in cream. Bring to a boil, stirring constantly. Cook and stir until thickened, about 2 minutes. Reduce heat, stir in cheese until melted.
+         Step 3 Add macaroni, cook and stir until heated through. Top as desired.
          ', 
                 --Start of Ingredients
         '2 cups uncooked elbow macaroni (about 8 ounces)
@@ -555,9 +555,9 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'Beef enchiladas prepared in flour tortillas in this saucy casserole that has irresistible home-cooked flavor and a subtle kick.', --description
         70, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Preheat oven to 350°. In a large skillet, cook beef and onion over medium heat, crumbling meat, until beef is no longer pink, 6-8 minutes; drain. Stir in flour and seasonings. Add tomatoes; bring to a boil. Reduce heat; simmer, covered, 15 minutes.
-         Step 2 In a saucepan, heat butter over medium-high heat. Add garlic; cook and stir 1 minute or until tender. Stir in flour until blended; gradually whisk in broth. Bring to a boil; cook and stir until thickened, about 2 minutes. Stir in tomato sauce and seasonings; heat through.
-         Step 3 Pour 1-1/2 cups sauce into an ungreased 13x9-in. baking dish. Place about 1/4 cup beef mixture off center on each tortilla; top with 1-2 tablespoons cheese. Roll up and place over sauce, seam side down. Top with remaining sauce.
+         'Step 1 Preheat oven to 350°. In a large skillet, cook beef and onion over medium heat, crumbling meat, until beef is no longer pink, 6-8 minutes, drain. Stir in flour and seasonings. Add tomatoes, bring to a boil. Reduce heat, simmer, covered, 15 minutes.
+         Step 2 In a saucepan, heat butter over medium-high heat. Add garlic, cook and stir 1 minute or until tender. Stir in flour until blended, gradually whisk in broth. Bring to a boil, cook and stir until thickened, about 2 minutes. Stir in tomato sauce and seasonings, heat through.
+         Step 3 Pour 1-1/2 cups sauce into an ungreased 13x9-in. baking dish. Place about 1/4 cup beef mixture off center on each tortilla, top with 1-2 tablespoons cheese. Roll up and place over sauce, seam side down. Top with remaining sauce.
          Step 4 Bake, covered, until heated through, 30-35 minutes. Sprinkle with remaining cheese. Bake, uncovered, until cheese is melted, 10-15 minutes longer. Serve with toppings as desired.
          ', 
                 --Start of Ingredients
@@ -586,10 +586,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'This all-in-one comforting pork chops recipe reminds me of home.', --description
         120, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 In a small saucepan, melt butter; stir in the flour, salt and pepper until smooth. Add broth. Bring to a boil; cook and stir for 1 minute or until thickened. Remove from the heat and set aside.
-         Step 2 In a large skillet, brown the pork chops on both sides in oil; sprinkle with additional salt and pepper if desired.
+         'Step 1 In a small saucepan, melt butter, stir in the flour, salt and pepper until smooth. Add broth. Bring to a boil, cook and stir for 1 minute or until thickened. Remove from the heat and set aside.
+         Step 2 In a large skillet, brown the pork chops on both sides in oil, sprinkle with additional salt and pepper if desired.
          Step 3 In a greased 13-in. x 9-in. baking dish, layer potatoes and onion. Pour broth mixture over layers. Place pork chops on top.
-         Step 4 Cover and bake at 350° for 1 hour; uncover and bake 30 minutes longer or until meat and potatoes are tender. If desired, sprinkle with paprika and parsley.
+         Step 4 Cover and bake at 350° for 1 hour, uncover and bake 30 minutes longer or until meat and potatoes are tender. If desired, sprinkle with paprika and parsley.
          ', 
                 --Start of Ingredients
         '3 tablespoons butter
@@ -610,8 +610,8 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'Our fun, simple chicken taco recipe is perfect for a relaxing dinner with friends.', --description
         300, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Place chicken in a 3-qt. slow cooker. Combine lime juice and chili powder; pour over chicken. Cook, covered, on low until chicken is tender, 5-6 hours.
-         Step 2 Remove chicken. When cool enough to handle, shred meat with two forks; return to slow cooker. Stir in corn and salsa. Cook, covered, on low until heated through, about 30 minutes. Place filling on tortillas; if desired, serve with sour cream, pickled onions, lettuce and cheese.
+         'Step 1 Place chicken in a 3-qt. slow cooker. Combine lime juice and chili powder, pour over chicken. Cook, covered, on low until chicken is tender, 5-6 hours.
+         Step 2 Remove chicken. When cool enough to handle, shred meat with two forks, return to slow cooker. Stir in corn and salsa. Cook, covered, on low until heated through, about 30 minutes. Place filling on tortillas, if desired, serve with sour cream, pickled onions, lettuce and cheese.
          ', 
                 --Start of Ingredients
         '1-1/2 pounds boneless skinless chicken breast halves
@@ -629,9 +629,9 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         15, --cook_time
                 -- Start of Directions, by steps
          'Step 1 Heat oven to 350°F. Generously grease 12-cup fluted tube pan with shortening or cooking spray. In large 1-gallon plastic food storage bag, mix granulated sugar and cinnamon.
-          Step 2 Separate dough into 16 biscuits; cut each into quarters. Shake in bag to coat. Arrange in pan, adding walnuts and raisins among the biscuit pieces. Sprinkle any remaining sugar over biscuits.
-          Step 3 In small bowl, mix brown sugar and butter; pour over biscuit pieces.
-          Step 4 Bake 30 to 40 minutes or until golden brown and no longer doughy in center. Loosen edges of pan with metal spatula. Cool in pan 5 minutes. Turn upside down onto serving plate; replacing any biscuit pieces and caramel from pan. Pull apart to serve. Serve warm.
+          Step 2 Separate dough into 16 biscuits, cut each into quarters. Shake in bag to coat. Arrange in pan, adding walnuts and raisins among the biscuit pieces. Sprinkle any remaining sugar over biscuits.
+          Step 3 In small bowl, mix brown sugar and butter, pour over biscuit pieces.
+          Step 4 Bake 30 to 40 minutes or until golden brown and no longer doughy in center. Loosen edges of pan with metal spatula. Cool in pan 5 minutes. Turn upside down onto serving plate, replacing any biscuit pieces and caramel from pan. Pull apart to serve. Serve warm.
         ', 
                 --Start of Ingredients
           '1/2 cup granulated sugar
