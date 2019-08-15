@@ -231,7 +231,7 @@ h1 {
   
 }
 .container {
-  background-color: rgb(50, 58, 66);
+  background-color: rgba(50, 58, 66, 0.8);
 }
 
 

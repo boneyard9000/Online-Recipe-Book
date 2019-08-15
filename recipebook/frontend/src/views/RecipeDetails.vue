@@ -188,7 +188,7 @@ export default {
    
     width: 100%;
     padding:10px;
-    background-color: rgb(50, 58, 66);
+    background-color: rgba(50, 58, 66, 0.8);
 }
 .titleBlock {
     font-family: 'Open Sans';

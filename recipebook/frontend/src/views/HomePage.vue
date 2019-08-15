@@ -268,11 +268,10 @@ h4 {
 .personal-description {
   margin-top: auto;
   margin-bottom: auto;
-  font-size: 2.3vw;
+  font-size: 1.4vw;
   text-align: center;
     color: rgb(41, 38, 38);
     font-weight: 700;
-
 }
 
 .personal-cook-time {
@@ -302,7 +301,7 @@ button {
   width: 35%;
   display: flex;
   flex-direction: column;
-  background-color: rgb(96, 121, 86);
+  background-color: rgb(96, 121, 86, 0.8);
   height: 25%;
   border: 4px solid rgb(121, 107, 128);
   border-radius: 25px;
