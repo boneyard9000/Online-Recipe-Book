@@ -19,7 +19,7 @@
           <b-button
             class="btn-sm"
             @click="saveToUser(recipes[randomRecipeId])"
-          >Add To Favorites</b-button>
+          >Add To My Recipes</b-button>
         </div>
 
         <div class="extra-recipes-container">

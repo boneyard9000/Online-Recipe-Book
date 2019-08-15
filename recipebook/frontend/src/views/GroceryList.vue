@@ -1,12 +1,13 @@
 
 
 <template>
-<div id="entire-page" style="background-color:transparent;">
-    <h2 style="text-align: center; color: green;">WELCOME TO YOUR GROCERY LIST</h2>
-    <h2 style="text-align: center; color: green;">----------------------------------------------------------</h2>
+<div id="entire-page" style="background-color:transparent; text-align: center;">
+    <div style="width: 80%; height: 800px; display: inline-block; background-color: rgba(50, 58, 66, 0.8);">
+        <h2 style="text-align: center; color: white;">WELCOME TO YOUR GROCERY LIST</h2>
+    <h2 style="text-align: center; color: white;">----------------------------------------------------------</h2>
     <div id="todo-list">
         <div id="child" style="transparent: none; border-radius: 50px;">
-            <h1 style="background-color: green; color: white;">My Groceries</h1> 
+            <h1 style="background-color: gray; color: white;">My Groceries</h1> 
             <b-button pill variant="success" type="submit" v-on:click="updateGroceryList" style="margin: auto; margin-top:10px;">SAVE GROCERY LIST</b-button>
             <br>
             
@@ -28,8 +29,10 @@
                 </li>
                 
             </ul>
+            <b-button v-on:click="goBack">Return to Recipe Details</b-button>
             
         </div>
+    </div>
     </div>
 </div>
 </template>
@@ -89,6 +92,9 @@ export default {
                 this.groceriesArray.push(this.currentGrocery);
                 this.currentGrocery = '';
             }
+        },
+        goBack: function(){
+             window.history.back();
         },
         clearGroceryList: function() {
             this.groceriesArray = [];
