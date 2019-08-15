@@ -1,10 +1,10 @@
 <template>
 <div id="entire-page" style="background-color:transparent;">
-    <h2 style="text-align: center; color: white;">WELCOME TO YOUR GROCERY LIST</h2>
-    <h2 style="text-align: center; color: white;">----------------------------------------------------------</h2>
+    <h2 style="text-align: center; color: green;">WELCOME TO YOUR GROCERY LIST</h2>
+    <h2 style="text-align: center; color: green;">----------------------------------------------------------</h2>
     <div id="todo-list">
         <div id="child" style="transparent: none; border-radius: 50px;">
-            <h1 style="background-color: green; color: black;">My Groceries</h1> 
+            <h1 style="background-color: green; color: white;">My Groceries</h1> 
             <b-button pill variant="success" type="submit" v-on:click="updateGroceryList" style="margin: auto; margin-top:10px;">SAVE GROCERY LIST</b-button>
             <br>
             
