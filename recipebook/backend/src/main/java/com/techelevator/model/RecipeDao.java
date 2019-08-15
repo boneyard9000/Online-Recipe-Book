@@ -25,4 +25,5 @@ public interface RecipeDao {
 	public void saveRecipeToUser(int userId, int recipeId);
 	
 	public Recipe update(Recipe recipe);
+	
 }

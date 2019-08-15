@@ -40,5 +40,8 @@ public interface UserDao {
     public void addToGroceryList(int userId, String groceryList);
     
     public void updateGroceryList(int userId, String groceryList);
+    
+	public void deleteRecipeFromUser(int userId, int recipeId);
+
 
 }

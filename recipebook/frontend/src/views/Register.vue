@@ -1,6 +1,6 @@
 <template>
   <div id="register" class="container">
-    <b-form cols="4" class="form-register" @submit.prevent="register">
+    <b-form cols="4" name="form1" class="form-register" @submit.prevent="register">
 
           <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
           <div class="alert alert-danger" role="alert" v-if="registrationErrors">
@@ -49,11 +49,13 @@
               label-for="password"  
           >
           <b-form-input
+            name="password"
             type="password"
             id="password"
             class="form-control"
-            placeholder="Example: W0rstP13s1nL0nd0n"
+            placeholder="Min. 4 characters, 1 number and both upper and lowercase letters."
             v-model="user.password"
+            v-on:blur="CheckPassword"
             required
           />
           </b-form-group>
@@ -171,6 +173,29 @@ export default {
         })
         .catch((err) => console.log(err));
     },
+
+    CheckPassword() { 
+    var p = document.getElementById('password').value,
+        errors = [];
+    if (p.length < 4) {
+        errors.push("Your password must be at least 4 characters");
+    }
+    if (p.search(/[a-z]/i) < 0) {
+        errors.push("Your password must contain at least one lowercase letter."); 
+    }
+    if (p.search(/[A-Z]/i) < 0) {
+        errors.push("Your password must contain at least one uppercase letter."); 
+    }
+    if (p.search(/[0-9]/) < 0) {
+        errors.push("Your password must contain at least one digit.");
+    }
+    if (errors.length > 0) {
+        alert(errors.join("\n"));
+        return false;
+    }
+    return true;
+},
+
     password_match() {
       if (this.user.password != this.user.confirmPassword) {
         alert("Passwords do not match!");

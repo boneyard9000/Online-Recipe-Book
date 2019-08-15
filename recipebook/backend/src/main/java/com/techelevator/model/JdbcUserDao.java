@@ -160,5 +160,11 @@ public class JdbcUserDao implements UserDao {
 		jdbcTemplate.update(sqlUpdateGroceryList, groceryList, userId);
 
 	}
+	
+	@Override
+	public void deleteRecipeFromUser(int userId, int recipeId) {
+		String sqlDeleteFromUser = "DELETE FROM user_recipes WHERE user_id = ? AND recipe_id = ?";
+		jdbcTemplate.update(sqlDeleteFromUser, userId, recipeId);
+	}
 
 }

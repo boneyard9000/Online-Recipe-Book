@@ -19,7 +19,7 @@
           <b-button
             class="btn-sm"
             @click="saveToUser(recipes[randomRecipeId])"
-          >Add To Favorites</b-button>
+          >Add To My Recipes</b-button>
         </div>
 
         <div class="extra-recipes-container">
@@ -37,6 +37,7 @@
             <div class="personal-category">{{recipe.category}}</div>
             <div class="personal-description">{{recipe.description}}</div>
             <div class="personal-cook-time">Cook Time: {{recipe.cookMins}}</div>
+            <b-button @click="deleteRecipe(recipe.recipeId)" class="trash-can" style="color: rgb(63, 60, 60)" variant="danger"><i class="fa fa-trash-o"></i></b-button>
             </div>
           </div>
         </div>
@@ -74,7 +75,16 @@ export default {
     updateCurrentRecipe() {
       this.$emit("updateCurrentRecipe", this.currentRecipe);
     },
-    
+
+    deleteRecipe(recipeId) {
+        fetch(`${process.env.VUE_APP_REMOTE_API}/api/deleteRecipeFromUser/${recipeId}`, {
+          method: 'DELETE',
+          headers: {Authorization: 'Bearer ' + auth.getToken()}
+          })
+             .then(() => location.reload());
+
+    },
+ 
     saveToUser(recipe) {
           fetch(`${process.env.VUE_APP_REMOTE_API}/api/saveRecipeToUser`, {
         method: 'POST',
@@ -320,6 +330,10 @@ button {
 
 .recipe-of-day h3 {
   text-align: center;
+}
+
+.trash-can {
+  border-color: rgb(63, 60, 60);
 }
 
 
