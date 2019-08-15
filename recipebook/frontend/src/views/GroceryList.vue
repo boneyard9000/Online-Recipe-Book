@@ -23,7 +23,7 @@
             
             <ul id="my-list" style="background-color: white; border-radius: 50px;">
 
-                <li v-for="(thing, index) in groceriesArray.sort()" class="all-li" style="width: 450px; text-align: left; border-radius: 20px;">
+                <li v-for="(thing, index) in groceriesArray.sort()" :key="index" class="all-li" style="width: 450px; text-align: left; border-radius: 20px;">
                     {{thing}}
                     <b-button v-on:click="deleteGrocery(index)" variant="danger" style="float: right;"><i class="fa fa-trash-o"></i></b-button>
                 </li>

@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -124,4 +125,9 @@ public class ApiController {
 		userDao.addToGroceryList((int) u.getId(), currentGroceryList.getAllGroceries());
 	}
 	
+	@DeleteMapping("/deleteRecipeFromUser/{recipeId}")
+	public void deleteRecipeFromUser(@PathVariable int recipeId) {
+		User u = authProvider.getCurrentUser();
+		userDao.deleteRecipeFromUser((int)u.getId(), (int)recipeId);
+	}
 }
