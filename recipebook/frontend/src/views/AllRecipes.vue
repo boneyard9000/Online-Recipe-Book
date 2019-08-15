@@ -122,6 +122,8 @@ body {
   box-shadow: 0 30px 30px rgba(0,0,0,0.7);
 }
 
+
+
 .box .imgBox {
   position: absolute;
   top: 0;
@@ -181,6 +183,7 @@ body {
   transition: 0.5s;
   text-align: justify;
 }
+
 
 .box:hover .content p {
   opacity: 1;
