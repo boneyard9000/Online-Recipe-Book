@@ -174,7 +174,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
         'Oil Change',  --name
-        'This is not a recipe, its an oil change.  How did this get in here.', --description
+        'This is not a recipe, its an oil change.  How did this get in here?!', --description
         60, --cook_time
                 -- Start of Directions, by steps
          'Step 1 Let car sit at least 15 minutes to cool.
@@ -299,7 +299,6 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         2 black tea bags (or 2 teaspoons loose-leaf tea in an infuser. Decaf tea is fine)
         2 cinnamon sticks
         1/2 cup sugar
-        
         3 cups pomegranate juice
         1 cup freshly squeezed orange juice
         1 medium orange, sliced into thin rounds
@@ -376,7 +375,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           ', 'Breakfast'); --category       
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
-        'Breakfast Appit pies',  --name
+        'Breakfast Apple pies',  --name
         'Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist.', --description
         25, --cook_time
                 -- Start of Directions, by steps
@@ -395,6 +394,256 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          1 eggs
          1/2 teaspoon salt
           ', 'Breakfast'); --category                
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Ultimate Grilled Cheese',  --name
+        'Its time to up your grilled cheese game!', --description
+        15, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Lightly butter 1 side of each bread slice. Place 2 bread slices, buttered side down, on work surface. Top each with 2 prosciutto slices, then 4 basil leaves, then 4 cheese slices. Sprinkle with salt and crushed red pepper. Top with remaining 2 bread slices, buttered side up.
+          Step 2 Heat olive oil in heavy large ovenproof skillet over medium-high heat. Add sandwiches to skillet and cook until golden on bottom, about 4 minutes. Turn sandwiches over.
+          Step 3 Transfer skillet to oven and bake until golden and cheese melts, about 5 minutes. Remove from oven.
+          Step 4 Carefully lift off top bread slices from sandwiches and insert 3 tomato slices into each, then cover with bread tops and serve.
+        ', 
+                --Start of Ingredients
+          '1/8 cup Butter
+        4 slices country white sourdough bread
+        4 thin slices prosciutto
+        8 large fresh basil leaves
+        8 1/4-inch-thick slices young Asiago cheese
+        1/4 teaspoon dried crushed red pepper
+        2 tablespoons olive oil
+        1 large heirloom tomato
+          ', 'Lunch'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Grilled Chicken Wrap',  --name
+        'Southwestern-inspired chicken spiced with chili powder goes perfectly with a combination of beans, corn and bell peppers.', --description
+        15, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Combine beans, corn, bell pepper, lime juice, cilantro and hot pepper sauce, if desired, in small bowl; set aside.
+          Step 2 Coat chicken with chili powder. Cook on oiled preheated grill 6 minutes per side or until no longer pink. Cut chicken into thin slices.
+          Step 3 Wrap tortillas in plastic wrap. Microwave on HIGH 1 minute. For each sandwich, place three cheese slice halves down center of one tortilla. Top with chicken breast slices and bean mixture. Roll and secure with wooden pick in two places. Cut in half.
+        ', 
+                --Start of Ingredients
+          '1 can (15 oz.) black beans, rinsed and drained
+        1 can (8 oz.) whole kernel corn, drained
+        1/2 cup chopped red bell pepper or plum tomato
+        3 Tbsp. fresh lime juice
+        2 Tbsp. chopped fresh cilantro
+        1/4 tsp. red pepper sauce (optional)
+        4 boneless, skinless chicken breast halves
+        2 Tbsp. chili powder
+        4 (10-inch) flour tortillas
+        6 slices Sargento® Sliced Colby Cheese , cut into halves
+          ', 'Lunch'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'the Big Salad',  --name
+        'Youve worked in offices before, George! You understand "LUNCH"!', --description
+        10, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Place greens in bottom of serving bowl. Add grains in an even layer over greens. Repeat with the roasted vegetables, then the raw vegetables.
+          Step 2 Top with dressing, and toss gently. Fan out avocado on top on one side of bowl.
+          Step 3 Place hard-boiled egg pieces on the side opposite the avocado. Top with chives and nuts. Serve with whole-grain bread.
+        ', 
+                --Start of Ingredients
+          '2  cups sturdy salad greens, such as romaine, iceberg, escarole or kale
+        ½  cup cooked grains, like quinoa, farro, bulgur wheat or barley
+        1  cup roasted vegetables, like potatoes, sweet potatoes or winter squash
+        ¼  cup thinly sliced raw vegetables, like bell peppers, celery, carrots, fennel, mushrooms, onions, radishes, snap or snow peas, summer squash or tomatoes
+        ¼  cup salad dressing, like yogurt, tahini or a vinaigrette, plus more to taste
+        ½  avocado, thinly sliced
+        1  hard-boiled egg, peeled and halved
+        2  teaspoons snipped chives, plus more to taste
+        2  teaspoons sliced or chopped nuts, like almonds, walnuts, pecans or hazelnuts, plus more to taste
+        Whole-grain bread, for serving
+          ', 'Lunch'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Philly Steak Sandwiches',  --name
+        'Steak, grilled onions and melted cheese as the good Lord intended!', --description
+        22, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Heat a medium saucepan over medium high heat. Add 1 tablespoon extra-virgin olive oil, 1 turn of the pan. Add onions and season with salt and pepper or steak seasoning blend. Cook onions, stirring occasionally, 10 minutes or until onions are soft and caramel in color.
+          Step 2 Heat a heavy griddle pan over medium high to high heat. Wipe griddle with a drizzle of oil using a paper towel. Sear and cook thin sliced steaks until brown but not crisp, about 2 minutes on each side. Cook steaks in single layers in 2 batches and tenderize by cutting into meat with the side of your spatula while they cook. When the steaks are browned, just before you remove them from heat, sprinkle them with garlic salt and pepper. When all of the steaks are cooked, line each of your split rolls with 2 slices of provolone cheese. Pile 1/4 of your meat and onions on to the griddle and mix together with your spatula. Pile the meat and onions into rolls on top of the cheese. The heat from the meat and onions will melt the cheese. Repeat for remaining servings and serve.
+        ', 
+                --Start of Ingredients
+          '1 tablespoon extra-virgin olive oil
+        2 large yellow skinned onions, sliced very thin
+        Coarse salt and pepper or steak seasoning blend
+        2 teaspoons extra-virgin olive oil, 2 drizzles
+        1 1/2 pounds lean beef tenderloin or sirloin, ask butcher to slice the meat very thin
+        1 teaspoon garlic salt
+        Freshly ground black pepper
+        8 slices provolone cheese, from the deli counter
+        4 soft Italian sandwich hogie rolls, split 6 to 8 inches long each, split lengthwise
+          ', 'Lunch'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Chicken Pot Pie',  --name
+        'Chock-full of poultry, potatoes, peas and corn, this recipe for easy chicken pot pie makes two golden pies, so you can serve one at supper and save the other for a busy night.', --description
+        75, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Preheat oven to 425°. Place potatoes and carrots in a large saucepan; add water to cover. Bring to a boil. Reduce heat; cook, covered, 8-10 minutes or until crisp-tender; drain.
+         Step 2 In a large skillet, heat butter over medium-high heat. Add onion; cook and stir until tender. Stir in flour and seasonings until blended. Gradually stir in broth and milk. Bring to a boil, stirring constantly; cook and stir 2 minutes or until thickened. Stir in chicken, peas, corn and potato mixture; remove from heat.
+         Step 3 Unroll a pie crust into each of two 9-in. pie plates; trim even with rims. Add chicken mixture. Unroll remaining crusts; place over filling. Trim, seal and flute edges. Cut slits in tops.
+         Step 4 Bake 35-40 minutes or until crust is lightly browned. Let stand 15 minutes before cutting. Freeze option: Cover and freeze unbaked pies. To use, remove from freezer 30 minutes before baking (do not thaw). Preheat oven to 425°. Place pies on baking sheets; cover edges loosely with foil. Bake 30 minutes. Reduce oven setting to 350°; bake 70-80 minutes longer or until crust is golden brown and a thermometer inserted in center reads 165°.
+         ', 
+                --Start of Ingredients
+        '2 cups diced peeled potatoes
+        1-3/4 cups sliced carrots
+        1 cup butter, cubed
+        2/3 cup chopped onion
+        1 cup all-purpose flour
+        1-3/4 teaspoons salt
+        1 teaspoon dried thyme
+        3/4 teaspoon pepper
+        3 cups chicken broth
+        1-1/2 cups whole milk
+        4 cups cubed cooked chicken
+        1 cup frozen peas
+        1 cup frozen corn
+        4 sheets refrigerated pie crust
+          ', 'Dinner'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Classic Beef Stew',  --name
+        'A good old-fashioned easy beef stew recipe with rich beef gravy that lets the flavor of the potatoes and carrots come through.', --description
+        60, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 In an oven-safe Dutch oven, brown beef in batches in oil; drain. Return all meat to the pan. Add onions, tomatoes, broth, tapioca, garlic, parsley, salt, pepper and bay leaf. Bring to a boil.
+         Step 2 Cover stew and bake at 350° for 1 hour. Stir in carrots, potatoes and celery. Bake, covered, 1 hour longer or until meat and vegetables are tender. Discard bay leaf.
+         ', 
+                --Start of Ingredients
+        '2 pounds beef stew meat, cut into 1-inch cubes
+        1 to 2 tablespoons canola oil
+        1-1/2 cups chopped onions
+        1 can (14-1/2 ounces) diced tomatoes, undrained
+        1 can (10-1/2 ounces) condensed beef broth, undiluted
+        3 tablespoons quick-cooking tapioca
+        1 garlic clove, minced
+        1 tablespoon dried parsley flakes
+        1 teaspoon salt
+        1/4 teaspoon pepper
+        1 bay leaf
+        6 medium carrots, cut into 2-inch pieces
+        3 medium potatoes, peeled and cut into 2-inch pieces
+        1 cup sliced celery (1-inch lengths)
+          ', 'Beverage'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Skillet Mac & Cheese',  --name
+        'This super creamy mac 'n' cheese is so simple it seems almost too easy!', --description
+        25, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Cook macaroni according to package directions; drain.
+         Step 2 Meanwhile, in a large cast-iron or other heavy skillet, melt butter over medium heat. Stir in flour until smooth; gradually whisk in cream. Bring to a boil, stirring constantly. Cook and stir until thickened, about 2 minutes. Reduce heat; stir in cheese until melted.
+         Step 3 Add macaroni; cook and stir until heated through. Top as desired.
+         ', 
+                --Start of Ingredients
+        '2 cups uncooked elbow macaroni (about 8 ounces)
+        2 tablespoons butter
+        2 tablespoons all-purpose flour
+        1-1/2 cups half-and-half cream
+        3/4 pound process cheese (Velveeta), cubed
+        Optional toppings: fresh arugula, halved cherry tomatoes and coarsely ground pepper
+          ', 'Appetizer'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Garlic Beef Enchiladas',  --name
+        'Beef enchiladas prepared in flour tortillas in this saucy casserole that has irresistible home-cooked flavor and a subtle kick.', --description
+        70, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Preheat oven to 350°. In a large skillet, cook beef and onion over medium heat, crumbling meat, until beef is no longer pink, 6-8 minutes; drain. Stir in flour and seasonings. Add tomatoes; bring to a boil. Reduce heat; simmer, covered, 15 minutes.
+         Step 2 In a saucepan, heat butter over medium-high heat. Add garlic; cook and stir 1 minute or until tender. Stir in flour until blended; gradually whisk in broth. Bring to a boil; cook and stir until thickened, about 2 minutes. Stir in tomato sauce and seasonings; heat through.
+         Step 3 Pour 1-1/2 cups sauce into an ungreased 13x9-in. baking dish. Place about 1/4 cup beef mixture off center on each tortilla; top with 1-2 tablespoons cheese. Roll up and place over sauce, seam side down. Top with remaining sauce.
+         Step 4 Bake, covered, until heated through, 30-35 minutes. Sprinkle with remaining cheese. Bake, uncovered, until cheese is melted, 10-15 minutes longer. Serve with toppings as desired.
+         ', 
+                --Start of Ingredients
+        '1 pound ground beef
+        1 medium onion, chopped
+        1 teaspoon salt
+        1 teaspoon garlic powder
+        1/2 teaspoon ground cumin
+        1/4 teaspoon rubbed sage
+        1 can (14-1/2 ounces) stewed tomatoes, cut up
+        1/3 cup butter
+        4 to 6 garlic cloves, minced
+        1/2 cup all-purpose flour
+        1 can (14-1/2 ounces) beef broth
+        1 can (15 ounces) tomato sauce
+        3 tablespoons chili powder
+        1 to 2 teaspoons ground cumin
+        1 to 2 teaspoons rubbed sage
+        1/2 teaspoon salt
+        10 flour tortillas (6 inches), warmed
+        2 cups shredded Colby-Monterey Jack cheese, divided
+          ', 'Dinner'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Pork Chops with Scalloped Potatoes',  --name
+        'This all-in-one comforting pork chops recipe reminds me of home.', --description
+        120, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 In a small saucepan, melt butter; stir in the flour, salt and pepper until smooth. Add broth. Bring to a boil; cook and stir for 1 minute or until thickened. Remove from the heat and set aside.
+         Step 2 In a large skillet, brown the pork chops on both sides in oil; sprinkle with additional salt and pepper if desired.
+         Step 3 In a greased 13-in. x 9-in. baking dish, layer potatoes and onion. Pour broth mixture over layers. Place pork chops on top.
+         Step 4 Cover and bake at 350° for 1 hour; uncover and bake 30 minutes longer or until meat and potatoes are tender. If desired, sprinkle with paprika and parsley.
+         ', 
+                --Start of Ingredients
+        '3 tablespoons butter
+        3 tablespoons all-purpose flour
+        1-1/2 teaspoons salt
+        1/4 teaspoon pepper
+        1 can (14-1/2 ounces) chicken broth
+        6 pork rib or loin chops (3/4 inch thick)
+        2 tablespoons canola oil
+        Additional salt and pepper, optional
+        6 cups thinly sliced peeled potatoes
+        1 medium onion, sliced
+        Paprika and minced fresh parsley, optional
+          ', 'Dinner'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Lime Chicken Tacos',  --name
+        'Our fun, simple chicken taco recipe is perfect for a relaxing dinner with friends.', --description
+        300, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Place chicken in a 3-qt. slow cooker. Combine lime juice and chili powder; pour over chicken. Cook, covered, on low until chicken is tender, 5-6 hours.
+         Step 2 Remove chicken. When cool enough to handle, shred meat with two forks; return to slow cooker. Stir in corn and salsa. Cook, covered, on low until heated through, about 30 minutes. Place filling on tortillas; if desired, serve with sour cream, pickled onions, lettuce and cheese.
+         ', 
+                --Start of Ingredients
+        '1-1/2 pounds boneless skinless chicken breast halves
+        3 tablespoons lime juice
+        1 tablespoon chili powder
+        1 cup frozen corn, thawed
+        1 cup chunky salsa
+        12 fat-free flour tortillas (6 inches), warmed
+        Sour cream, pickled onions, shredded lettuce and shredded cheddar or cotija cheese, optional
+          ', 'Dinner'); --category
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Monkey bread',  --name
+        'A soft, sweet, sticky pastry served in the United States for breakfast or as a treat. It is often served at fairs and festivals', --description
+        15, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Heat oven to 350°F. Generously grease 12-cup fluted tube pan with shortening or cooking spray. In large 1-gallon plastic food storage bag, mix granulated sugar and cinnamon.
+          Step 2 Separate dough into 16 biscuits; cut each into quarters. Shake in bag to coat. Arrange in pan, adding walnuts and raisins among the biscuit pieces. Sprinkle any remaining sugar over biscuits.
+          Step 3 In small bowl, mix brown sugar and butter; pour over biscuit pieces.
+          Step 4 Bake 30 to 40 minutes or until golden brown and no longer doughy in center. Loosen edges of pan with metal spatula. Cool in pan 5 minutes. Turn upside down onto serving plate; replacing any biscuit pieces and caramel from pan. Pull apart to serve. Serve warm.
+        ', 
+                --Start of Ingredients
+          '1/2 cup granulated sugar
+        1 teaspoon cinnamon
+        2 cans (16.3 oz each) Pillsbury™ Grands!™
+        1/2 cup chopped walnuts, if desired
+        1/2 cup raisins, if desired
+        1 cup firmly packed brown sugar
+        3/4 cup butter or margarine, melted
+          ', 'Breakfast'); --category
+
+
 
 INSERT INTO users (first_name, last_name, password, salt, email, phone)
         VALUES ('a', 'a', 'TkcxOZ+G2JaDh2cg0YMuxg==', '+GbyRIz87EbaECurSAvolcYBK3LwzLhwBmk2FyQ+/3xauT/pwa7pIBdFuGXfrDCO2+WrPyeEGTEoGL4B7ujl5XCv8C0DMWrtB9GEGmtdV5CgKSEHSHYkWKqDrV+StLh3CeiQP4qyX7l7KNLQW1uXY4cnjk6Mjh9W5lhUmnA+3/w=',

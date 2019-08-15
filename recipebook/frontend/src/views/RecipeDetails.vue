@@ -214,7 +214,7 @@ export default {
     text-align: left;
     border: 2px solid darkslategrey;
     border-radius: 25px;
-    background: tomato;
+    background: slategrey;
     font-weight: 600;
     margin-top: .5em;
     margin-bottom: 1em;
