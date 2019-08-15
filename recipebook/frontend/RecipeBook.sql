@@ -640,8 +640,104 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1/2 cup chopped walnuts, if desired
         1/2 cup raisins, if desired
         1 cup firmly packed brown sugar
-        3/4 cup butter or margarine, melted
-          ', 'Breakfast'); --category
+        3/4 cup butter or margarine, melted', 'Breakfast'); --category
+
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Luscious Slush Punch',  --name
+        'Without a doubt the best punch you have ever had.', --description
+        20, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Bring the sugar, water, and strawberry flavored gelatin to a boil in a large saucepan, boil for 3 minutes. Stir in the pineapple juice, lemon juice, and orange juice. Divide mixture into 2 separate containers and freeze.
+          Step 2 Combine the contents of 1 container with 1 bottle of the lemon-lime flavored carbonated beverage in a punch bowl, stir until slushy. Repeat with remaining portions as needed.
+         ', 
+                --Start of Ingredients
+          '2 1/2 cups white sugar
+        6 cups water
+        2 (3 ounce) packages strawberry flavored Jell-O® mix
+        1 (46 fluid ounce) can pineapple juice
+        2/3 cup lemon juice
+        1 quart orange juice
+        2 (2 liter) bottles lemon-lime flavored carbonated beverage', 'Beverage'); --category
+
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Apple Pie Moonshine',  --name
+        'Just a spoonful of sugar helps the medicine go down', --description
+        25, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Bring the apple cider, apple juice, cinnamon sticks, whole clove, white sugar, and brown sugar to a boil in a large pot, reduce heat to medium low and simmer for 20 minutes. Remove from heat and cool completely.
+          Step 2 Stir the grain alcohol and vanilla vodka into the cooled mixture. Pour into bottles and refrigerate.', 
+                --Start of Ingredients
+          '1/2 gallon apple cider
+          1/2 gallon apple juice
+          4 cinnamon sticks
+          1 whole clove
+          1 cup white sugar
+          1 cup brown sugar
+          3 cups 190 proof grain alcohol (such as Everclear®)
+          2 cups vanilla vodka', 'Beverage'); --category
+
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Sangria',  --name
+        'Wine soaked fruit, follow their lead.', --description
+        30, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 In a large pitcher or bowl, mix together the brandy, lemon juice, lemonade concentrate, orange juice, red wine, triple sec, and sugar. Float slices of lemon, orange and lime, and maraschino cherries in the mixture. Refrigerate overnight for best flavor. For a fizzy sangria, add club soda just before serving.
+        ', 
+                --Start of Ingredients
+          '1/2 cup brandy
+          1/4 cup lemon juice
+          1/3 cup frozen lemonade concentrate
+          1/3 cup orange juice
+          1 (750 milliliter) bottle dry red wine
+          1/2 cup triple sec
+          1 lemon, sliced into rounds
+          1 orange, sliced into rounds
+          1 lime, sliced into rounds
+          1/4 cup white sugar (optional)
+          8 maraschino cherries
+          2 cups ginger ale', 'Beverage'); --category
+
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Coquito',  --name
+        'Very yummy creamy tropical coconut eggnog made with spices and white rum.', --description
+        25, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 In the top of a double boiler, combine egg yolks and evaporated milk. Stirring constantly, cook over lightly simmering water until mixture reaches a temperature of 160 degrees F (71 degrees C). The mixture should be thick enough to coat the back of a spoon.
+          Step 2 Transfer mixture to a blender, and add cream of coconut, sweetened condensed milk, rum, water, cloves, cinnamon, and vanilla. Blend for about 30 seconds. Pour into glass bottles and chill overnight.
+        ', 
+                --Start of Ingredients
+          '2 egg yolks, beaten
+          1 (12 fluid ounce) can evaporated milk
+          1 (14 ounce) can cream of coconut
+          1 (14 ounce) can sweetened condensed milk
+          1/2 cup white rum
+          1/2 cup water
+          1/4 teaspoon ground cloves
+          1/2 teaspoon ground cinnamon
+          1 teaspoon vanilla extract', 'Beverage'); --category
+
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Masala Chai',  --name
+        'Indian milk tea made with a blend of spices such as cardamom and ginger.', --description
+        7, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 With a mortar and pestle, crack the cardamom pods and discard pod.  Grind the cardamom into fine powder.  If you use ginger, cut into one thin slice.
+          Step 2 In a small saucepan, pour the water from the cups. Add cardamom, sugar, and ginger if you like, and bring it to boil. When boiling, add tea leaves. Simmer for 2-3 minutes.
+          Step 3 Add milk and bring it to boil again. When boiling again, reduce heat and keep simmering for another 2 minutes.
+          Step 4 Remove from heat and strain tea with a strainer.  Serve with a biscuit or cookie.', 
+                --Start of Ingredients
+          '2 tea cups water
+        4 pods green cardamom
+        2 tsp sugar
+        1 slice ginger (optional)
+        3 tsp loose black tea (Red Label Orange Peko, Taj Mahal, Darjeeling etc)
+        4-6 Tbsp milk (I use whole milk)', 'Beverage'); --category
+
 
 
 
