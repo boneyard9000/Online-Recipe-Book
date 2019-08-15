@@ -326,7 +326,54 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         2 (750-mL) bottles chilled champagne, sparkling white wine, or sparkling mineral water
 Optional: ice, garnishes of mint, lemon or lime slices
 
-          ', 'Beverage'); --category          
+          ', 'Beverage'); --category   
+          
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Creamy Ham and Cheese Quiche',  --name
+        'This quiche is creamy, simple, and delicious!', --description
+        50, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Preheat oven to 400 degrees F (200 degrees C).
+          Step 2 Press pie pasty into the bottom of a 9-inch pie plate.
+          Step 3 Bake pie crust in preheated oven for 5 minutes, use a fork to poke holes into the crust, and continue cooking until lightly browned, about 5 minutes more.
+          Step 4 Reduce oven heat to 350 degrees F (175 degrees C).
+          Step 5 Mix 1/2 cup Cheddar cheese, Swiss cheese, and 1 tablespoon flour in a bowl, spread over the warm pie crust.
+          Step 6 Stir ham and honey mustard together in a bowl to coat the ham completely, spoon over the cheese mixture.
+          Step 7 Mix half-and-half, eggs, green onions, 1 tablespoon flour, and salt together in bowl. Pour mixture carefully over the ham layer, top with remaining Cheddar cheese.
+          Step 8 Bake in preheated oven until set in the center, 40 to 50 minutes. Cool for 10 minutes before cutting.', 
+                --Start of Ingredients
+          '1 (9 inch) pastry for a 9-inch pie crust
+          1 cup shredded Cheddar cheese, divided
+          1/2 cup shredded Swiss cheese
+          2 tablespoons all-purpose flour, divided
+          1/2 cup diced cooked ham
+          2 tablespoons honey mustard
+          1 1/4 cups half-and-half
+          5 eggs, beaten
+          1/4 cup green onions
+          1/4 teaspoon salt
+          ', 'Breakfast'); --category     
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Fluffy Pancakes',  --name
+        'Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist.', --description
+        25, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Combine milk with vinegar in a medium bowl and set aside for 5 minutes to "sour".
+          Step 2 Combine flour, sugar, baking powder, baking soda, and salt in a large mixing bowl. Whisk egg and butter into "soured" milk. Pour the flour mixture into the wet ingredients and whisk until lumps are gone.
+          Step 3 Heat a large skillet over medium heat, and coat with cooking spray. Pour 1/4 cupfuls of batter onto the skillet, and cook until bubbles appear on the surface. Flip with a spatula, and cook until browned on the other side.', 
+                --Start of Ingredients
+        '1/2 teaspoon baking soda
+         1 cup all-purpose flour          
+         1 teaspoon baking powder
+         2 tablespoons white sugar
+         1/2 ounce cooking spray
+         2 tablespoons distilled white vinegar
+         2 tablespoons butter
+         3/4 cup milk
+         1 eggs
+         1/2 teaspoon salt
+          ', 'Breakfast'); --category            
 
 INSERT INTO users (first_name, last_name, password, salt, email, phone)
         VALUES ('a', 'a', 'TkcxOZ+G2JaDh2cg0YMuxg==', '+GbyRIz87EbaECurSAvolcYBK3LwzLhwBmk2FyQ+/3xauT/pwa7pIBdFuGXfrDCO2+WrPyeEGTEoGL4B7ujl5XCv8C0DMWrtB9GEGmtdV5CgKSEHSHYkWKqDrV+StLh3CeiQP4qyX7l7KNLQW1uXY4cnjk6Mjh9W5lhUmnA+3/w=',

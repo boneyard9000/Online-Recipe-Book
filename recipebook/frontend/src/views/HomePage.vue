@@ -123,6 +123,8 @@ export default {
           }
         })
       });
+       
+      
 
     this.randomRecipeId = Math.floor(Math.random() * this.recipes.length);
   },

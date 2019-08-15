@@ -11,7 +11,7 @@
                     <div><b-button
             class="btn-sm"
             @click="saveToUser(currentRecipe[recipeId])"
-          >Add To Favorites</b-button>
+          >Add To My Recipes</b-button>
           </div>
                 <div class="titleBlock">
                     <h2>{{currentRecipe.recipeName}}</h2>
