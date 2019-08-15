@@ -319,6 +319,8 @@ color: black;
   background: rgba(0,0,0,0.7);
   box-shadow: 0 30px 30px rgba(0,0,0,0.7);
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container p {

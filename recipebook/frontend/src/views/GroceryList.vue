@@ -2,7 +2,7 @@
 
 <template>
 <div id="entire-page" style="background-color:transparent; text-align: center;">
-    <div style="width: 80%; height: 800px; display: inline-block; background-color: rgba(50, 58, 66, 0.8);">
+    <div style="width: 80%; display: inline-block; background-color: rgba(50, 58, 66, 0.8);">
         <h2 style="text-align: center; color: white;">WELCOME TO YOUR GROCERY LIST</h2>
     <h2 style="text-align: center; color: white;">----------------------------------------------------------</h2>
     <div id="todo-list">
@@ -22,11 +22,12 @@
             <br>
             
             <ul id="my-list" style="background-color: white; border-radius: 50px;">
-
-                <li v-for="(thing, index) in groceriesArray.sort()" :key="index" class="all-li" style="width: 450px; text-align: left; border-radius: 20px;">
-                    {{thing}}
-                    <b-button v-on:click="deleteGrocery(index)" variant="danger" style="float: right;"><i class="fa fa-trash-o"></i></b-button>
+                <div class="item-line">
+                <li v-for="(thing, index) in groceriesArray.sort()" :key="index" class="all-li" style="border-radius: 20px;">
+                    <p>{{thing}}</p>
+                    <b-button class="trash" v-on:click="deleteGrocery(index)" variant="danger" style="float: right;"><i class="fa fa-trash-o"></i></b-button>
                 </li>
+                </div>
                 
             </ul>
             <b-button v-on:click="goBack">Return to Recipe Details</b-button>
@@ -142,10 +143,11 @@ html, body {
     margin:0;
     padding:0;
     height:200%; 
+    width: 100vw;
  } 
 
 #todo-list {
-    width:450px;
+    width: 45%;
     background: #fff;
     font-family: 'Roboto Condensed', sans-serif;
     border-radius: 10px;
@@ -169,10 +171,19 @@ h1 {
     padding:0px;
     
 }
+
+.item-line {
+    display: inline-block;
+}
 .all-li {
-    font-size: 24px;
+    font-size: 1vw;
     border-bottom:1px solid #f2f2f2;
     padding:10px 20px;
+    width: 90%;
+}
+
+.all-li p {
+    float: left;
 }
 
 li:last-child{
@@ -190,10 +201,22 @@ i.far.fa-check-circle {
 i.far.fa-check-circle.completed {
     color:green;
 }
+
+.trash {
+    float: right;
+    font-size: 1vw;
+    border: none;
+}
 input[type="checkbox"] {
     font-size:40px;
     vertical-align: middle;
     margin-top:0px;
+}
+
+#child {
+    height: 80%;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 
