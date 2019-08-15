@@ -248,7 +248,6 @@ button {
   display: flex;
   flex-direction: column;
   background-color: rgb(182, 179, 179);
-  height: 60vh;
   border: 4px solid rgb(121, 107, 128);
   margin: 1.5% auto 1% auto;
   align-content: center;
@@ -274,7 +273,7 @@ button {
 }
 
 .btn-sm {
-color: rgb(52, 62, 80);
+color: black;
 }
 
 .rod-header {
@@ -286,7 +285,7 @@ color: rgb(52, 62, 80);
 
 .rod-pic {
   width: 80%;
-  height: 250px;
+  height: 80%;
   border: 4px solid white;
   border-radius: 25px;
   margin: 0 auto 0 auto;
