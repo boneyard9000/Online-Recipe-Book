@@ -1,3 +1,5 @@
+
+
 <template>
 <div id="entire-page" style="background-color:transparent;">
     <h2 style="text-align: center; color: green;">WELCOME TO YOUR GROCERY LIST</h2>
@@ -22,7 +24,7 @@
 
                 <li v-for="(thing, index) in groceriesArray.sort()" class="all-li" style="width: 450px; text-align: left; border-radius: 20px;">
                     {{thing}}
-                    <b-button v-on:click="deleteGrocery(index)" style="float: right;"><i class="material-icons">X</i></b-button>
+                    <b-button v-on:click="deleteGrocery(index)" variant="danger" style="float: right;"><i class="fa fa-trash-o"></i></b-button>
                 </li>
                 
             </ul>
@@ -128,6 +130,8 @@ export default {
 
 <style scoped>
 
+
+
 html, body {
     margin:0;
     padding:0;
@@ -185,6 +189,7 @@ input[type="checkbox"] {
     vertical-align: middle;
     margin-top:0px;
 }
+
 
 
 
