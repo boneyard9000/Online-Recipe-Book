@@ -36,7 +36,7 @@ PRIMARY KEY(user_id, recipe_id)
 
 );
        
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Quick and Easy Chicken Noodle Soup',  --name
         'No Time for the traditional? This is a good substitute', --description
         30, --cook_time
@@ -56,9 +56,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           1/2 teaspoon dried basil
           1/2 teaspoon dried oregano
           salt and pepper to taste
-          ', 'Lunch'); --category
+          ', 'Lunch',
+          'https://i.ytimg.com/vi/o91gT73mQhg/maxresdefault.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Chicken Cheesecake',  --name
         'Sounds weird...is weird.', --description
         120, --cook_time
@@ -72,9 +73,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           1 whole left-over cheesecake
           1 oven
           1 killing block
-          ', 'Dessert'); --category
+          ', 'Dessert',
+          'http://images.sweetauthoring.com/recipe/540x540/104972_971.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Bananalogne platter',  --name
         'All your cheap n quick lazy foods wrapped up in to 1 delicious(?) meal.', --description
         5, --cook_time
@@ -89,9 +91,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
            4 Bananas
            1pack of American cheese
            1lb Bologne, sliced thin'
-          , 'Dinner'); --category
+          , 'Dinner',
+          'http://1.bp.blogspot.com/-XpEgqddVmJY/UhqHHhlZJvI/AAAAAAAACMw/iqCJH_R213U/s1600/Eggs+in+Bologna+Cups.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Birthday Cake',  --name
         'It comes but once a year', --description
         30, --cook_time
@@ -105,9 +108,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           '1 Normal cake
           1 Calendar with birth-date marked
           1 amount of wait time', 
-          'Dessert'); --category
+          'Dessert',
+          'https://www.williams-sonoma.com/wsimgs/ab/images/dp/wcm/201922/0465/img14c.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Breakfast Pizza',  --name
         'The Breakfast of Champions.  Minimal effort.  maximal reward.', --description
         480, --cook_time in minutes
@@ -124,9 +128,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           '1 Pizza Pie
           1 Nights rest
           misc Pizza Fixins', 
-          'Breakfast'); --category
+          'Breakfast',
+          'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/2/7/1/FNM_030114-Breakfast-Pizza-Recipe_s4x3.jpg.rend.hgtvcom.616.462.suffix/1391877822055.jpeg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Hot Dog Margarita',  --name
         'Technically edible', --description
         300, --cook_time
@@ -139,9 +144,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           '8 Hot Dogs, uncoocked
           64oz Tequilla
           8 Fine Martini Glasses
-          ', 'Beverage'); --category
+          ', 'Beverage',
+          'https://timeincsecure-a.akamaihd.net/rtmp_uds/429048911/201703/1018/429048911_5376504367001_5376172885001-vs.jpg?pubId=429048911&videoId=5376172885001'); --category
           
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Literal Dirt',  --name
         'Its literally just dirt.', --description
         10, --cook_time
@@ -156,23 +162,25 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           all of the Dirt
           6-8 months of Sunshine
           1 Large Yard
-          ', 'Lunch'); --category
+          ', 'Lunch',
+          'https://www.tasteofhome.com/wp-content/uploads/2017/10/exps3954_FF1227370D14B-1.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Unboiled Water',  --name
         'Tired of burnt water?  We can fix that.', --description
         20, --cook_time
                 -- Start of Directions, by steps
          'Step 1 Fill large pot with water.  Put on high and let reach a rolling boil.
           Step 2 Remove pot from flame and take it outside.  Throw that nastiness out. 
-          Step 3 Refill pot with fresh, unboiled wter from the tap.  the less boiled the better.  You have now learned how to make unboiled water.', 
+          Step 3 Refill pot with fresh, unboiled water from the tap.  the less boiled the better.  You have now learned how to make unboiled water.', 
                 --Start of Ingredients
           '1 Large Pot
           1 gallon Water
           1 Irrelevant Stove
-          ', 'Beverage'); --category
+          ', 'Beverage',
+          'https://d1alt1wkdk73qo.cloudfront.net/images/guide/398660cdb95a48f58ebe147bce9ca901/640x960.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Oil Change',  --name
         'This is not a recipe, its an oil change.  How did this get in here?!', --description
         60, --cook_time
@@ -190,9 +198,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           1 oil filter
           1 set of tools
           1 Jack or lift
-          ', 'Appetizer'); --category
+          ', 'Appetizer',
+          'https://www.kahlua.com/globalassets/images/cocktails/2018/opt/kahluadrinks_wide_coffee1.png'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Buffalo Chicken Meatballs',  --name
         'These bites are spicy, tangy and perfectly tender, but infinitely more white-jeans-friendly.', --description
         20, --cook_time
@@ -215,9 +224,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         6 tablespoons butter
         ¾ cup Buffalo-style hot sauce
         1 cup blue-cheese dressing (optional)
-          ', 'Appetizer'); --category
+          ', 'Appetizer',
+          'https://whatgreatgrandmaate.com/wp-content/uploads/2016/11/IMG_9842-e1478050633263.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Coconut Shrimp',  --name
         ' The popular appetizer may be a special treat, but why should you have to go out to enjoy it? Stay in and make this version instead.', --description
         25, --cook_time
@@ -239,9 +249,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         2 pounds peeled and deveined shrimp
         1 lemon, cut into wedges
         ¾ cup store-bought sweet chile sauce, for dipping
-          ', 'Appetizer'); --category
+          ', 'Appetizer',
+          'https://www.culinaryhill.com/wp-content/uploads/2017/09/Coconut-Shrimp-Culinary-Hill-6.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Zucchini Quesadillas',  --name
         'a tortilla filled with cheese and cooked vegetables. Sour cream, shredded lettuce, sliced avocado, and bottled salsa make great accompaniments to quesadillas, so serve them on the side.', --description
         35, --cook_time
@@ -260,9 +271,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           4 cloves garlic, minced
           1 cup frozen corn kernels (4oz)
           4(8-inch) flour tortillas
-          ', 'Appetizer'); --category
+          ', 'Appetizer',
+          'http://www.ezrapoundcake.com/wp-content/uploads/2009/06/zucchini-quesadillas-1.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Blueberry Lavender Vodka Spritzer',  --name
         'The 10-minute happy hour can be as simple or as sophisticated as you like.', --description
         10, --cook_time
@@ -284,9 +296,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1 cup sugar
         1 cup blueberries
         4 lavender sprigs (or 1 1/2 teaspoons dried food-grade lavender buds)
-          ', 'Beverage'); --category
+          ', 'Beverage',
+          'https://s23209.pcdn.co/wp-content/uploads/2014/05/IMG_8952edit.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Non-Alcoholic Sangria',  --name
         'All of the fruit goodness, with none of the spirits. A refreshing sipper.', --description
         30, --cook_time
@@ -306,9 +319,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1 medium lime, sliced into thin rounds
         1 medium apple, cored and cut into 1/2-inch chunks
         3 cups carbonated water
-          ', 'Beverage'); --category
+          ', 'Beverage',
+          'https://www.recipegirl.com/wp-content/uploads/2008/11/Winter-Holiday-Sangria-2.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Hibiscus Ginger Punch',  --name
         'Whether you fizz it up with champagne or mineral water, hibiscus ginger punch will put a colorful sparkle in your celebrations.', --description
         35, --cook_time
@@ -325,9 +339,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         2 (750-mL) bottles chilled champagne, sparkling white wine, or sparkling mineral water
 Optional: ice, garnishes of mint, lemon or lime slices
 
-          ', 'Beverage'); --category   
+          ', 'Beverage',
+          'https://media2.s-nbcnews.com/j/newscms/2017_18/1212485/paloma-mezcal-cocktail-today-170505-tease_09c0f329288292d501e73ab546a2ddc9.today-inline-large.jpg'); --category   
           
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Creamy Ham and Cheese Quiche',  --name
         'This quiche is creamy, simple, and delicious!', --description
         50, --cook_time
@@ -351,9 +366,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           5 eggs, beaten
           1/4 cup green onions
           1/4 teaspoon salt
-          ', 'Breakfast'); --category     
+          ', 'Breakfast',
+          'https://www.thereciperebel.com/wp-content/uploads/2018/07/easy-ham-quiche-www.thereciperebel.com-600-12-of-16.jpg'); --category     
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Fluffy Pancakes',  --name
         'Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist.', --description
         25, --cook_time
@@ -372,9 +388,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          3/4 cup milk
          1 eggs
          1/2 teaspoon salt
-          ', 'Breakfast'); --category       
+          ', 'Breakfast',
+          'https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/mccormick/h/800/homemade_fluffy_pancakes_800x800.jpg'); --category       
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Breakfast Apples',  --name
         'This is a fun and yummy breakfast that is great for a snack or dessert as well!', --description
         16, --cook_time
@@ -389,9 +406,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          1/2 cup crispy rice cereal squares (such as Rice Chex®), crushed
          2 teaspoons ground cinnamon
          1/4 cup chopped walnuts (optional)
-          ', 'Breakfast'); --category                
+          ', 'Breakfast',
+          'https://images.media-allrecipes.com/userphotos/560x315/2438212.jpg'); --category                
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Ultimate Grilled Cheese',  --name
         'Its time to up your grilled cheese game!', --description
         15, --cook_time
@@ -410,9 +428,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1/4 teaspoon dried crushed red pepper
         2 tablespoons olive oil
         1 large heirloom tomato
-          ', 'Lunch'); --category
+          ', 'Lunch',
+          'https://www.thechunkychef.com/wp-content/uploads/2016/08/Ultimate-Grilled-Cheese-6.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Grilled Chicken Wrap',  --name
         'Southwestern-inspired chicken spiced with chili powder goes perfectly with a combination of beans, corn and bell peppers.', --description
         15, --cook_time
@@ -432,9 +451,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         2 Tbsp. chili powder
         4 (10-inch) flour tortillas
         6 slices Sargento® Sliced Colby Cheese , cut into halves
-          ', 'Lunch'); --category
+          ', 'Lunch',
+          'https://www.sweetbabyrays.com/getattachment/8a65615e-2d6d-49e2-843b-e93fa446e09a/Buffalo-Grilled-Chicken-Wraps'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'the Big Salad',  --name
         'Youve worked in offices before, George! You understand "LUNCH"!', --description
         10, --cook_time
@@ -454,9 +474,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         2  teaspoons snipped chives, plus more to taste
         2  teaspoons sliced or chopped nuts, like almonds, walnuts, pecans or hazelnuts, plus more to taste
         Whole-grain bread, for serving
-          ', 'Lunch'); --category
+          ', 'Lunch',
+          'https://i.pinimg.com/originals/08/c4/6b/08c46b543c38550b9b380e518d9d2dfe.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Philly Steak Sandwiches',  --name
         'Steak, grilled onions and melted cheese as the good Lord intended!', --description
         22, --cook_time
@@ -474,9 +495,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         Freshly ground black pepper
         8 slices provolone cheese, from the deli counter
         4 soft Italian sandwich hogie rolls, split 6 to 8 inches long each, split lengthwise
-          ', 'Lunch'); --category
+          ', 'Lunch',
+          'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2003/10/16/0/tm1b67_philly_steak_sandwich.jpg.rend.hgtvcom.826.620.suffix/1547587334190.jpeg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Chicken Pot Pie',  --name
         'Chock-full of poultry, potatoes, peas and corn, this recipe for easy chicken pot pie makes two golden pies, so you can serve one at supper and save the other for a busy night.', --description
         75, --cook_time
@@ -501,9 +523,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1 cup frozen peas
         1 cup frozen corn
         4 sheets refrigerated pie crust
-          ', 'Dinner'); --category
+          ', 'Dinner',
+          'https://images-gmi-pmc.edge-generalmills.com/0f8b0cba-584d-461f-9f06-32b085bd8f43.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Classic Beef Stew',  --name
         'A good old-fashioned easy beef stew recipe with rich beef gravy that lets the flavor of the potatoes and carrots come through.', --description
         60, --cook_time
@@ -526,16 +549,13 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         6 medium carrots, cut into 2-inch pieces
         3 medium potatoes, peeled and cut into 2-inch pieces
         1 cup sliced celery (1-inch lengths)
-          ', 'Beverage'); --category
+          ', 'Beverage',
+          'https://lifemadesweeter.com/wp-content/uploads/Instant-Pot-Beef-Stew-Recipe-Photo-Recipe-1-of-1-12-e1507849409918.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Skillet Mac & Cheese',  --name
         'This super creamy mac and cheese is so simple it seems almost too easy!', --description
-<<<<<<< HEAD
         25, --cook_time
-=======
-        25, --cooktime
->>>>>>> 8eb78fbd27398b4a5b50adbf8e1f962dbb39a338
                 -- Start of Directions, by steps
          'Step 1 Cook macaroni according to package directions, drain.
          Step 2 Meanwhile, in a large cast-iron or other heavy skillet, melt butter over medium heat. Stir in flour until smooth, gradually whisk in cream. Bring to a boil, stirring constantly. Cook and stir until thickened, about 2 minutes. Reduce heat, stir in cheese until melted.
@@ -548,9 +568,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1-1/2 cups half-and-half cream
         3/4 pound process cheese (Velveeta), cubed
         Optional toppings: fresh arugula, halved cherry tomatoes and coarsely ground pepper
-          ', 'Appetizer'); --category
+          ', 'Appetizer',
+          'https://img1.southernliving.timeinc.net/sites/default/files/styles/4_3_horizontal_-_1200x900/public/image/2016/12/main/january-2017-recipes-2504001_winte_27011.jpg?itok=lsq6IUHW'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Garlic Beef Enchiladas',  --name
         'Beef enchiladas prepared in flour tortillas in this saucy casserole that has irresistible home-cooked flavor and a subtle kick.', --description
         70, --cook_time
@@ -579,9 +600,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1/2 teaspoon salt
         10 flour tortillas (6 inches), warmed
         2 cups shredded Colby-Monterey Jack cheese, divided
-          ', 'Dinner'); --category
+          ', 'Dinner',
+          'https://s23209.pcdn.co/wp-content/uploads/2014/01/IMG_8465edit.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Pork Chops with Scalloped Potatoes',  --name
         'This all-in-one comforting pork chops recipe reminds me of home.', --description
         120, --cook_time
@@ -603,9 +625,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         6 cups thinly sliced peeled potatoes
         1 medium onion, sliced
         Paprika and minced fresh parsley, optional
-          ', 'Dinner'); --category
+          ', 'Dinner',
+          'https://whisktc.com/wp-content/uploads/2017/10/dpcsp.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Lime Chicken Tacos',  --name
         'Our fun, simple chicken taco recipe is perfect for a relaxing dinner with friends.', --description
         300, --cook_time
@@ -621,9 +644,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1 cup chunky salsa
         12 fat-free flour tortillas (6 inches), warmed
         Sour cream, pickled onions, shredded lettuce and shredded cheddar or cotija cheese, optional
-          ', 'Dinner'); --category
+          ', 'Dinner',
+          'https://lifemadesimplebakes.com/wp-content/uploads/2016/05/Chili-Lime-Chicken-Tacos-3.jpg'); --category
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Monkey bread',  --name
         'A soft, sweet, sticky pastry served in the United States for breakfast or as a treat. It is often served at fairs and festivals', --description
         15, --cook_time
@@ -641,9 +665,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1/2 cup raisins, if desired
         1 cup firmly packed brown sugar
         3/4 cup butter or margarine, melted
-          ', 'Breakfast'); --category
+          ', 'Breakfast',
+          'https://images-gmi-pmc.edge-generalmills.com/3c78f8b9-85d9-4584-bd96-7623a109674a.jpg'); --category
           
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Fluffy Pancakes',  --name
         'Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist.', --description
         25, --cook_time
@@ -662,10 +687,11 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          3/4 cup milk
          1 eggs
          1/2 teaspoon salt
-          ', 'Breakfast'); --category
+          ', 'Breakfast',
+          'http://www.runningwithspoons.com/wp-content/uploads/2016/04/Cinnamon-Roll-Greek-Yogurt-Pancakes.jpg'); --category
 
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Luscious Slush Punch',  --name
         'Without a doubt the best punch you have ever had.', --description
         20, --cook_time
@@ -680,10 +706,11 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1 (46 fluid ounce) can pineapple juice
         2/3 cup lemon juice
         1 quart orange juice
-        2 (2 liter) bottles lemon-lime flavored carbonated beverage', 'Beverage'); --category
+        2 (2 liter) bottles lemon-lime flavored carbonated beverage', 'Beverage',
+        'https://cdn.cpnscdn.com/static.coupons.com/ext/kitchme/images/recipes/300x200/strawberry-sangria_18501.jpg'); --category
 
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Apple Pie Moonshine',  --name
         'Just a spoonful of sugar helps the medicine go down', --description
         25, --cook_time
@@ -698,10 +725,11 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           1 cup white sugar
           1 cup brown sugar
           3 cups 190 proof grain alcohol (such as Everclear®)
-          2 cups vanilla vodka', 'Beverage'); --category
+          2 cups vanilla vodka', 'Beverage',
+          'https://images-gmi-pmc.edge-generalmills.com/94e767da-3f8a-427c-bc15-036b04545a43.jpg'); --category
 
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Sangria',  --name
         'Wine soaked fruit, follow their lead.', --description
         30, --cook_time
@@ -720,10 +748,11 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           1 lime, sliced into rounds
           1/4 cup white sugar (optional)
           8 maraschino cherries
-          2 cups ginger ale', 'Beverage'); --category
+          2 cups ginger ale', 'Beverage',
+          'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/4/25/0/CCWM_Traditional-Sangria_s4x3.jpg.rend.hgtvcom.826.620.suffix/1483737021903.jpeg'); --category
 
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Coquito',  --name
         'Very yummy creamy tropical coconut eggnog made with spices and white rum.', --description
         25, --cook_time
@@ -740,10 +769,11 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           1/2 cup water
           1/4 teaspoon ground cloves
           1/2 teaspoon ground cinnamon
-          1 teaspoon vanilla extract', 'Beverage'); --category
+          1 teaspoon vanilla extract', 'Beverage',
+          'https://www.babemadeblog.com/wp-content/uploads/2018/11/Coquito-2.jpg'); --category
 
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Masala Chai',  --name
         'Indian milk tea made with a blend of spices such as cardamom and ginger.', --description
         7, --cook_time
@@ -758,10 +788,11 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         2 tsp sugar
         1 slice ginger (optional)
         3 tsp loose black tea (Red Label Orange Peko, Taj Mahal, Darjeeling etc)
-        4-6 Tbsp milk (I use whole milk)', 'Beverage'); --category
+        4-6 Tbsp milk (I use whole milk)', 'Beverage',
+        'https://assets.epicurious.com/photos/579909083a12dd9d56024018/master/pass/spiced-milk-tea-masala-chai.jpg'); --category
 
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Ham and Cheese Breakfast Quiche',  --name
         'Here is one great idea for what to do with that leftover ham! My picky eaters loved it and it is easy to make!', --description
         16, --cook_time
@@ -779,9 +810,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          1/2 cup heavy whipping cream
          2 eggs
          1 cup shredded Monterey Jack cheese
-          ', 'Breakfast'); --category   
+          ', 'Breakfast',
+          'https://www.homemadeinterest.com/wp-content/uploads/2018/03/Low-Carb-Ham-Cheese-Crustless-Quiche_IG-2.jpg'); --category   
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Authentic Mexican Breakfast Tacos',  --name
         'Quick Easy and Delicious! I learned this recipe from many years of eating with the Mexican cooks at my restaurant. I have grown to LOVE this breakfast. If you like spicy food, you will love this.', --description
         27, --cook_time
@@ -801,9 +833,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          1 cup shredded Monterey Jack cheese
          1 dash hot pepper sauce (e.g. Tabasco™), or to taste
          1/2 cup salsa
-          ', 'Breakfast'); --category    
+          ', 'Breakfast',
+          'https://www.cookingclassy.com/wp-content/uploads/2015/04/breakfast-tacos5-srgb..jpg'); --category    
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Breakfast Quinoa',  --name
         'Delicious, filling, and comforting on a cold morning. It is really flexible, so substitute in your favorite nuts and fruit. Cashews and cherries are just my personal favorite.', --description
         16, --cook_time
@@ -821,9 +854,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          1 tablespoon honey
          1/2 cup fresh blackberries
          2 tablespoons creme fraiche (optional)
-          ', 'Breakfast'); --category  
+          ', 'Breakfast',
+          'http://images.media-allrecipes.com/userphotos/960x960/3758218.jpg'); --category  
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Whole Grain Breakfast Cookies',  --name
         'My sister and I love something sweet with our coffee in the morning. We created this recipe to make a wholesome breakfast. I generally double the batch and keep them in the freezer. They taste even better frozen (still soft!).', --description
         50, --cook_time
@@ -850,9 +884,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          1 teaspoon vanilla extract
          1/2 cup dried cherries
          1 cup semi-sweet chocolate chips
-          ', 'Breakfast'); --category      
+          ', 'Breakfast',
+          'https://images.media-allrecipes.com/userphotos/560x315/885973.jpg'); --category      
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Peanut Butter Breakfast Syrup',  --name
         'My daughters wanted peanut butter syrup on their waffles, so I made this up. It is delicious! Stores in the refrigerator for a really long time. Serve over pancakes with sliced bananas. Try coconut extract in place of vanilla for added flavor.', --description
         10, --cook_time
@@ -864,9 +899,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          1 cup white sugar    
          1/2 cup natural peanut butter
          1 teaspoon vanilla extract
-          ', 'Breakfast'); --category 
+          ', 'Breakfast',
+          'http://veggieandthebeastfeast.com/wp-content/uploads/2013/01/P1136154-2.jpg'); --category 
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Puerto Rican Breakfast Custard',  --name
         'This is a unique Spanish breakfast custard that my Puerto Rican father loved as a child and something my mother made for us as we were growing up. The results are very delicious and warming on a cold winter morning.', --description
         30, --cook_time
@@ -879,9 +915,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          3 tablespoons white sugar
          1/8 teaspoon ground cinnamon
          2 cups whole milk
-          ', 'Breakfast'); --category                  
+          ', 'Breakfast',
+          'https://images.media-allrecipes.com/userphotos/560x315/1010841.jpg'); --category                  
 
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
         'Breakfast Prune Spice Cake',  --name
         'This moist cake was a favorite of mine as a child - probably because it meant I could have cake for breakfast! Moist, spicy and delicious any time of day!', --description
         70, --cook_time
@@ -904,7 +941,8 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          1 teaspoon salt
          1 teaspoon baking powder
          1 teaspoon baking soda
-          ', 'Breakfast'); --category
+          ', 'Breakfast',
+          'https://images.food52.com/bEdRPm0O9Ui6_93R8G5rnFySe2o=/2016x1344/8872d36e-6273-4647-873a-b1c43c769a1f--IMG_7797.jpg'); --category
 
 
 INSERT INTO users (first_name, last_name, password, salt, email, phone)
@@ -938,8 +976,3 @@ INSERT INTO user_recipes (user_id, recipe_id)
                 (2, 3),
                 (2, 5);
 
-
-
-Select * From users
-SELECT * FROM recipes
-Select * from user_recipes;
