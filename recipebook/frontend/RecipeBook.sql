@@ -375,24 +375,20 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           ', 'Breakfast'); --category       
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
-        'Breakfast Apple pies',  --name
-        'Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist.', --description
-        25, --cook_time
+        'Breakfast Apples',  --name
+        'This is a fun and yummy breakfast that is great for a snack or dessert as well!', --description
+        16, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Combine milk with vinegar in a medium bowl and set aside for 5 minutes to "sour".
-          Step 2 Combine flour, sugar, baking powder, baking soda, and salt in a large mixing bowl. Whisk egg and butter into "soured" milk. Pour the flour mixture into the wet ingredients and whisk until lumps are gone.
-          Step 3 Heat a large skillet over medium heat, and coat with cooking spray. Pour 1/4 cupfuls of batter onto the skillet, and cook until bubbles appear on the surface. Flip with a spatula, and cook until browned on the other side.', 
+         'Step 1 Place the apple, rice cereal, cinnamon, and coconut oil into a microwave-safe bowl.
+          Step 2 Cook in a microwave oven until the coconut oil has melted, 30 to 45 seconds. Stir to combine.
+          Step 3 Serve topped with berries and walnuts, if desired.', 
                 --Start of Ingredients
-        '1/2 teaspoon baking soda
-         1 cup all-purpose flour          
-         1 teaspoon baking powder
-         2 tablespoons white sugar
-         1/2 ounce cooking spray
-         2 tablespoons distilled white vinegar
-         2 tablespoons butter
-         3/4 cup milk
-         1 eggs
-         1/2 teaspoon salt
+        '1 apple, cored and chopped
+         2 teaspoons coconut oil         
+         1/2 cup sliced fresh strawberries (optional)
+         1/2 cup crispy rice cereal squares (such as Rice Chex®), crushed
+         2 teaspoons ground cinnamon
+         1/4 cup chopped walnuts (optional)
           ', 'Breakfast'); --category                
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
@@ -421,7 +417,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'Southwestern-inspired chicken spiced with chili powder goes perfectly with a combination of beans, corn and bell peppers.', --description
         15, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Combine beans, corn, bell pepper, lime juice, cilantro and hot pepper sauce, if desired, in small bowl; set aside.
+         'Step 1 Combine beans, corn, bell pepper, lime juice, cilantro and hot pepper sauce, if desired, in small bowl, set aside.
           Step 2 Coat chicken with chili powder. Cook on oiled preheated grill 6 minutes per side or until no longer pink. Cut chicken into thin slices.
           Step 3 Wrap tortillas in plastic wrap. Microwave on HIGH 1 minute. For each sandwich, place three cheese slice halves down center of one tortilla. Top with chicken breast slices and bean mixture. Roll and secure with wooden pick in two places. Cut in half.
         ', 
@@ -485,10 +481,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'Chock-full of poultry, potatoes, peas and corn, this recipe for easy chicken pot pie makes two golden pies, so you can serve one at supper and save the other for a busy night.', --description
         75, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Preheat oven to 425°. Place potatoes and carrots in a large saucepan; add water to cover. Bring to a boil. Reduce heat; cook, covered, 8-10 minutes or until crisp-tender; drain.
-         Step 2 In a large skillet, heat butter over medium-high heat. Add onion; cook and stir until tender. Stir in flour and seasonings until blended. Gradually stir in broth and milk. Bring to a boil, stirring constantly; cook and stir 2 minutes or until thickened. Stir in chicken, peas, corn and potato mixture; remove from heat.
-         Step 3 Unroll a pie crust into each of two 9-in. pie plates; trim even with rims. Add chicken mixture. Unroll remaining crusts; place over filling. Trim, seal and flute edges. Cut slits in tops.
-         Step 4 Bake 35-40 minutes or until crust is lightly browned. Let stand 15 minutes before cutting. Freeze option: Cover and freeze unbaked pies. To use, remove from freezer 30 minutes before baking (do not thaw). Preheat oven to 425°. Place pies on baking sheets; cover edges loosely with foil. Bake 30 minutes. Reduce oven setting to 350°; bake 70-80 minutes longer or until crust is golden brown and a thermometer inserted in center reads 165°.
+         'Step 1 Preheat oven to 425°. Place potatoes and carrots in a large saucepan, add water to cover. Bring to a boil. Reduce heat, cook, covered, 8-10 minutes or until crisp-tender, drain.
+         Step 2 In a large skillet, heat butter over medium-high heat. Add onion, cook and stir until tender. Stir in flour and seasonings until blended. Gradually stir in broth and milk. Bring to a boil, stirring constantly, cook and stir 2 minutes or until thickened. Stir in chicken, peas, corn and potato mixture, remove from heat.
+         Step 3 Unroll a pie crust into each of two 9-in. pie plates, trim even with rims. Add chicken mixture. Unroll remaining crusts, place over filling. Trim, seal and flute edges. Cut slits in tops.
+         Step 4 Bake 35-40 minutes or until crust is lightly browned. Let stand 15 minutes before cutting. Freeze option: Cover and freeze unbaked pies. To use, remove from freezer 30 minutes before baking (do not thaw). Preheat oven to 425°. Place pies on baking sheets, cover edges loosely with foil. Bake 30 minutes. Reduce oven setting to 350°, bake 70-80 minutes longer or until crust is golden brown and a thermometer inserted in center reads 165°.
          ', 
                 --Start of Ingredients
         '2 cups diced peeled potatoes
@@ -512,7 +508,7 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'A good old-fashioned easy beef stew recipe with rich beef gravy that lets the flavor of the potatoes and carrots come through.', --description
         60, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 In an oven-safe Dutch oven, brown beef in batches in oil; drain. Return all meat to the pan. Add onions, tomatoes, broth, tapioca, garlic, parsley, salt, pepper and bay leaf. Bring to a boil.
+         'Step 1 In an oven-safe Dutch oven, brown beef in batches in oil, drain. Return all meat to the pan. Add onions, tomatoes, broth, tapioca, garlic, parsley, salt, pepper and bay leaf. Bring to a boil.
          Step 2 Cover stew and bake at 350° for 1 hour. Stir in carrots, potatoes and celery. Bake, covered, 1 hour longer or until meat and vegetables are tender. Discard bay leaf.
          ', 
                 --Start of Ingredients
@@ -534,12 +530,12 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
         'Skillet Mac & Cheese',  --name
-        'This super creamy mac 'n' cheese is so simple it seems almost too easy!', --description
+        'This super creamy mac and cheese is so simple it seems almost too easy!', --description
         25, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Cook macaroni according to package directions; drain.
-         Step 2 Meanwhile, in a large cast-iron or other heavy skillet, melt butter over medium heat. Stir in flour until smooth; gradually whisk in cream. Bring to a boil, stirring constantly. Cook and stir until thickened, about 2 minutes. Reduce heat; stir in cheese until melted.
-         Step 3 Add macaroni; cook and stir until heated through. Top as desired.
+         'Step 1 Cook macaroni according to package directions, drain.
+         Step 2 Meanwhile, in a large cast-iron or other heavy skillet, melt butter over medium heat. Stir in flour until smooth, gradually whisk in cream. Bring to a boil, stirring constantly. Cook and stir until thickened, about 2 minutes. Reduce heat, stir in cheese until melted.
+         Step 3 Add macaroni, cook and stir until heated through. Top as desired.
          ', 
                 --Start of Ingredients
         '2 cups uncooked elbow macaroni (about 8 ounces)
@@ -555,9 +551,9 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'Beef enchiladas prepared in flour tortillas in this saucy casserole that has irresistible home-cooked flavor and a subtle kick.', --description
         70, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Preheat oven to 350°. In a large skillet, cook beef and onion over medium heat, crumbling meat, until beef is no longer pink, 6-8 minutes; drain. Stir in flour and seasonings. Add tomatoes; bring to a boil. Reduce heat; simmer, covered, 15 minutes.
-         Step 2 In a saucepan, heat butter over medium-high heat. Add garlic; cook and stir 1 minute or until tender. Stir in flour until blended; gradually whisk in broth. Bring to a boil; cook and stir until thickened, about 2 minutes. Stir in tomato sauce and seasonings; heat through.
-         Step 3 Pour 1-1/2 cups sauce into an ungreased 13x9-in. baking dish. Place about 1/4 cup beef mixture off center on each tortilla; top with 1-2 tablespoons cheese. Roll up and place over sauce, seam side down. Top with remaining sauce.
+         'Step 1 Preheat oven to 350°. In a large skillet, cook beef and onion over medium heat, crumbling meat, until beef is no longer pink, 6-8 minutes, drain. Stir in flour and seasonings. Add tomatoes, bring to a boil. Reduce heat, simmer, covered, 15 minutes.
+         Step 2 In a saucepan, heat butter over medium-high heat. Add garlic, cook and stir 1 minute or until tender. Stir in flour until blended, gradually whisk in broth. Bring to a boil, cook and stir until thickened, about 2 minutes. Stir in tomato sauce and seasonings, heat through.
+         Step 3 Pour 1-1/2 cups sauce into an ungreased 13x9-in. baking dish. Place about 1/4 cup beef mixture off center on each tortilla, top with 1-2 tablespoons cheese. Roll up and place over sauce, seam side down. Top with remaining sauce.
          Step 4 Bake, covered, until heated through, 30-35 minutes. Sprinkle with remaining cheese. Bake, uncovered, until cheese is melted, 10-15 minutes longer. Serve with toppings as desired.
          ', 
                 --Start of Ingredients
@@ -586,10 +582,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'This all-in-one comforting pork chops recipe reminds me of home.', --description
         120, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 In a small saucepan, melt butter; stir in the flour, salt and pepper until smooth. Add broth. Bring to a boil; cook and stir for 1 minute or until thickened. Remove from the heat and set aside.
-         Step 2 In a large skillet, brown the pork chops on both sides in oil; sprinkle with additional salt and pepper if desired.
+         'Step 1 In a small saucepan, melt butter, stir in the flour, salt and pepper until smooth. Add broth. Bring to a boil, cook and stir for 1 minute or until thickened. Remove from the heat and set aside.
+         Step 2 In a large skillet, brown the pork chops on both sides in oil, sprinkle with additional salt and pepper if desired.
          Step 3 In a greased 13-in. x 9-in. baking dish, layer potatoes and onion. Pour broth mixture over layers. Place pork chops on top.
-         Step 4 Cover and bake at 350° for 1 hour; uncover and bake 30 minutes longer or until meat and potatoes are tender. If desired, sprinkle with paprika and parsley.
+         Step 4 Cover and bake at 350° for 1 hour, uncover and bake 30 minutes longer or until meat and potatoes are tender. If desired, sprinkle with paprika and parsley.
          ', 
                 --Start of Ingredients
         '3 tablespoons butter
@@ -610,8 +606,8 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'Our fun, simple chicken taco recipe is perfect for a relaxing dinner with friends.', --description
         300, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Place chicken in a 3-qt. slow cooker. Combine lime juice and chili powder; pour over chicken. Cook, covered, on low until chicken is tender, 5-6 hours.
-         Step 2 Remove chicken. When cool enough to handle, shred meat with two forks; return to slow cooker. Stir in corn and salsa. Cook, covered, on low until heated through, about 30 minutes. Place filling on tortillas; if desired, serve with sour cream, pickled onions, lettuce and cheese.
+         'Step 1 Place chicken in a 3-qt. slow cooker. Combine lime juice and chili powder, pour over chicken. Cook, covered, on low until chicken is tender, 5-6 hours.
+         Step 2 Remove chicken. When cool enough to handle, shred meat with two forks, return to slow cooker. Stir in corn and salsa. Cook, covered, on low until heated through, about 30 minutes. Place filling on tortillas, if desired, serve with sour cream, pickled onions, lettuce and cheese.
          ', 
                 --Start of Ingredients
         '1-1/2 pounds boneless skinless chicken breast halves
@@ -629,12 +625,12 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         15, --cook_time
                 -- Start of Directions, by steps
          'Step 1 Heat oven to 350°F. Generously grease 12-cup fluted tube pan with shortening or cooking spray. In large 1-gallon plastic food storage bag, mix granulated sugar and cinnamon.
-          Step 2 Separate dough into 16 biscuits; cut each into quarters. Shake in bag to coat. Arrange in pan, adding walnuts and raisins among the biscuit pieces. Sprinkle any remaining sugar over biscuits.
-          Step 3 In small bowl, mix brown sugar and butter; pour over biscuit pieces.
-          Step 4 Bake 30 to 40 minutes or until golden brown and no longer doughy in center. Loosen edges of pan with metal spatula. Cool in pan 5 minutes. Turn upside down onto serving plate; replacing any biscuit pieces and caramel from pan. Pull apart to serve. Serve warm.
+          Step 2 Separate dough into 16 biscuits, cut each into quarters. Shake in bag to coat. Arrange in pan, adding walnuts and raisins among the biscuit pieces. Sprinkle any remaining sugar over biscuits.
+          Step 3 In small bowl, mix brown sugar and butter, pour over biscuit pieces.
+          Step 4 Bake 30 to 40 minutes or until golden brown and no longer doughy in center. Loosen edges of pan with metal spatula. Cool in pan 5 minutes. Turn upside down onto serving plate, replacing any biscuit pieces and caramel from pan. Pull apart to serve. Serve warm.
         ', 
                 --Start of Ingredients
-          '1/2 cup granulated sugar
+        '1/2 cup granulated sugar
         1 teaspoon cinnamon
         2 cans (16.3 oz each) Pillsbury™ Grands!™
         1/2 cup chopped walnuts, if desired
@@ -642,7 +638,172 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         1 cup firmly packed brown sugar
         3/4 cup butter or margarine, melted
           ', 'Breakfast'); --category
+          
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Fluffy Pancakes',  --name
+        'Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist.', --description
+        25, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Combine milk with vinegar in a medium bowl and set aside for 5 minutes to "sour".
+          Step 2 Combine flour, sugar, baking powder, baking soda, and salt in a large mixing bowl. Whisk egg and butter into "soured" milk. Pour the flour mixture into the wet ingredients and whisk until lumps are gone.
+          Step 3 Heat a large skillet over medium heat, and coat with cooking spray. Pour 1/4 cupfuls of batter onto the skillet, and cook until bubbles appear on the surface. Flip with a spatula, and cook until browned on the other side.', 
+                --Start of Ingredients
+        '1/2 teaspoon baking soda
+         1 cup all-purpose flour          
+         1 teaspoon baking powder
+         2 tablespoons white sugar
+         1/2 ounce cooking spray
+         2 tablespoons distilled white vinegar
+         2 tablespoons butter
+         3/4 cup milk
+         1 eggs
+         1/2 teaspoon salt
+          ', 'Breakfast'); --category
 
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Ham and Cheese Breakfast Quiche',  --name
+        'Here is one great idea for what to do with that leftover ham! My picky eaters loved it and it is easy to make!', --description
+        16, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Preheat oven to 425 degrees F (220 degrees C).
+          Step 2 Squeeze any excess moisture from the potatoes and combine them with the melted butter or margarine in a small bowl. Press this mixture into the bottom and sides of an ungreased 10 inch pie pan.
+          Step 3 Bake at 425 degrees F (220 degrees C) for 25 minutes.
+          Step 4 Remove pan from oven and arrange the ham and cheese evenly over the potatoes. In a separate small bowl, beat together the eggs and the cream. Pour this over the ham and cheese.
+          Step 5 Return pan to oven and bake for 425 degrees F (220 degrees C) for 30 minutes, or until the custard has completely set.
+          ', 
+                --Start of Ingredients
+        '2 (12 ounce) packages frozen hash brown potatoes
+         1/3 cup butter, melted        
+         1 cup cooked diced ham
+         1/2 cup heavy whipping cream
+         2 eggs
+         1 cup shredded Monterey Jack cheese
+          ', 'Breakfast'); --category   
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Authentic Mexican Breakfast Tacos',  --name
+        'Quick Easy and Delicious! I learned this recipe from many years of eating with the Mexican cooks at my restaurant. I have grown to LOVE this breakfast. If you like spicy food, you will love this.', --description
+        27, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Crumble the sausage into a skillet over medium-high heat. Cook and stir until evenly brown. Set aside.
+          Step 2 Heat one skillet over medium heat, and heat another skillet over high heat. The skillet over high heat is for warming tortillas. In a medium bowl, whisk together the eggs, milk, salt and pepper. Spray the medium heat skillet with some cooking spray, and pour in the eggs. Cook and stir until almost firm. Add the sausage, and continue cooking and stirring until firm.
+          Step 3 Meanwhile, warm tortillas for about 45 seconds per side in the other skillet, so they are hot and crispy on the edges, but still pliable.
+          Step 4 Sprinkle a little shredded cheese onto each tortilla while it is still hot. Top with some of the scrambled egg and sausage, then add hot pepper sauce and salsa to your liking.
+          ', 
+                --Start of Ingredients
+        '6 ounces chorizo sausage
+         8 (6 inch) corn tortillas       
+         6 eggs
+         1/4 cup milk
+         1/2 teaspoon pepper
+         1/2 teaspoon salt
+         1 cup shredded Monterey Jack cheese
+         1 dash hot pepper sauce (e.g. Tabasco™), or to taste
+         1/2 cup salsa
+          ', 'Breakfast'); --category    
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Breakfast Quinoa',  --name
+        'Delicious, filling, and comforting on a cold morning. It is really flexible, so substitute in your favorite nuts and fruit. Cashews and cherries are just my personal favorite.', --description
+        16, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Bring quinoa, water, milk, cinnamon, and vanilla extract to a boil in a saucepan. Reduce heat to medium-low, cover, and simmer until quinoa is tender and has absorbed the water, 10 to 15 minutes. Remove saucepan from heat.
+          Step 2 Mix cherries, cashews, and honey into the quinoa mixture, top with blackberries and creme fraiche.
+          ', 
+                --Start of Ingredients
+        '1/2 cup quinoa
+         1/2 cup water       
+         1/2 cup skim milk
+         1/2 teaspoon ground cinnamon
+         1/2 teaspoon vanilla extract
+         1/2 cup dried cherries
+         1 tablespoon honey
+         1/2 cup fresh blackberries
+         2 tablespoons creme fraiche (optional)
+          ', 'Breakfast'); --category  
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Whole Grain Breakfast Cookies',  --name
+        'My sister and I love something sweet with our coffee in the morning. We created this recipe to make a wholesome breakfast. I generally double the batch and keep them in the freezer. They taste even better frozen (still soft!).', --description
+        50, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Preheat oven to 375 degrees F (190 degrees C). Line baking sheets with parchment paper.
+          Step 2 Pulse the walnuts in a food processor several times to chop, continue processing until the walnuts are ground into flour, transfer to a bowl. Mix in the rolled oats, whole wheat flour, flax meal, baking soda, salt, and cinnamon until thoroughly combined.
+          Step 3 Combine the almond butter, canola oil, agave nectar, brown sugar, egg, and vanilla extract in the food processor and process a few seconds to blend the ingredients well, transfer the almond butter mixture to a large bowl and fold in the dried cherries and chocolate chips. Mix the walnut-oatmeal mixture into the almond butter mixture (dough will be very thick).
+          Step 4 Scoop up heaping teaspoons of dough, and form into balls, lay the dough balls onto the prepared baking sheets, about 2 inches apart.
+          Step 5 Bake in the preheated oven until lightly browned, 8 to 10 minutes. Remove from oven and flatten the cookies with a spatula. Allow to cool for about 5 minutes on the baking sheets before removing to finish cooling on wire racks.
+          ', 
+                --Start of Ingredients
+        '1 cup walnuts
+         1 1/2 cups old-fashioned rolled oats (not instant)   
+         1/3 cup whole wheat flour
+         1/2 cup ground flax meal
+         1 teaspoon baking soda
+         1/2 teaspoon salt
+         1 teaspoon ground cinnamon
+         1/2 cup almond butter
+         1/4 cup canola oil
+         1/4 cup blue agave nectar
+         1/3 cup brown sugar
+         1 egg
+         1 teaspoon vanilla extract
+         1/2 cup dried cherries
+         1 cup semi-sweet chocolate chips
+          ', 'Breakfast'); --category      
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Peanut Butter Breakfast Syrup',  --name
+        'My daughters wanted peanut butter syrup on their waffles, so I made this up. It is delicious! Stores in the refrigerator for a really long time. Serve over pancakes with sliced bananas. Try coconut extract in place of vanilla for added flavor.', --description
+        10, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Stir milk, sugar, and peanut butter together in a saucepan over medium heat, bring to a boil while whisking constantly. Cook at a boil for 3 minutes, remove from heat, and stir vanilla extract into the syrup.
+          ', 
+                --Start of Ingredients
+        '1 cup skim milk
+         1 cup white sugar    
+         1/2 cup natural peanut butter
+         1 teaspoon vanilla extract
+          ', 'Breakfast'); --category 
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Puerto Rican Breakfast Custard',  --name
+        'This is a unique Spanish breakfast custard that my Puerto Rican father loved as a child and something my mother made for us as we were growing up. The results are very delicious and warming on a cold winter morning.', --description
+        30, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Whisk together the cornstarch, salt, sugar, and cinnamon in a large saucepan. Stir in the milk to evenly blend ingredients, and set over medium-high heat. Continue whisking and cooking until custard reaches a thick consistency, 25 to 30 minutes. It is important to stir the entire time, or the custard can easily burn or clump. The custard will continue to thicken as it cools. Spoon into bowls to serve.
+          ', 
+                --Start of Ingredients
+        '2 tablespoons cornstarch
+         1/8 teaspoon salt  
+         3 tablespoons white sugar
+         1/8 teaspoon ground cinnamon
+         2 cups whole milk
+          ', 'Breakfast'); --category                  
+
+INSERT INTO recipes (name, description, cook_time, directions, ingredients, category) VALUES (
+        'Breakfast Prune Spice Cake',  --name
+        'This moist cake was a favorite of mine as a child - probably because it meant I could have cake for breakfast! Moist, spicy and delicious any time of day!', --description
+        70, --cook_time
+                -- Start of Directions, by steps
+         'Step 1 Preheat the oven to 350 degrees F (175 degrees C). Grease and flour a 9 inch tube pan.
+          Step 2 In a large bowl, mix the shortening and sugar with an electric mixer until smooth. Mix in the eggs one at a time, then stir in the vanilla and prunes. Sift the flour, allspice, nutmeg, cinnamon, salt, baking powder and baking soda into a large bowl or onto a sheet of waxed paper. Stir in the dry ingredients 1/3 at a time, alternating with the buttermilk. Mix in the walnuts if using. Pour batter into the prepared pan.
+          Step 3 Bake for 50 minutes in the preheated oven, or until a toothpick inserted in the crown of the cake comes out clean. Cool on a wire rack for at least 10 minutes before inverting onto a serving plate.
+          ', 
+                --Start of Ingredients
+        '1 cup shortening
+         2 cups white sugar
+         4 eggs
+         1 teaspoon vanilla extract
+         1 1/3 cups buttermilk
+         1 1/3 cups stewed prunes, chopped
+         2 1/3 cups all-purpose flour
+         1 teaspoon allspice
+         1 teaspoon ground nutmeg
+         1 teaspoon ground cinnamon
+         1 teaspoon salt
+         1 teaspoon baking powder
+         1 teaspoon baking soda
+          ', 'Breakfast'); --category
 
 
 INSERT INTO users (first_name, last_name, password, salt, email, phone)
