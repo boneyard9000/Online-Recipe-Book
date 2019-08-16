@@ -22,10 +22,17 @@
             <br>
             
             <ul id="my-list" style="background-color: white; border-radius: 50px;">
+<<<<<<< Updated upstream
                 <div class="item-line">
                 <li v-for="(thing, index) in groceriesArray.sort()" :key="index" class="all-li" style="border-radius: 20px;">
                     <p>{{thing}}</p>
                     <b-button class="trash" v-on:click="deleteGrocery(index)" variant="danger" style="float: right;"><i class="fa fa-trash-o"></i></b-button>
+=======
+
+                <li v-for="(thing, index) in newGroceriesArray.sort()" :key="index" class="all-li" style="width: 450px; text-align: left; border-radius: 20px;">
+                    {{thing}}
+                    <b-button v-on:click="deleteGrocery(index)" variant="danger" style="float: right;"><i class="fa fa-trash-o"></i></b-button>
+>>>>>>> Stashed changes
                 </li>
                 </div>
                 
@@ -47,8 +54,9 @@ export default {
         return {
             currentUser: auth.getUser(),
             groceries: '',
-            groceriesArray: {},
+            groceriesArray: [],
             currentGrocery: '',
+            newGroceriesArray: [],
             currentGroceryList: {
                 allGroceries: ''
             }
@@ -58,6 +66,7 @@ export default {
     },
 
     created() {
+
         fetch(`${process.env.VUE_APP_REMOTE_API}/api/user`, {
         headers: {
           Accept: 'application/json',
@@ -78,12 +87,39 @@ export default {
         if (this.groceriesArray[0] === "") {
             this.groceriesArray = [];
         }
+        this.getNewArray();
+
+
         });
+
+        
 
         
     },
 
     methods: {
+        getNewArray() {
+            console.log(map);
+            let map = new Map();
+            for (let i = 0; i < this.groceriesArray.length; i++) {
+
+                let myString = this.groceriesArray[i];
+                let num = myString.substring(0, myString.indexOf(' '));
+                let item = myString.substring(myString.indexOf(' ') + 1);
+
+                if (map.has(item)) {
+                    num = (+num) + (+map.get(item));
+                    console.log("A map exists");
+                }
+
+                map.set(item, num);
+            }
+
+            for (let [k, v] of map) {
+                console.log(k, v);
+                this.newGroceriesArray.push(v + " " + k);
+            }
+        },
         deleteGrocery: function(index) {
             this.groceriesArray.splice(index, 1);
         },

@@ -71,20 +71,26 @@
             />
             </b-form-group>
 
-             <b-form-group class="control-label text-left"
-              id="input-group-5"
-              label="Ingredients:"
-              label-for="ingredients"
-          >
-            <b-form-textarea
-            id="ingredients"
-            placeholder="Put each ingredient on a new line (ex: 1 Cup of Milk)"
-            v-model="recipe.ingredients"
-            type="text"
+            <b-form-group class="control-label text-left" id="input-group-5" label="Ingredients:" label-for="ingredients">
+                <input v-model="quantity" type="text" style="margin-right: 30px; margin-left:20px;" placeholder="Enter Quantity Here">
+                <select v-model="units" style="margin-right: 20px;">
+                  <option>Misc</option>
+                  <option>Cup(s)</option>
+                  <option>Tbsp(s)</option>
+                  <option>Tsp(s)</option>
+                  <option>Fl oz</option>
+                  <option>Milliliter(s)</option>
+                  <option>Liter(s)</option>
+                  <option>Pound(s)</option>
+                  <option>Ounce(s)</option>
+                  <option>Gram(s)</option>
+                </select>
+                <input v-model="ingredientName" type="text" style="margin-right: 30px; margin-left:20px;" placeholder="Enter Name Here">
+                <b-button pill variant="success" v-on:click="addIngredient">Add Ingredient</b-button>
+                <p v-for="(thing, index) in ingredientArray" style="color:white; margin-bottom: 10px; text-align: center;">{{ thing }} <b-button v-on:click="removeIngredient(index)" style="margin-left: 15px;">REMOVE</b-button></p>
 
-            rows="3"
-            max-rows="20"
-            />
+
+           
             </b-form-group>
 
             <b-form-group class="control-label text-left"
@@ -122,6 +128,9 @@
             </b-button><br>
             <div class="space">.</div>
         </b-form>
+
+
+        
     </div>
     
 
@@ -143,6 +152,7 @@ export default {
             description: '',
             cookMins: '',
             directions: '',
+            specificIngredient: '',
             ingredients: '',
             category: '',
             recipePic: ''
@@ -161,12 +171,37 @@ export default {
               {name:"Dinner", id: 5},
               {name: "Lunch", id: 6}
             ],
-
+        quantity: '',
+        units: '',
+        ingredientName: '',
+        ingredientArray: [],
         recipe: this.recipeToEdit,
         recipeErrors: false
       };
     },
     methods: {
+    
+    addIngredient() {
+      this.specificIngredient = this.quantity + ' ' + this.units + ' of ' + this.ingredientName;
+      console.log(this.specificIngredient);
+      this.ingredientArray.push(this.specificIngredient);
+      if (this.ingredients === "") {
+        this.ingredients = this.quantity + ' ' + this.units + ' of ' + this.ingredientName + '\n';
+      } else {
+        this.ingredients += this.quantity + ' ' + this.units + ' of ' + this.ingredientName + '\n';
+      }
+      this.quantity = '';
+      this.units = '';
+      this.ingredientName = '';
+      this.recipe.ingredients = this.ingredients.substring(9);
+    },
+    removeIngredient(index) {
+      this.ingredientArray.splice(index, 1);
+      this.recipe.ingredients = '';
+      for (let i =0; i < this.ingredientArray.length; i++) {
+        this.recipe.ingredients += this.ingredientArray[i] + '\n';
+      }
+    },
     emptyRecipe(currentRecipe){
       this.$emit('emptyRecipe', currentRecipe)
     },
@@ -209,6 +244,10 @@ export default {
 
 }
 </script>
+
+
+
+
 
 <style>
 
