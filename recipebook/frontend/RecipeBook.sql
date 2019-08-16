@@ -45,18 +45,16 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 2 Pour in chicken and vegetable broths and stir in chicken, noodles, carrots, basil, oregano, salt and pepper. 
           Step 3 Bring to a boil, then reduce heat and simmer 20 minutes before serving.', 
                 --Start of Ingredients
-          '1 tablespoon butter
-          1/2 cup chopped onion
-          1/2 cup chopped celery
-          4 (14.5 ounce) cans chicken broth
-          1 (14.5 ounce) can vegetable broth
-          1/2 pound chopped cooked chicken breast
-          1 1/2 cups egg noodles
-          1 cup sliced carrots
-          1/2 teaspoon dried basil
-          1/2 teaspoon dried oregano
-          salt and pepper to taste
-          ', 'Lunch',
+'1 Tbsp(s) butter
+0.5 Cup(s) chopped onion
+0.5 Cup(s) chopped celery
+4 (14.5 Fl oz) cans chicken broth
+1 (14.5 Fl oz) can vegetable broth
+0.5 Pound(s) chopped cooked chicken breast
+1.5 Cup(s) egg noodles
+1 Cup(s) sliced carrots
+0.5 Tsp(s) dried basil
+0.5 Tsp(s) dried oregano', 'Lunch',
           'https://i.ytimg.com/vi/o91gT73mQhg/maxresdefault.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -69,11 +67,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 3 Bake at 350 until golden brown for 2 hours. 
           Step 4 Let cool 40 minutes before serving.', 
                 --Start of Ingredients
-          '1 whole live chicken
-          1 whole left-over cheesecake
-          1 oven
-          1 killing block
-          ', 'Dessert',
+'1 whole live chicken
+1 whole left-over cheesecake
+1 oven
+1 killing block', 'Dessert',
           'http://images.sweetauthoring.com/recipe/540x540/104972_971.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -87,11 +84,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 4 Enjoy with a knife and fork, or just a fork, or really you can handle it with just your fingers, its your life.',
 
                          --Start of Ingredients
-          '5 Minutes
-           4 Bananas
-           1pack of American cheese
-           1lb Bologne, sliced thin'
-          , 'Dinner',
+'5 Minutes
+4 Bananas
+1 pack of American cheese
+1 Pound(s) Bologne, sliced thin', 'Dinner',
           'http://1.bp.blogspot.com/-XpEgqddVmJY/UhqHHhlZJvI/AAAAAAAACMw/iqCJH_R213U/s1600/Eggs+in+Bologna+Cups.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -99,16 +95,15 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         'It comes but once a year', --description
         30, --cook_time
                 -- Start of Directions, by steps
-         'Step 1 Bake a delicious cake.     
+        'Step 1 Bake a delicious cake.     
           Step 2 Check the calendar.
           Step 3 Wait until it is your birthday.
           Step 4  When it is. Congratulations!!  Your cake has now become a birthday cake.  (As a matter of insurance this site must note that - dependent on your 
         birthday- this cake may not be edible--- We accept no responsibility for eating said cake unless it is delicious)', 
                 --Start of Ingredients
-          '1 Normal cake
-          1 Calendar with birth-date marked
-          1 amount of wait time', 
-          'Dessert',
+'1 Normal cake
+1 Calendar with birth-date marked
+1 amount of wait time', 'Dessert',
           'https://www.williams-sonoma.com/wsimgs/ab/images/dp/wcm/201922/0465/img14c.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -125,10 +120,9 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         if it is reheated or is consumed before 10AM.
         Step 7 This flexible treat can (and should) be combined with whatever condiments you have in your fridge, sriracha is a sure crowd pleaser.',
                           --Start of Ingredients
-          '1 Pizza Pie
-          1 Nights rest
-          misc Pizza Fixins', 
-          'Breakfast',
+'1 Pizza Pie
+1 Nights rest
+1 misc Pizza Fixins', 'Breakfast',
           'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/2/7/1/FNM_030114-Breakfast-Pizza-Recipe_s4x3.jpg.rend.hgtvcom.616.462.suffix/1391877822055.jpeg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -141,10 +135,9 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 3 Cover with generous quantity of tequila.
           Step 4 Let cure in sun for half day (or so)', 
                 --Start of Ingredients
-          '8 Hot Dogs, uncoocked
-          64oz Tequilla
-          8 Fine Martini Glasses
-          ', 'Beverage',
+'8 Hot Dogs, uncoocked
+64 oz Tequilla
+8 Fine Martini Glasses', 'Beverage',
           'https://timeincsecure-a.akamaihd.net/rtmp_uds/429048911/201703/1018/429048911_5376504367001_5376172885001-vs.jpg?pubId=429048911&videoId=5376172885001'); --category
           
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -157,12 +150,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 3 Wait 6-8 months for delicious veggies to grow.
           Step 4 Eat that, not the dirt.  Its better.', 
                 --Start of Ingredients
-          '1 Bucket
-          1 Shovel
-          all of the Dirt
-          6-8 months of Sunshine
-          1 Large Yard
-          ', 'Lunch',
+'1 Bucket
+1 Shovel
+6 months of Sunshine
+1 Large Yard', 'Lunch',
           'https://www.tasteofhome.com/wp-content/uploads/2017/10/exps3954_FF1227370D14B-1.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -174,10 +165,9 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 2 Remove pot from flame and take it outside.  Throw that nastiness out. 
           Step 3 Refill pot with fresh, unboiled water from the tap.  the less boiled the better.  You have now learned how to make unboiled water.', 
                 --Start of Ingredients
-          '1 Large Pot
-          1 gallon Water
-          1 Irrelevant Stove
-          ', 'Beverage',
+'1 Large Pot
+1 gallon Water
+1 Irrelevant Stove', 'Beverage',
           'https://d1alt1wkdk73qo.cloudfront.net/images/guide/398660cdb95a48f58ebe147bce9ca901/640x960.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -194,11 +184,10 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 7 Put car back on to ground. Congratulations, you just changed you oil!
           Step 8 I bet youre hungry now...', 
                 --Start of Ingredients
-          '6-8 quarts of oil
-          1 oil filter
-          1 set of tools
-          1 Jack or lift
-          ', 'Appetizer',
+'6 quarts of oil
+1 oil filter
+1 set of tools
+1 Jack or lift', 'Appetizer',
           'https://www.kahlua.com/globalassets/images/cocktails/2018/opt/kahluadrinks_wide_coffee1.png'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -212,19 +201,17 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 4 In a medium pot, melt the butter over medium heat. Add the hot sauce and whisk to combine until smooth. Toss the meatballs in the sauce to coat.
          Step 5 Serve the meatballs warm with a side of blue-cheese dressing (if using). The meatballs can be made up to two days ahead and gently reheated on the stove or in the microwave.', 
                 --Start of Ingredients
-        '4 tablespoons olive oil, divided
-        2 celery stalks, finely minced
-        ½ white onion, finely minced
-        1 egg, lightly beaten
-        1 tablespoon mustard
-        1 pound ground chicken
-        1 cup bread crumbs
-        1 teaspoon salt
-        ½ teaspoon freshly ground black pepper
-        6 tablespoons butter
-        ¾ cup Buffalo-style hot sauce
-        1 cup blue-cheese dressing (optional)
-          ', 'Appetizer',
+'4 Tbsp(s) olive oil divided
+2 celery stalks finely minced
+0.5 white onion finely minced
+1 egg, lightly beaten
+1 Tbsp(s) mustard
+1 Pound(s) ground chicken
+1 Cup(s) bread crumbs
+1 Tsp(s) salt
+0.5 Tsp(s) freshly ground black pepper
+6 Tbsp(s) butter
+0.75 Cup(s) Buffalo-style hot sauce', 'Appetizer',
           'https://whatgreatgrandmaate.com/wp-content/uploads/2016/11/IMG_9842-e1478050633263.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -240,16 +227,14 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         ', 
                 --Start of Ingredients
           'Vegetable oil, for frying
-        1 cup all-purpose flour
-        1½ teaspoons salt
-        1 teaspoon freshly ground black pepper
-        Pinch of chile powder
-        2 eggs, lightly whisked
-        2½ cups shredded coconut
-        2 pounds peeled and deveined shrimp
-        1 lemon, cut into wedges
-        ¾ cup store-bought sweet chile sauce, for dipping
-          ', 'Appetizer',
+1 Cup(s) all-purpose flour
+1.5 Tsp(s) salt
+1 Tsp(s) freshly ground black pepper
+2 eggs lightly whisked
+2.5 Cup(s) shredded coconut
+2 Pound(s) peeled and deveined shrimp
+1 lemon cut into wedges
+0.75 Cup(s) store-bought sweet chile sauce', 'Appetizer',
           'https://www.culinaryhill.com/wp-content/uploads/2017/09/Coconut-Shrimp-Culinary-Hill-6.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -262,16 +247,15 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 3 Brush one side of all tortillas with remaining tablespoon oil. Lay 2 tortillas, oiled side down, on a baking sheet. Place half of the filling on each, and sprinkle with half the cheese. Place remaining 2 tortillas on top, oiled side up. Press down gently with a spatula to seal.
           Step 4 Bake until cheese has melted and tortillas are golden brown, turning once, about 10 minutes. Remove from oven. let cool slightly. To serve, slice each quesadilla into wedges.', 
                 --Start of Ingredients
-          '4 tablespoons olive oil
-          1 tsp Salt
-          2 medium zucchini (or 1lb), halved lengthwise and thinly sliced crosswise
-          1/4 cup chopped fresh cilantro
-          2 cups grated pepper jack
-          1 onion, coursely chopped
-          4 cloves garlic, minced
-          1 cup frozen corn kernels (4oz)
-          4(8-inch) flour tortillas
-          ', 'Appetizer',
+'4 Tbsp(s) olive oil
+1 Tsp(s) Salt
+2 medium zucchini
+0.25 Cup(s) chopped fresh cilantro
+2 Cup(s) grated pepper jack
+1 onion
+4 cloves garlic, minced
+1 Cup(s) frozen corn kernels (4oz)
+4 (8-inch) flour tortillas', 'Appetizer',
           'http://www.ezrapoundcake.com/wp-content/uploads/2009/06/zucchini-quesadillas-1.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -285,18 +269,13 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 4 In a glass pitcher combine the vodka, simple syrup, lime juice, and club soda. Add ice cubes. Add remaining ice cubes to glasses. Pour the mixture over top and serve with a sprig of lavender.
          ', 
                 --Start of Ingredients
-        '1 cup blueberries, for ice cubes
-        2 cups vodka
-        3/4 cup blueberry lavender simple syrup (recipe below)
-        4 ounces lime juice
-        Soda water
-        Fresh lavender for garnish
-        For the blueberry lavender simple syrup:
-        1 cup water
-        1 cup sugar
-        1 cup blueberries
-        4 lavender sprigs (or 1 1/2 teaspoons dried food-grade lavender buds)
-          ', 'Beverage',
+'1 Cup(s) blueberries
+2 Cup(s) vodka
+4 Fl oz lime juice
+1 Cup(s) water
+1 Cup(s) sugar
+1 Cup(s) blueberries
+4 lavender sprigs', 'Beverage',
           'https://s23209.pcdn.co/wp-content/uploads/2014/05/IMG_8952edit.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -308,18 +287,17 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 2 In a large jar or pitcher, combine tea, cinnamon sticks, pomegranate juice, orange juice, orange, lemon, lime, and apple. Refrigerate for at least 1 hour and preferably overnight.
          Step 3 Just before serving, stir in carbonated water. Serve in glasses over ice.',
             --Start of Ingredients
-        '2 cups boiling water
-        2 black tea bags (or 2 teaspoons loose-leaf tea in an infuser. Decaf tea is fine)
-        2 cinnamon sticks
-        1/2 cup sugar
-        3 cups pomegranate juice
-        1 cup freshly squeezed orange juice
-        1 medium orange, sliced into thin rounds
-        1 medium lemon, sliced into thin rounds
-        1 medium lime, sliced into thin rounds
-        1 medium apple, cored and cut into 1/2-inch chunks
-        3 cups carbonated water
-          ', 'Beverage',
+'2 Cup(s) boiling water
+2 black tea bags
+2 cinnamon sticks
+.5 Cup(s) sugar
+3 Cup(s) pomegranate juice
+1 Cup(s) freshly squeezed orange juice
+1 medium orange
+1 medium lemon
+1 medium lime
+1 medium apple
+3 Cup(s) carbonated water', 'Beverage',
           'https://www.recipegirl.com/wp-content/uploads/2008/11/Winter-Holiday-Sangria-2.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -331,15 +309,12 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 2 To make punch, stir hibiscus juice with ginger ale and champagne or mineral water. Garnish if desired and serve immediately.
 ', 
                 --Start of Ingredients
-        '4 1/2 cups water
-        1 cup dried hibiscus blossoms
-        1 (2-inch) piece of ginger, thinly sliced
-        1 cup sugar
-        4 cups chilled ginger ale
-        2 (750-mL) bottles chilled champagne, sparkling white wine, or sparkling mineral water
-Optional: ice, garnishes of mint, lemon or lime slices
-
-          ', 'Beverage',
+'4 Cup(s) water
+1 Cup(s) dried hibiscus blossoms
+1 piece of ginger
+1 Cup(s) sugar
+4 Cup(s) chilled ginger ale
+2 bottles chilled champagne', 'Beverage',
           'https://media2.s-nbcnews.com/j/newscms/2017_18/1212485/paloma-mezcal-cocktail-today-170505-tease_09c0f329288292d501e73ab546a2ddc9.today-inline-large.jpg'); --category   
           
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -356,17 +331,16 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 7 Mix half-and-half, eggs, green onions, 1 tablespoon flour, and salt together in bowl. Pour mixture carefully over the ham layer, top with remaining Cheddar cheese.
           Step 8 Bake in preheated oven until set in the center, 40 to 50 minutes. Cool for 10 minutes before cutting.', 
                 --Start of Ingredients
-          '1 (9 inch) pastry for a 9-inch pie crust
-          1 cup shredded Cheddar cheese, divided
-          1/2 cup shredded Swiss cheese
-          2 tablespoons all-purpose flour, divided
-          1/2 cup diced cooked ham
-          2 tablespoons honey mustard
-          1 1/4 cups half-and-half
-          5 eggs, beaten
-          1/4 cup green onions
-          1/4 teaspoon salt
-          ', 'Breakfast',
+'1 (9 inch) pastry for a 9-inch pie crust
+1 Cup(s) shredded Cheddar cheese
+.5 Cup(s) shredded Swiss cheese
+2 Tbsp(s) all-purpose flour
+.5 Cup(s) diced cooked ham
+2 Tbsp(s) honey mustard
+1.25 Cup(s) half-and-half
+5 eggs, beaten
+.25 Cup(s) green onions
+.25 Tsp(s) salt', 'Breakfast',
           'https://www.thereciperebel.com/wp-content/uploads/2018/07/easy-ham-quiche-www.thereciperebel.com-600-12-of-16.jpg'); --category     
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -378,17 +352,16 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 2 Combine flour, sugar, baking powder, baking soda, and salt in a large mixing bowl. Whisk egg and butter into "soured" milk. Pour the flour mixture into the wet ingredients and whisk until lumps are gone.
           Step 3 Heat a large skillet over medium heat, and coat with cooking spray. Pour 1/4 cupfuls of batter onto the skillet, and cook until bubbles appear on the surface. Flip with a spatula, and cook until browned on the other side.', 
                 --Start of Ingredients
-        '1/2 teaspoon baking soda
-         1 cup all-purpose flour          
-         1 teaspoon baking powder
-         2 tablespoons white sugar
-         1/2 ounce cooking spray
-         2 tablespoons distilled white vinegar
-         2 tablespoons butter
-         3/4 cup milk
-         1 eggs
-         1/2 teaspoon salt
-          ', 'Breakfast',
+'0.5 Tsp(s) baking soda
+1 Cup(s) all-purpose flour          
+1 Tsp(s) baking powder
+2 Tbsp(s) white sugar
+0.5 Fl oz cooking spray
+2 Tbsp(s) distilled white vinegar
+2 Tbsp(s) butter
+0.75 Cup(s) milk
+1 eggs
+0.5 Tsp(s) salt', 'Breakfast',
           'https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/mccormick/h/800/homemade_fluffy_pancakes_800x800.jpg'); --category       
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -400,13 +373,12 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 2 Cook in a microwave oven until the coconut oil has melted, 30 to 45 seconds. Stir to combine.
           Step 3 Serve topped with berries and walnuts, if desired.', 
                 --Start of Ingredients
-        '1 apple, cored and chopped
-         2 teaspoons coconut oil         
-         1/2 cup sliced fresh strawberries (optional)
-         1/2 cup crispy rice cereal squares (such as Rice Chex®), crushed
-         2 teaspoons ground cinnamon
-         1/4 cup chopped walnuts (optional)
-          ', 'Breakfast',
+'1 apple, cored and chopped
+2 Tsp(s) coconut oil         
+0.5 Cup(s) sliced fresh strawberries (optional)
+0.5 Cup(s) crispy rice cereal squares (such as Rice Chex®)
+2 Tsp(s) ground cinnamon
+0.25 Cup(s) chopped walnuts (optional)', 'Breakfast',
           'https://images.media-allrecipes.com/userphotos/560x315/2438212.jpg'); --category                
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -420,15 +392,13 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 4 Carefully lift off top bread slices from sandwiches and insert 3 tomato slices into each, then cover with bread tops and serve.
         ', 
                 --Start of Ingredients
-          '1/8 cup Butter
-        4 slices country white sourdough bread
-        4 thin slices prosciutto
-        8 large fresh basil leaves
-        8 1/4-inch-thick slices young Asiago cheese
-        1/4 teaspoon dried crushed red pepper
-        2 tablespoons olive oil
-        1 large heirloom tomato
-          ', 'Lunch',
+'0.25 Cup(s) Butter
+4 slices country white sourdough bread
+4 thin slices prosciutto
+8 large fresh basil leaves
+0.25 Tsp(s) dried crushed red pepper
+2 Tbsp(s) olive oil
+1 large heirloom tomato', 'Lunch',
           'https://www.thechunkychef.com/wp-content/uploads/2016/08/Ultimate-Grilled-Cheese-6.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -441,17 +411,16 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 3 Wrap tortillas in plastic wrap. Microwave on HIGH 1 minute. For each sandwich, place three cheese slice halves down center of one tortilla. Top with chicken breast slices and bean mixture. Roll and secure with wooden pick in two places. Cut in half.
         ', 
                 --Start of Ingredients
-          '1 can (15 oz.) black beans, rinsed and drained
-        1 can (8 oz.) whole kernel corn, drained
-        1/2 cup chopped red bell pepper or plum tomato
-        3 Tbsp. fresh lime juice
-        2 Tbsp. chopped fresh cilantro
-        1/4 tsp. red pepper sauce (optional)
-        4 boneless, skinless chicken breast halves
-        2 Tbsp. chili powder
-        4 (10-inch) flour tortillas
-        6 slices Sargento® Sliced Colby Cheese , cut into halves
-          ', 'Lunch',
+'1 can (15 oz.) black beans
+1 can (8 oz.) whole kernel corn
+.5 Cup(s) chopped red bell pepper or plum tomato
+3 Tbsp(s) fresh lime juice
+2 Tbsp(s) chopped fresh cilantro
+.25 Tbsp(s) red pepper sauce (optional)
+4 boneless
+2 Tbsp(s) chili powder
+4 (10-inch) flour tortillas
+6 slices Sargento® Sliced Colby Cheese', 'Lunch',
           'https://www.sweetbabyrays.com/getattachment/8a65615e-2d6d-49e2-843b-e93fa446e09a/Buffalo-Grilled-Chicken-Wraps'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -464,17 +433,16 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 3 Place hard-boiled egg pieces on the side opposite the avocado. Top with chives and nuts. Serve with whole-grain bread.
         ', 
                 --Start of Ingredients
-          '2  cups sturdy salad greens, such as romaine, iceberg, escarole or kale
-        ½  cup cooked grains, like quinoa, farro, bulgur wheat or barley
-        1  cup roasted vegetables, like potatoes, sweet potatoes or winter squash
-        ¼  cup thinly sliced raw vegetables, like bell peppers, celery, carrots, fennel, mushrooms, onions, radishes, snap or snow peas, summer squash or tomatoes
-        ¼  cup salad dressing, like yogurt, tahini or a vinaigrette, plus more to taste
-        ½  avocado, thinly sliced
-        1  hard-boiled egg, peeled and halved
-        2  teaspoons snipped chives, plus more to taste
-        2  teaspoons sliced or chopped nuts, like almonds, walnuts, pecans or hazelnuts, plus more to taste
-        Whole-grain bread, for serving
-          ', 'Lunch',
+'2 Cup(s) sturdy salad greens
+0.5 Cup(s) cooked grains
+1 Cup(s) roasted vegetables
+0.25 Cup(s) thinly sliced raw vegetables
+0.75 Cup(s) salad dressing
+0.5 avocado, thinly sliced
+1 hard-boiled egg
+2 Tsp(s) snipped chives, plus more to taste
+2 Tsp(s) sliced or chopped nuts
+Whole-grain bread', 'Lunch',
           'https://i.pinimg.com/originals/08/c4/6b/08c46b543c38550b9b380e518d9d2dfe.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -483,19 +451,16 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
         22, --cook_time
                 -- Start of Directions, by steps
          'Step 1 Heat a medium saucepan over medium high heat. Add 1 tablespoon extra-virgin olive oil, 1 turn of the pan. Add onions and season with salt and pepper or steak seasoning blend. Cook onions, stirring occasionally, 10 minutes or until onions are soft and caramel in color.
-          Step 2 Heat a heavy griddle pan over medium high to high heat. Wipe griddle with a drizzle of oil using a paper towel. Sear and cook thin sliced steaks until brown but not crisp, about 2 minutes on each side. Cook steaks in single layers in 2 batches and tenderize by cutting into meat with the side of your spatula while they cook. When the steaks are browned, just before you remove them from heat, sprinkle them with garlic salt and pepper. When all of the steaks are cooked, line each of your split rolls with 2 slices of provolone cheese. Pile 1/4 of your meat and onions on to the griddle and mix together with your spatula. Pile the meat and onions into rolls on top of the cheese. The heat from the meat and onions will melt the cheese. Repeat for remaining servings and serve.
+          Step 2 Heat a heavy griddle pan over medium high to high heat. Wipe griddle with a drizzle of oil using a paper towel. Sear and cook thin sliced steaks until brown but not crisp, about 2 minutes on each side. Cook steaks in single layers in 2 batches and tenderize by cutting into meat with the side of your spatula while they cook. When the steaks are browned, just before you remove them from heat, sprinkle them with garlic salt and pepper. When all of the steaks are cooked, line each of your split rolls with 2 slices of provolone cheese. Pile .25 of your meat and onions on to the griddle and mix together with your spatula. Pile the meat and onions into rolls on top of the cheese. The heat from the meat and onions will melt the cheese. Repeat for remaining servings and serve.
         ', 
                 --Start of Ingredients
-          '1 tablespoon extra-virgin olive oil
-        2 large yellow skinned onions, sliced very thin
-        Coarse salt and pepper or steak seasoning blend
-        2 teaspoons extra-virgin olive oil, 2 drizzles
-        1 1/2 pounds lean beef tenderloin or sirloin, ask butcher to slice the meat very thin
-        1 teaspoon garlic salt
-        Freshly ground black pepper
-        8 slices provolone cheese, from the deli counter
-        4 soft Italian sandwich hogie rolls, split 6 to 8 inches long each, split lengthwise
-          ', 'Lunch',
+'1 Tbsp(s) extra-virgin olive oil
+2 large yellow skinned onions
+2 Tsp(s) extra-virgin olive oil
+1.5 Pound(s) lean beef tenderloin or sirloin
+1 Tsp(s) garlic salt
+8 slices provolone cheese
+4 soft Italian sandwich hogie rolls', 'Lunch',
           'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2003/10/16/0/tm1b67_philly_steak_sandwich.jpg.rend.hgtvcom.826.620.suffix/1547587334190.jpeg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -509,21 +474,20 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 4 Bake 35-40 minutes or until crust is lightly browned. Let stand 15 minutes before cutting. Freeze option: Cover and freeze unbaked pies. To use, remove from freezer 30 minutes before baking (do not thaw). Preheat oven to 425°. Place pies on baking sheets, cover edges loosely with foil. Bake 30 minutes. Reduce oven setting to 350°, bake 70-80 minutes longer or until crust is golden brown and a thermometer inserted in center reads 165°.
          ', 
                 --Start of Ingredients
-        '2 cups diced peeled potatoes
-        1-3/4 cups sliced carrots
-        1 cup butter, cubed
-        2/3 cup chopped onion
-        1 cup all-purpose flour
-        1-3/4 teaspoons salt
-        1 teaspoon dried thyme
-        3/4 teaspoon pepper
-        3 cups chicken broth
-        1-1/2 cups whole milk
-        4 cups cubed cooked chicken
-        1 cup frozen peas
-        1 cup frozen corn
-        4 sheets refrigerated pie crust
-          ', 'Dinner',
+'2 Cup(s) diced peeled potatoes
+1.75 Cup(s) sliced carrots
+1 Cup(s) butter
+.50 Cup(s) chopped onion
+1 Cup(s) all-purpose flour
+1.75 Tsp(s) salt
+1 Tsp(s) dried thyme
+.75 Tsp(s) pepper
+3 Cup(s) chicken broth
+1.5 Cup(s) whole milk
+4 Cup(s) cubed cooked chicken
+1 Cup(s) frozen peas
+1 Cup(s) frozen corn
+4 sheets refrigerated pie crust', 'Dinner',
           'https://images-gmi-pmc.edge-generalmills.com/0f8b0cba-584d-461f-9f06-32b085bd8f43.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -535,21 +499,20 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 2 Cover stew and bake at 350° for 1 hour. Stir in carrots, potatoes and celery. Bake, covered, 1 hour longer or until meat and vegetables are tender. Discard bay leaf.
          ', 
                 --Start of Ingredients
-        '2 pounds beef stew meat, cut into 1-inch cubes
-        1 to 2 tablespoons canola oil
-        1-1/2 cups chopped onions
-        1 can (14-1/2 ounces) diced tomatoes, undrained
-        1 can (10-1/2 ounces) condensed beef broth, undiluted
-        3 tablespoons quick-cooking tapioca
-        1 garlic clove, minced
-        1 tablespoon dried parsley flakes
-        1 teaspoon salt
-        1/4 teaspoon pepper
-        1 bay leaf
-        6 medium carrots, cut into 2-inch pieces
-        3 medium potatoes, peeled and cut into 2-inch pieces
-        1 cup sliced celery (1-inch lengths)
-          ', 'Beverage',
+'2 Pound(s) beef stew meat
+1 to 2 Tbsp(s) canola oil
+1.5 Cup(s) chopped onions
+1 can (14-1/2 Fl oz) diced tomatoes
+1 can (10-1/2 Fl oz) condensed beef broth
+3 Tbsp(s) quick-cooking tapioca
+1 garlic clove, minced
+1 Tbsp(s) dried parsley flakes
+1 Tsp(s) salt
+.25 Tsp(s) pepper
+1 bay leaf
+6 medium carrots
+3 medium potatoes
+1 Cup(s) sliced celery (1-inch lengths)', 'Beverage',
           'https://lifemadesweeter.com/wp-content/uploads/Instant-Pot-Beef-Stew-Recipe-Photo-Recipe-1-of-1-12-e1507849409918.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -562,13 +525,11 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 3 Add macaroni, cook and stir until heated through. Top as desired.
          ', 
                 --Start of Ingredients
-        '2 cups uncooked elbow macaroni (about 8 ounces)
-        2 tablespoons butter
-        2 tablespoons all-purpose flour
-        1-1/2 cups half-and-half cream
-        3/4 pound process cheese (Velveeta), cubed
-        Optional toppings: fresh arugula, halved cherry tomatoes and coarsely ground pepper
-          ', 'Appetizer',
+'2 Cup(s) uncooked elbow macaroni (about 8 Fl oz)
+2 Tbsp(s) butter
+2 Tbsp(s) all-purpose flour
+1.5 Cup(s) half-and-half cream
+3/4 Pound(s) process cheese', 'Appetizer',
           'https://img1.southernliving.timeinc.net/sites/default/files/styles/4_3_horizontal_-_1200x900/public/image/2016/12/main/january-2017-recipes-2504001_winte_27011.jpg?itok=lsq6IUHW'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -578,29 +539,28 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
                 -- Start of Directions, by steps
          'Step 1 Preheat oven to 350°. In a large skillet, cook beef and onion over medium heat, crumbling meat, until beef is no longer pink, 6-8 minutes, drain. Stir in flour and seasonings. Add tomatoes, bring to a boil. Reduce heat, simmer, covered, 15 minutes.
          Step 2 In a saucepan, heat butter over medium-high heat. Add garlic, cook and stir 1 minute or until tender. Stir in flour until blended, gradually whisk in broth. Bring to a boil, cook and stir until thickened, about 2 minutes. Stir in tomato sauce and seasonings, heat through.
-         Step 3 Pour 1-1/2 cups sauce into an ungreased 13x9-in. baking dish. Place about 1/4 cup beef mixture off center on each tortilla, top with 1-2 tablespoons cheese. Roll up and place over sauce, seam side down. Top with remaining sauce.
+         Step 3 Pour 1-1/2 cups sauce into an ungreased 13x9-in. baking dish. Place about 1/4 Cup(s) beef mixture off center on each tortilla, top with 1-2 tablespoons cheese. Roll up and place over sauce, seam side down. Top with remaining sauce.
          Step 4 Bake, covered, until heated through, 30-35 minutes. Sprinkle with remaining cheese. Bake, uncovered, until cheese is melted, 10-15 minutes longer. Serve with toppings as desired.
          ', 
                 --Start of Ingredients
-        '1 pound ground beef
-        1 medium onion, chopped
-        1 teaspoon salt
-        1 teaspoon garlic powder
-        1/2 teaspoon ground cumin
-        1/4 teaspoon rubbed sage
-        1 can (14-1/2 ounces) stewed tomatoes, cut up
-        1/3 cup butter
-        4 to 6 garlic cloves, minced
-        1/2 cup all-purpose flour
-        1 can (14-1/2 ounces) beef broth
-        1 can (15 ounces) tomato sauce
-        3 tablespoons chili powder
-        1 to 2 teaspoons ground cumin
-        1 to 2 teaspoons rubbed sage
-        1/2 teaspoon salt
-        10 flour tortillas (6 inches), warmed
-        2 cups shredded Colby-Monterey Jack cheese, divided
-          ', 'Dinner',
+'1 Pound(s) ground beef
+1 medium onion
+1 Tsp(s) salt
+1 Tsp(s) garlic powder
+.5 Tsp(s) ground cumin
+.25 Tsp(s) rubbed sage
+1 can (14-1/2 Fl oz) stewed tomatoes
+.33 Cup(s) butter
+4 to 6 garlic cloves
+.5 Cup(s) all-purpose flour
+1 can (14-1/2 Fl oz) beef broth
+1 can (15 Fl oz) tomato sauce
+3 Tbsp(s) chili powder
+1 to 2 Tsp(s) ground cumin
+1 to 2 Tsp(s) rubbed sage
+.5 Tsp(s) salt
+10 flour tortillas (6 inches)
+2 Cup(s) shredded Colby-Monterey Jack cheese, divided', 'Dinner',
           'https://s23209.pcdn.co/wp-content/uploads/2014/01/IMG_8465edit.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -614,18 +574,14 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 4 Cover and bake at 350° for 1 hour, uncover and bake 30 minutes longer or until meat and potatoes are tender. If desired, sprinkle with paprika and parsley.
          ', 
                 --Start of Ingredients
-        '3 tablespoons butter
-        3 tablespoons all-purpose flour
-        1-1/2 teaspoons salt
-        1/4 teaspoon pepper
-        1 can (14-1/2 ounces) chicken broth
-        6 pork rib or loin chops (3/4 inch thick)
-        2 tablespoons canola oil
-        Additional salt and pepper, optional
-        6 cups thinly sliced peeled potatoes
-        1 medium onion, sliced
-        Paprika and minced fresh parsley, optional
-          ', 'Dinner',
+'3 Tbsp(s) butter
+3 Tbsp(s) all-purpose flour
+1.5 Tsp(s) salt
+.25 Tsp(s) pepper
+6 pork rib or loin chops (3/4 inch thick)
+6 Cup(s) thinly sliced peeled potatoes
+1 medium onion
+Paprika and minced fresh parsley', 'Dinner',
           'https://whisktc.com/wp-content/uploads/2017/10/dpcsp.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -637,14 +593,13 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          Step 2 Remove chicken. When cool enough to handle, shred meat with two forks, return to slow cooker. Stir in corn and salsa. Cook, covered, on low until heated through, about 30 minutes. Place filling on tortillas, if desired, serve with sour cream, pickled onions, lettuce and cheese.
          ', 
                 --Start of Ingredients
-        '1-1/2 pounds boneless skinless chicken breast halves
-        3 tablespoons lime juice
-        1 tablespoon chili powder
-        1 cup frozen corn, thawed
-        1 cup chunky salsa
-        12 fat-free flour tortillas (6 inches), warmed
-        Sour cream, pickled onions, shredded lettuce and shredded cheddar or cotija cheese, optional
-          ', 'Dinner',
+'1.5 Pound(s) boneless skinless chicken breast halves
+3 Tbsp(s) lime juice
+1 Tbsp(s) chili powder
+1 Cup(s) frozen corn, thawed
+1 Cup(s) chunky salsa
+12 fat-free flour tortillas
+Sour cream, pickled onions', 'Dinner',
           'https://lifemadesimplebakes.com/wp-content/uploads/2016/05/Chili-Lime-Chicken-Tacos-3.jpg'); --category
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -658,14 +613,13 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 4 Bake 30 to 40 minutes or until golden brown and no longer doughy in center. Loosen edges of pan with metal spatula. Cool in pan 5 minutes. Turn upside down onto serving plate, replacing any biscuit pieces and caramel from pan. Pull apart to serve. Serve warm.
         ', 
                 --Start of Ingredients
-        '1/2 cup granulated sugar
-        1 teaspoon cinnamon
-        2 cans (16.3 oz each) Pillsbury™ Grands!™
-        1/2 cup chopped walnuts, if desired
-        1/2 cup raisins, if desired
-        1 cup firmly packed brown sugar
-        3/4 cup butter or margarine, melted
-          ', 'Breakfast',
+'.5 Cup(s) granulated sugar
+1 Tsp(s) cinnamon
+2 cans (16.3 oz each) Pillsbury™ Grands!™
+.5 Cup(s) chopped walnuts, if desired
+.5 Cup(s) raisins, if desired
+1 Cup(s) firmly packed brown sugar
+.75 Cup(s) butter or margarine', 'Breakfast',
           'https://images-gmi-pmc.edge-generalmills.com/3c78f8b9-85d9-4584-bd96-7623a109674a.jpg'); --category
           
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -677,17 +631,16 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 2 Combine flour, sugar, baking powder, baking soda, and salt in a large mixing bowl. Whisk egg and butter into "soured" milk. Pour the flour mixture into the wet ingredients and whisk until lumps are gone.
           Step 3 Heat a large skillet over medium heat, and coat with cooking spray. Pour 1/4 cupfuls of batter onto the skillet, and cook until bubbles appear on the surface. Flip with a spatula, and cook until browned on the other side.', 
                 --Start of Ingredients
-        '1/2 teaspoon baking soda
-         1 cup all-purpose flour          
-         1 teaspoon baking powder
-         2 tablespoons white sugar
-         1/2 ounce cooking spray
-         2 tablespoons distilled white vinegar
-         2 tablespoons butter
-         3/4 cup milk
-         1 eggs
-         1/2 teaspoon salt
-          ', 'Breakfast',
+'.5 Tsp(s) baking soda
+1 Cup(s) all-purpose flour          
+1 Tsp(s) baking powder
+2 Tbsp(s) white sugar
+.5 Fl oz cooking spray
+2 Tbsp(s) distilled white vinegar
+2 Tbsp(s) butter
+3/4 Cup(s) milk
+1 eggs
+.5 Tsp(s) salt', 'Breakfast',
           'http://www.runningwithspoons.com/wp-content/uploads/2016/04/Cinnamon-Roll-Greek-Yogurt-Pancakes.jpg'); --category
 
 
@@ -700,13 +653,13 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 2 Combine the contents of 1 container with 1 bottle of the lemon-lime flavored carbonated beverage in a punch bowl, stir until slushy. Repeat with remaining portions as needed.
          ', 
                 --Start of Ingredients
-          '2 1/2 cups white sugar
-        6 cups water
-        2 (3 ounce) packages strawberry flavored Jell-O® mix
-        1 (46 fluid ounce) can pineapple juice
-        2/3 cup lemon juice
-        1 quart orange juice
-        2 (2 liter) bottles lemon-lime flavored carbonated beverage', 'Beverage',
+'2.5 Cup(s) white sugar
+6 Cup(s) water
+2 (3 Fl oz) packages strawberry flavored Jell-O® mix
+1 (46 fluid Fl oz) can pineapple juice
+.67 Cup(s) lemon juice
+1 quart orange juice
+2 (2 liter) bottles lemon-lime flavored carbonated beverage', 'Beverage',
         'https://cdn.cpnscdn.com/static.coupons.com/ext/kitchme/images/recipes/300x200/strawberry-sangria_18501.jpg'); --category
 
 
@@ -718,14 +671,14 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          'Step 1 Bring the apple cider, apple juice, cinnamon sticks, whole clove, white sugar, and brown sugar to a boil in a large pot, reduce heat to medium low and simmer for 20 minutes. Remove from heat and cool completely.
           Step 2 Stir the grain alcohol and vanilla vodka into the cooled mixture. Pour into bottles and refrigerate.', 
                 --Start of Ingredients
-          '1/2 gallon apple cider
-          1/2 gallon apple juice
-          4 cinnamon sticks
-          1 whole clove
-          1 cup white sugar
-          1 cup brown sugar
-          3 cups 190 proof grain alcohol (such as Everclear®)
-          2 cups vanilla vodka', 'Beverage',
+'.5 gallon apple cider
+.5 gallon apple juice
+4 cinnamon sticks
+1 whole clove
+1 Cup(s) white sugar
+1 Cup(s) brown sugar
+3 Cup(s) 190 proof grain alcohol
+2 Cup(s) vanilla vodka', 'Beverage',
           'https://images-gmi-pmc.edge-generalmills.com/94e767da-3f8a-427c-bc15-036b04545a43.jpg'); --category
 
 
@@ -737,18 +690,18 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
          'Step 1 In a large pitcher or bowl, mix together the brandy, lemon juice, lemonade concentrate, orange juice, red wine, triple sec, and sugar. Float slices of lemon, orange and lime, and maraschino cherries in the mixture. Refrigerate overnight for best flavor. For a fizzy sangria, add club soda just before serving.
         ', 
                 --Start of Ingredients
-          '1/2 cup brandy
-          1/4 cup lemon juice
-          1/3 cup frozen lemonade concentrate
-          1/3 cup orange juice
-          1 (750 milliliter) bottle dry red wine
-          1/2 cup triple sec
-          1 lemon, sliced into rounds
-          1 orange, sliced into rounds
-          1 lime, sliced into rounds
-          1/4 cup white sugar (optional)
-          8 maraschino cherries
-          2 cups ginger ale', 'Beverage',
+'.5 Cup(s) brandy
+.25 Cup(s) lemon juice
+.33 Cup(s) frozen lemonade concentrate
+.34 Cup(s) orange juice
+1 (750 Milliliter) bottle dry red wine
+.5 Cup(s) triple sec
+1 lemon
+1 orange
+1 lime
+.25 Cup(s) white sugar (optional)
+8 maraschino cherries
+2 Cup(s) ginger ale', 'Beverage',
           'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/4/25/0/CCWM_Traditional-Sangria_s4x3.jpg.rend.hgtvcom.826.620.suffix/1483737021903.jpeg'); --category
 
 
@@ -761,15 +714,15 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 2 Transfer mixture to a blender, and add cream of coconut, sweetened condensed milk, rum, water, cloves, cinnamon, and vanilla. Blend for about 30 seconds. Pour into glass bottles and chill overnight.
         ', 
                 --Start of Ingredients
-          '2 egg yolks, beaten
-          1 (12 fluid ounce) can evaporated milk
-          1 (14 ounce) can cream of coconut
-          1 (14 ounce) can sweetened condensed milk
-          1/2 cup white rum
-          1/2 cup water
-          1/4 teaspoon ground cloves
-          1/2 teaspoon ground cinnamon
-          1 teaspoon vanilla extract', 'Beverage',
+'2 egg yolks
+1 (12 fluid Fl oz) can evaporated milk
+1 (14 Fl oz) can cream of coconut
+1 (14 Fl oz) can sweetened condensed milk
+.5 Cup(s) white rum
+.5 Cup(s) water
+.25 Tsp(s) ground cloves
+.5 Tsp(s) ground cinnamon
+1 Tsp(s) vanilla extract', 'Beverage',
           'https://www.babemadeblog.com/wp-content/uploads/2018/11/Coquito-2.jpg'); --category
 
 
@@ -783,12 +736,11 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 3 Add milk and bring it to boil again. When boiling again, reduce heat and keep simmering for another 2 minutes.
           Step 4 Remove from heat and strain tea with a strainer.  Serve with a biscuit or cookie.', 
                 --Start of Ingredients
-          '2 tea cups water
-        4 pods green cardamom
-        2 tsp sugar
-        1 slice ginger (optional)
-        3 tsp loose black tea (Red Label Orange Peko, Taj Mahal, Darjeeling etc)
-        4-6 Tbsp milk (I use whole milk)', 'Beverage',
+'2 tea Cup(s) water
+4 pods green cardamom
+2 Tsp(s) sugar
+1 slice ginger (optional)
+3 Tsp(s) loose black tea', 'Beverage',
         'https://assets.epicurious.com/photos/579909083a12dd9d56024018/master/pass/spiced-milk-tea-masala-chai.jpg'); --category
 
 
@@ -804,13 +756,12 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 5 Return pan to oven and bake for 425 degrees F (220 degrees C) for 30 minutes, or until the custard has completely set.
           ', 
                 --Start of Ingredients
-        '2 (12 ounce) packages frozen hash brown potatoes
-         1/3 cup butter, melted        
-         1 cup cooked diced ham
-         1/2 cup heavy whipping cream
-         2 eggs
-         1 cup shredded Monterey Jack cheese
-          ', 'Breakfast',
+'2 (12 Fl oz) packages frozen hash brown potatoes
+.33 Cup(s) butter    
+1 Cup(s) cooked diced ham
+.5 Cup(s) heavy whipping cream
+2 eggs
+1 Cup(s) shredded Monterey Jack cheese', 'Breakfast',
           'https://www.homemadeinterest.com/wp-content/uploads/2018/03/Low-Carb-Ham-Cheese-Crustless-Quiche_IG-2.jpg'); --category   
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -824,16 +775,15 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 4 Sprinkle a little shredded cheese onto each tortilla while it is still hot. Top with some of the scrambled egg and sausage, then add hot pepper sauce and salsa to your liking.
           ', 
                 --Start of Ingredients
-        '6 ounces chorizo sausage
-         8 (6 inch) corn tortillas       
-         6 eggs
-         1/4 cup milk
-         1/2 teaspoon pepper
-         1/2 teaspoon salt
-         1 cup shredded Monterey Jack cheese
-         1 dash hot pepper sauce (e.g. Tabasco™), or to taste
-         1/2 cup salsa
-          ', 'Breakfast',
+'6 Fl oz chorizo sausage
+8 (6 inch) corn tortillas       
+6 eggs
+.25 Cup(s) milk
+.5 Tsp(s) pepper
+.5 Tsp(s) salt
+1 Cup(s) shredded Monterey Jack cheese
+1 dash hot pepper sauce
+.5 Cup(s) salsa', 'Breakfast',
           'https://www.cookingclassy.com/wp-content/uploads/2015/04/breakfast-tacos5-srgb..jpg'); --category    
 
 INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
@@ -845,104 +795,16 @@ INSERT INTO recipes (name, description, cook_time, directions, ingredients, cate
           Step 2 Mix cherries, cashews, and honey into the quinoa mixture, top with blackberries and creme fraiche.
           ', 
                 --Start of Ingredients
-        '1/2 cup quinoa
-         1/2 cup water       
-         1/2 cup skim milk
-         1/2 teaspoon ground cinnamon
-         1/2 teaspoon vanilla extract
-         1/2 cup dried cherries
-         1 tablespoon honey
-         1/2 cup fresh blackberries
-         2 tablespoons creme fraiche (optional)
-          ', 'Breakfast',
-          'http://images.media-allrecipes.com/userphotos/960x960/3758218.jpg'); --category  
-
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
-        'Whole Grain Breakfast Cookies',  --name
-        'My sister and I love something sweet with our coffee in the morning. We created this recipe to make a wholesome breakfast. I generally double the batch and keep them in the freezer. They taste even better frozen (still soft!).', --description
-        50, --cook_time
-                -- Start of Directions, by steps
-         'Step 1 Preheat oven to 375 degrees F (190 degrees C). Line baking sheets with parchment paper.
-          Step 2 Pulse the walnuts in a food processor several times to chop, continue processing until the walnuts are ground into flour, transfer to a bowl. Mix in the rolled oats, whole wheat flour, flax meal, baking soda, salt, and cinnamon until thoroughly combined.
-          Step 3 Combine the almond butter, canola oil, agave nectar, brown sugar, egg, and vanilla extract in the food processor and process a few seconds to blend the ingredients well, transfer the almond butter mixture to a large bowl and fold in the dried cherries and chocolate chips. Mix the walnut-oatmeal mixture into the almond butter mixture (dough will be very thick).
-          Step 4 Scoop up heaping teaspoons of dough, and form into balls, lay the dough balls onto the prepared baking sheets, about 2 inches apart.
-          Step 5 Bake in the preheated oven until lightly browned, 8 to 10 minutes. Remove from oven and flatten the cookies with a spatula. Allow to cool for about 5 minutes on the baking sheets before removing to finish cooling on wire racks.
-          ', 
-                --Start of Ingredients
-        '1 cup walnuts
-         1 1/2 cups old-fashioned rolled oats (not instant)   
-         1/3 cup whole wheat flour
-         1/2 cup ground flax meal
-         1 teaspoon baking soda
-         1/2 teaspoon salt
-         1 teaspoon ground cinnamon
-         1/2 cup almond butter
-         1/4 cup canola oil
-         1/4 cup blue agave nectar
-         1/3 cup brown sugar
-         1 egg
-         1 teaspoon vanilla extract
-         1/2 cup dried cherries
-         1 cup semi-sweet chocolate chips
-          ', 'Breakfast',
-          'https://images.media-allrecipes.com/userphotos/560x315/885973.jpg'); --category      
-
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
-        'Peanut Butter Breakfast Syrup',  --name
-        'My daughters wanted peanut butter syrup on their waffles, so I made this up. It is delicious! Stores in the refrigerator for a really long time. Serve over pancakes with sliced bananas. Try coconut extract in place of vanilla for added flavor.', --description
-        10, --cook_time
-                -- Start of Directions, by steps
-         'Step 1 Stir milk, sugar, and peanut butter together in a saucepan over medium heat, bring to a boil while whisking constantly. Cook at a boil for 3 minutes, remove from heat, and stir vanilla extract into the syrup.
-          ', 
-                --Start of Ingredients
-        '1 cup skim milk
-         1 cup white sugar    
-         1/2 cup natural peanut butter
-         1 teaspoon vanilla extract
-          ', 'Breakfast',
-          'http://veggieandthebeastfeast.com/wp-content/uploads/2013/01/P1136154-2.jpg'); --category 
-
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
-        'Puerto Rican Breakfast Custard',  --name
-        'This is a unique Spanish breakfast custard that my Puerto Rican father loved as a child and something my mother made for us as we were growing up. The results are very delicious and warming on a cold winter morning.', --description
-        30, --cook_time
-                -- Start of Directions, by steps
-         'Step 1 Whisk together the cornstarch, salt, sugar, and cinnamon in a large saucepan. Stir in the milk to evenly blend ingredients, and set over medium-high heat. Continue whisking and cooking until custard reaches a thick consistency, 25 to 30 minutes. It is important to stir the entire time, or the custard can easily burn or clump. The custard will continue to thicken as it cools. Spoon into bowls to serve.
-          ', 
-                --Start of Ingredients
-        '2 tablespoons cornstarch
-         1/8 teaspoon salt  
-         3 tablespoons white sugar
-         1/8 teaspoon ground cinnamon
-         2 cups whole milk
-          ', 'Breakfast',
-          'https://images.media-allrecipes.com/userphotos/560x315/1010841.jpg'); --category                  
-
-INSERT INTO recipes (name, description, cook_time, directions, ingredients, category, recipe_pic) VALUES (
-        'Breakfast Prune Spice Cake',  --name
-        'This moist cake was a favorite of mine as a child - probably because it meant I could have cake for breakfast! Moist, spicy and delicious any time of day!', --description
-        70, --cook_time
-                -- Start of Directions, by steps
-         'Step 1 Preheat the oven to 350 degrees F (175 degrees C). Grease and flour a 9 inch tube pan.
-          Step 2 In a large bowl, mix the shortening and sugar with an electric mixer until smooth. Mix in the eggs one at a time, then stir in the vanilla and prunes. Sift the flour, allspice, nutmeg, cinnamon, salt, baking powder and baking soda into a large bowl or onto a sheet of waxed paper. Stir in the dry ingredients 1/3 at a time, alternating with the buttermilk. Mix in the walnuts if using. Pour batter into the prepared pan.
-          Step 3 Bake for 50 minutes in the preheated oven, or until a toothpick inserted in the crown of the cake comes out clean. Cool on a wire rack for at least 10 minutes before inverting onto a serving plate.
-          ', 
-                --Start of Ingredients
-        '1 cup shortening
-         2 cups white sugar
-         4 eggs
-         1 teaspoon vanilla extract
-         1 1/3 cups buttermilk
-         1 1/3 cups stewed prunes, chopped
-         2 1/3 cups all-purpose flour
-         1 teaspoon allspice
-         1 teaspoon ground nutmeg
-         1 teaspoon ground cinnamon
-         1 teaspoon salt
-         1 teaspoon baking powder
-         1 teaspoon baking soda
-          ', 'Breakfast',
-          'https://images.food52.com/bEdRPm0O9Ui6_93R8G5rnFySe2o=/2016x1344/8872d36e-6273-4647-873a-b1c43c769a1f--IMG_7797.jpg'); --category
+'.5 Cup(s) quinoa
+.5 Cup(s) water       
+.5 Cup(s) skim milk
+.5 Tsp(s) ground cinnamon
+.5 Tsp(s) vanilla extract
+.5 Cup(s) dried cherries
+1 Tbsp(s) honey
+.5 Cup(s) fresh blackberries
+2 Tbsp(s) creme fraiche (optional)', 'Breakfast',
+          'http://images.media-allrecipes.com/userphotos/960x960/3758218.jpg'); --category                   
 
 
 INSERT INTO users (first_name, last_name, password, salt, email, phone)

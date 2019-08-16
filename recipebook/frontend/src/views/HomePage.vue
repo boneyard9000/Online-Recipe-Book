@@ -6,7 +6,7 @@
         </div>
         <div class="click-info" style="font-size: 30px; text-align: center;">Welcome {{currentUser.firstName}}! Click on a recipe below to learn more information</div>
 
-        <h4 class="rod-header">Recipe Of The Day</h4>
+        <h4 class="rod-header">Featured Recipe</h4>
         <div class=" recipe-of-day">
           <h2>{{recipes[randomRecipeId].recipeName}}</h2>
           <h3>{{recipes[randomRecipeId].description}}</h3>
